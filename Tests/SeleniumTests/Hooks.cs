@@ -12,7 +12,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
 {
     public class Hooks
     {
-        private IWebDriver driver;
+        private IWebDriver _driver;
 
 
         [SetUp]
@@ -20,17 +20,20 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
         {
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--headless");
-            driver = new ChromeDriver(options);
-            driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            Constants.SessionVariables.driver = driver;
+            options.AddArgument("--disable-download-notification");
+            options.AddArgument("--disable-gpu");
+            options.AddArgument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36");
+            _driver = new ChromeDriver(options);
+            _driver.Manage().Window.Maximize();
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+            Constants.SessionVariables.Driver = _driver;
         }
 
         [TearDown]
         public void TearDown()
         {
             //Thread.Sleep(5000);
-            driver.Quit();
+            _driver.Quit();
         }
     }
 
