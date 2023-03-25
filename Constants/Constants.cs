@@ -1,11 +1,16 @@
 ﻿using OpenQA.Selenium;
+using RestSharp;
 
 namespace DotNetTestingFramework.Constants
 {
     class SessionVariables
     {
         public static IWebDriver? Driver;
-       
+
+        public static string Username;
+        public static string Password;
+
+        public static RestResponse UserResponse;
 
     }
 }
