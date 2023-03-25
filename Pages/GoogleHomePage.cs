@@ -27,9 +27,9 @@ namespace DotNetTestingFramework.Pages
             _driver.Navigate().GoToUrl(_url);
         }
 
-        public void PageHasLogo()
+        public Boolean PageHasLogo()
         {
-            Assert.IsTrue(_pageLogo.Displayed);
+            return _pageLogo.Displayed;
         }
 
         public void EnterSearchText(string searchText)

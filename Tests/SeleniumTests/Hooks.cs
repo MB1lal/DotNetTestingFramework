@@ -1,36 +1,26 @@
-﻿using DotNetTestingFramework.Constants;
-using DotNetTestingFramework.Pages;
+﻿using DotNetTestingFramework.Utils;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DotNetTestingFramework.Tests.SeleniumTests
 {
     public class Hooks
     {
-        private IWebDriver driver;
-
+        private IWebDriver _driver;
+        private Browser browser = new Browser();
 
         [SetUp]
         public void Setup()
         {
-            ChromeOptions options = new ChromeOptions();
-            options.AddArgument("--headless");
-            driver = new ChromeDriver(options);
-            driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            Constants.SessionVariables.driver = driver;
+            _driver = browser.GetWebDriver("chrome", true, true);
+            _driver.Manage().Window.Maximize();
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+            Constants.SessionVariables.Driver = _driver;
         }
 
         [TearDown]
         public void TearDown()
         {
-            //Thread.Sleep(5000);
-            driver.Quit();
+            _driver.Quit();
         }
     }
 

@@ -1,30 +1,47 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DotNetTestingFramework.Pages
 {
     internal class GoogleSearchPage
     {
+        private IWebDriver _driver;
         [FindsBy(How = How.Id, Using = "search")]
         private IWebElement _searchdiv;
 
 
         public GoogleSearchPage()
         {
-            PageFactory.InitElements(Constants.SessionVariables.driver, this);
+            _driver = Constants.SessionVariables.Driver;
+            PageFactory.InitElements(_driver, this);
         }
 
-        public void SearchPageIsLoaded()
+        public Boolean SearchPageIsLoaded()
         {
-            Assert.IsTrue(_searchdiv.Displayed);
+            return _searchdiv.Displayed;
         }
 
-       
+        public void ClickPartialLinkText(string partiallinktext)
+        { 
+            _driver.FindElement(By.PartialLinkText(partiallinktext)).Click();
+        }
 
+        public void OpenLinkInNewTabUsingPartialText(string partiallinktext)
+        {
+
+            IWebElement linktext = _driver.FindElement(By.PartialLinkText(partiallinktext));
+            string keys;
+            
+            if(System.Environment.OSVersion.ToString().Contains("Mac"))
+            {
+                keys = Keys.Command + Keys.Enter;
+            } else
+            {
+                keys = Keys.Control + Keys.Enter;
+            }
+
+            linktext.SendKeys(keys);
+            _driver.SwitchTo().Window(_driver.WindowHandles[1]);    
+         }
     }
 }
