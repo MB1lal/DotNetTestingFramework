@@ -4,22 +4,22 @@ namespace DotNetTestingFramework.Utils
 {
     internal class ExcelWriter
     {
-        private static WorkBook workBook = WorkBook.Load(System.IO.Path.GetFullPath(@"..\..\..\Resources\testData.xlsx"));
+        private static WorkBook _workBook = WorkBook.Load(System.IO.Path.GetFullPath(@"..\..\..\Resources\testData.xlsx"));
 
-        public void CreateNewWorkbook(string _workbookName)
+        public void CreateNewWorkbook(string workbookName)
         {
-            workBook.CreateWorkSheet(_workbookName);
+            _workBook.CreateWorkSheet(workbookName);
         }
 
-        public void WriteToExcelSheet(List<List<string>> _data, string _sheetName)
+        public void WriteToExcelSheet(List<List<string>> data, string sheetName)
         {
-            WorkSheet workSheet = workBook.GetWorkSheet(_sheetName);
+            WorkSheet workSheet = _workBook.GetWorkSheet(sheetName);
 
-            for(int row=0; row<_data.Count; row++)
+            for(int row=0; row<data.Count; row++)
             {
-                for(int col=0; col < _data[row].Count; col++)
+                for(int col=0; col < data[row].Count; col++)
                 {
-                    workSheet.SetCellValue(row, col, _data[row][col]);
+                    workSheet.SetCellValue(row, col, data[row][col]);
                 }
             }
 
@@ -27,7 +27,7 @@ namespace DotNetTestingFramework.Utils
 
         public void SaveFile()
         {
-            workBook.Save();
+            _workBook.Save();
         }
     }
 }

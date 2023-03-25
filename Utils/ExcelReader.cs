@@ -1,20 +1,18 @@
 ﻿using AngleSharp.Common;
-using DotNetTestingFramework.Tests.SeleniumTests;
 using IronXL;
-using System;
-using System.Collections.Generic;
 
 namespace DotNetTestingFramework.Utils
 {
     internal class ExcelReader
     {
-        private static WorkBook workBook = WorkBook.Load(System.IO.Path.GetFullPath(@"..\..\..\Resources\testData.xlsx"));
-        private static WorkSheet workSheet = workBook.GetWorkSheet("Input");
+        private static WorkBook _workBook = WorkBook.Load(System.IO.Path.GetFullPath(@"..\..\..\Resources\testData.xlsx"));
+      
 
-        public Dictionary<string,string> getFullExcelSheet()
+        public Dictionary<string,string> getFullExcelSheet(string workSheetName)
         {
+            WorkSheet _workSheet = _workBook.GetWorkSheet(workSheetName);
             Dictionary<string, string> excelSheet = new Dictionary<string, string>();
-            foreach (var row in workSheet.Rows)
+            foreach (var row in _workSheet.Rows)
             {
                 if(!row.StringValue.Equals(""))
                 {
@@ -25,11 +23,6 @@ namespace DotNetTestingFramework.Utils
             }
 
             return excelSheet;
-        }
-
-        public string getSingleCellValue(string cellName)
-        {
-            return workSheet[cellName].StringValue;
         }
 
     }
