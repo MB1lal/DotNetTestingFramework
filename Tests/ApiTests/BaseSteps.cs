@@ -8,8 +8,9 @@ namespace DotNetTestingFramework.Tests.ApiTests
     internal class BaseSteps : Hooks
     {
         private UserConnector _userConnector = new UserConnector();
+        private PetStoreConnector _petStoreConnector = new PetStoreConnector();
 
-        private UserModel createNewPayload()
+        private UserModel createNewUserData()
         {
             UserModel user = new UserModel();
             user.id = Faker.RandomNumber.Next();
@@ -27,9 +28,24 @@ namespace DotNetTestingFramework.Tests.ApiTests
             return user;
         }
 
+        private PetStoreModel createNewStoreData()
+        {
+            PetStoreModel petStore = new PetStoreModel();
+            petStore.id = Faker.RandomNumber.Next(1,5000);
+            petStore.petId = Faker.RandomNumber.Next(1,5000);
+            petStore.quantity = Faker.RandomNumber.Next(1, 3);
+            petStore.shipDate = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
+            petStore.status = "placed";
+            petStore.complete = true;
+           
+            Constants.SessionVariables.PetStore = petStore;
+
+            return petStore;
+        }
+
         protected void createNewUser()
         {
-            UserModel userModel = createNewPayload();
+            UserModel userModel = createNewUserData();
             _userConnector.CreateNewUser(JsonSerializer.Serialize(userModel));
         }
 
@@ -46,6 +62,27 @@ namespace DotNetTestingFramework.Tests.ApiTests
         protected void logoutUser()
         {
             _userConnector.logoutUser();
+        }
+
+        protected void createNewPetStoreOder()
+        {
+            PetStoreModel petStoreModel = createNewStoreData();
+            _petStoreConnector.PlaceAnOrder(JsonSerializer.Serialize(petStoreModel));
+
+        }
+
+        protected RestResponse fetchPetStoreOrder(int orderId)
+        {
+            return _petStoreConnector.FetchOrder(orderId);
+        }
+        protected RestResponse  fetchInvalidPetStoreOrder(int orderId)
+        {
+            return _petStoreConnector.FetchDeletedOrder(orderId);
+        }
+
+        protected void deletePetStoreOrder(int orderId)
+        {
+            _petStoreConnector.DeleteOrder(orderId);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using DotNetTestingFramework.Models;
+using OpenQA.Selenium;
 using RestSharp;
 
 namespace DotNetTestingFramework.Constants
@@ -9,6 +10,8 @@ namespace DotNetTestingFramework.Constants
 
         public static string Username;
         public static string Password;
+
+        public static PetStoreModel? PetStore;
 
         public static RestResponse UserResponse;
 

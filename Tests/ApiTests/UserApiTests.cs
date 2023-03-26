@@ -1,7 +1,4 @@
-﻿
-
-using DotNetTestingFramework.Models;
-using RestSharp;
+﻿using DotNetTestingFramework.Models;
 using System.Text.Json;
 
 namespace DotNetTestingFramework.Tests.ApiTests
