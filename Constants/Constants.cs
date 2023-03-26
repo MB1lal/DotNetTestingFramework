@@ -12,6 +12,7 @@ namespace DotNetTestingFramework.Constants
         public static string Password;
 
         public static PetStoreModel? PetStore;
+        public static PetModel? PetModel;
 
         public static RestResponse UserResponse;
 

@@ -1,6 +1,8 @@
 ﻿using DotNetTestingFramework.Connectors;
 using DotNetTestingFramework.Models;
+using OpenQA.Selenium.DevTools.V108.Debugger;
 using RestSharp;
+using System.Collections.ObjectModel;
 using System.Text.Json;
 
 namespace DotNetTestingFramework.Tests.ApiTests
@@ -9,6 +11,7 @@ namespace DotNetTestingFramework.Tests.ApiTests
     {
         private UserConnector _userConnector = new UserConnector();
         private PetStoreConnector _petStoreConnector = new PetStoreConnector();
+        private PetConnector _petConnector = new PetConnector();
 
         private UserModel createNewUserData()
         {
@@ -41,6 +44,28 @@ namespace DotNetTestingFramework.Tests.ApiTests
             Constants.SessionVariables.PetStore = petStore;
 
             return petStore;
+        }
+
+        private PetModel createNewPetData()
+        {
+            PetModel petModel = new PetModel();
+
+            petModel.id = Faker.RandomNumber.Next(1, 5000);
+            petModel.status = "Available";
+            Category category = new Category();
+            category.id = Faker.RandomNumber.Next(1, 5000);
+            category.name = Faker.Lorem.Words(1).ToString();
+            petModel.category = category;
+            petModel.name = Faker.Lorem.Words(1).ToString();
+            petModel.photoUrls = new List<string>() { "", ""};
+            Tag tag = new Tag();
+            tag.id  = Faker.RandomNumber.Next(1, 400);
+            tag.name = Faker.Lorem.Words(1).ToString();
+            petModel.tags = new List<Tag>() { tag };
+
+            Constants.SessionVariables.PetModel = petModel;
+
+            return petModel;
         }
 
         protected void createNewUser()
@@ -83,6 +108,44 @@ namespace DotNetTestingFramework.Tests.ApiTests
         protected void deletePetStoreOrder(int orderId)
         {
             _petStoreConnector.DeleteOrder(orderId);
+        }
+
+        protected void addNewPetUsingId()
+        {
+            PetModel petModel = createNewPetData();
+            _petConnector.AddAPetUsingId(JsonSerializer.Serialize(petModel));
+        }
+
+        protected RestResponse getPetUsingId(int id)
+        {
+            return _petConnector.GetPetUsingId(id);
+        }
+
+        protected void addNewPetWithStatus(string status)
+        {
+            PetModel petModel = createNewPetData();
+            petModel.status = status;
+            _petConnector.AddAPetUsingId(JsonSerializer.Serialize(petModel));
+        }
+
+        protected RestResponse getPetUsingStatus(string status)
+        {
+            return _petConnector.GetPetUsingStatus(status);
+        }
+
+        protected void deletePetData(int id)
+        {
+            _petConnector.DeletePetUsingId(id);
+        }
+
+        protected RestResponse getDeletedPetUsingId(int id)
+        {
+            return _petConnector.GetDeletedPetUsingId(id);
+        }
+
+        protected void updateThePet(string attribute, string value)
+        {
+            _petConnector.UpdateThePetData(attribute, value);
         }
     }
 }
