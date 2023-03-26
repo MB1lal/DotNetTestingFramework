@@ -4,6 +4,8 @@ using DotNetTestingFramework.Utils;
 namespace DotNetTestingFramework.Tests.SeleniumTests
 {
     [TestFixture]
+    [Category("Selenium")]
+    [Parallelizable(ParallelScope.Fixtures)]
     public class SeleniumTest : Hooks
     {
         private GoogleHomePage _googleHomePage;

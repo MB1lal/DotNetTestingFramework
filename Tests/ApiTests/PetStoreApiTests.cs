@@ -5,7 +5,8 @@ using System.Text.Json;
 namespace DotNetTestingFramework.Tests.ApiTests
 {
     [TestFixture]
-    [Category("Pet Store")]
+    [Category("PetStore")]
+    [Parallelizable(ParallelScope.Fixtures)]
     internal class PetStoreApiTests : BaseSteps
     {
         [Test]

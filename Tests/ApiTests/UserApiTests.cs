@@ -4,7 +4,8 @@ using System.Text.Json;
 namespace DotNetTestingFramework.Tests.ApiTests
 {
     [TestFixture]
-    [Category("User Operations")]
+    [Category("UserOperations")]
+    [Parallelizable(ParallelScope.Fixtures)]
     internal class UserApiTests : BaseSteps
     {
 
