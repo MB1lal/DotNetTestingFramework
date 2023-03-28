@@ -6,6 +6,7 @@ namespace DotNetTestingFramework.Tests.ApiTests
 {
     [TestFixture]
     [Category("PetsTest")]
+    [Category("api")]
     [Parallelizable(ParallelScope.Fixtures)]
     internal class PetsTest : BaseSteps
     {

@@ -1,8 +1,6 @@
 ﻿using DotNetTestingFramework.Connectors;
 using DotNetTestingFramework.Models;
-using OpenQA.Selenium.DevTools.V108.Debugger;
 using RestSharp;
-using System.Collections.ObjectModel;
 using System.Text.Json;
 
 namespace DotNetTestingFramework.Tests.ApiTests

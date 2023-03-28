@@ -5,6 +5,7 @@ namespace DotNetTestingFramework.Tests.ApiTests
 {
     [TestFixture]
     [Category("UserOperations")]
+    [Category("api")]
     [Parallelizable(ParallelScope.Fixtures)]
     internal class UserApiTests : BaseSteps
     {
