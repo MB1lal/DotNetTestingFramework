@@ -25,8 +25,15 @@ namespace DotNetTestingFramework.Utils
             _extentTest.Log(status, message);
         }
 
-        public void Flush()
-        { _extentReports.Flush(); }
+        public ExtentTest AddScreenshot(string path)
+        {
+            return _extentTest.AddScreenCaptureFromPath(path);
+        }
+
+        public void EndReport()
+        {
+            _extentReports.Flush();
+        } 
         
     }
 }

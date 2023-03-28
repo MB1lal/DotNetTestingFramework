@@ -1,4 +1,6 @@
-﻿using DotNetTestingFramework.Utils;
+﻿using AventStack.ExtentReports;
+using DotNetTestingFramework.Utils;
+using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
 
 namespace DotNetTestingFramework.Tests
@@ -40,6 +42,16 @@ namespace DotNetTestingFramework.Tests
         {
             if (testIsSelenium())
             {
+                var status = TestContext.CurrentContext.Result.Outcome.Status;
+                var stackTrace = "<pre>" + TestContext.CurrentContext.Result.StackTrace + "</pre>";
+                var errorMessage = TestContext.CurrentContext.Result.Message;
+                if (status == TestStatus.Failed)
+                {
+                    string screenShotPath = GetScreenshot.Capture(_driver, TestContext.CurrentContext.Test.Name + "_FailureScreenshot");
+                    extentReporting.LogStatusInReport(Status.Fail, stackTrace + errorMessage);
+                    extentReporting.LogStatusInReport(Status.Fail, "Snapshot below: " + extentReporting.AddScreenshot(screenShotPath));
+                }
+               
                 _driver.Quit();
             }
                
@@ -48,7 +60,7 @@ namespace DotNetTestingFramework.Tests
         [OneTimeTearDown]
         public void ExtentClose()
         {
-            extentReporting.Flush();
+            extentReporting.EndReport();
         }
     }
 
