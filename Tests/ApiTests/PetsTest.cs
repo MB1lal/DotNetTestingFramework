@@ -102,7 +102,7 @@ namespace DotNetTestingFramework.Tests.ApiTests
         [Test]
         public void VerifyPetsDetailsCanBeUpdated()
         {
-            extentReporting.AddTestCase("Verify pet can be deleted");
+            extentReporting.AddTestCase("Verify pet details can be updated");
             try
             {
                 extentReporting.LogStatusInReport(info, "Adding a new pet");

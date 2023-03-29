@@ -37,7 +37,7 @@ namespace DotNetTestingFramework.Tests.ApiTests
         [Test] 
         public void UserLogoutTest() 
         {
-            extentReporting.AddTestCase("Verify user is able to login");
+            extentReporting.AddTestCase("Verify user is able to logout");
             try
             {
                 extentReporting.LogStatusInReport(info, "Creating a new user");
