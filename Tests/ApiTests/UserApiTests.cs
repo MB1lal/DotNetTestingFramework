@@ -1,4 +1,5 @@
 ﻿using DotNetTestingFramework.Models;
+using DotNetTestingFramework.Tests.Core;
 using System.Text.Json;
 
 namespace DotNetTestingFramework.Tests.ApiTests

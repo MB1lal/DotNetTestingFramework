@@ -1,4 +1,5 @@
 ﻿using DotNetTestingFramework.Models;
+using DotNetTestingFramework.Tests.Core;
 using RestSharp;
 using System.Text.Json;
 

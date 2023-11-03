@@ -1,4 +1,5 @@
 using DotNetTestingFramework.Pages;
+using DotNetTestingFramework.Tests.Core;
 using DotNetTestingFramework.Utils;
 
 namespace DotNetTestingFramework.Tests.SeleniumTests
