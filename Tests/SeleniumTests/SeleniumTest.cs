@@ -37,6 +37,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
         }
 
         [Test]
+        [Ignore("Ignoring this test as it's pretty much deprecated")]
         [Category("IMDB"), Category("Selenium")]
         public void GettingCastFromIMDB()
         {

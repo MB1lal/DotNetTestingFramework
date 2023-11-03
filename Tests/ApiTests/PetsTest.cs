@@ -87,7 +87,7 @@ namespace DotNetTestingFramework.Tests.ApiTests
                 RestResponse restResponse = getDeletedPetUsingId(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
                 extentReporting.LogStatusInReport(info, "Pet Response = " + restResponse.Content);
                 
-                Assert.True(restResponse.Content.Contains("Pet not found"));
+                Assert.That(restResponse.Content, Does.Contain("Pet not found"));
 
                 extentReporting.LogStatusInReport(pass, "Pet has been succesfully deleted");
             } catch (Exception ex)
