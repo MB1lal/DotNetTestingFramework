@@ -1,6 +1,6 @@
 ﻿using DotNetTestingFramework.Connectors;
 using DotNetTestingFramework.Models;
-using DotNetTestingFramework.Tests.ApiTests;
+using NLog;
 using RestSharp;
 using System.Text.Json;
 
@@ -53,7 +53,9 @@ namespace DotNetTestingFramework.Tests.Core
             petModel.status = "Available";
             Category category = new Category();
             category.id = Faker.RandomNumber.Next(1, 5000);
+            #pragma warning disable CS8601 // Possible null reference assignment.
             category.name = Faker.Lorem.Words(1).ToString();
+            #pragma warning restore CS8601 // Possible null reference assignment.
             petModel.category = category;
             petModel.name = Faker.Lorem.Words(1).ToString();
             petModel.photoUrls = new List<string>() { "", "" };
@@ -85,6 +87,7 @@ namespace DotNetTestingFramework.Tests.Core
 
         protected void logoutUser()
         {
+            logger.Info("Logging out user");
             _userConnector.logoutUser();
         }
 

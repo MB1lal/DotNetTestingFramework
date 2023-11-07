@@ -7,8 +7,6 @@ namespace DotNetTestingFramework.Utils
 {
     internal class Browser
     {
-        private IWebDriver _driver;
-
         private IWebDriver _getChromeDriver(Boolean isHeadless, Boolean isPrivate)
         {
             ChromeOptions options = new ChromeOptions();

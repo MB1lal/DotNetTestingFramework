@@ -1,15 +1,14 @@
 ﻿using DotNetTestingFramework.Utils;
+using NLog;
 using OpenQA.Selenium;
-using System.Reflection;
 
 namespace DotNetTestingFramework.Tests.Core
 {
     public class Hooks
     {
-        private IWebDriver? _driver;
-        private Browser browser = new Browser();
-        //Add logger
-        
+        protected static Logger logger = LogManager.GetCurrentClassLogger();
+        [ThreadStatic] protected static IWebDriver driver;
+
         private Boolean isSeleniumTest()
         {
             // Check if any of the test methods have the "Selenium" category
@@ -17,32 +16,32 @@ namespace DotNetTestingFramework.Tests.Core
                ((CategoryAttribute)Attribute.GetCustomAttribute(GetType(), typeof(CategoryAttribute))).Name == "Selenium";
         }
 
-        private void setupBrowser(string browserName, Boolean isHeadless, Boolean isPrivate)
-        {
-            _driver = browser.GetWebDriver(browserName, isHeadless, isPrivate);
-            _driver.Manage().Window.Maximize();
-            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
-            Constants.SessionVariables.Driver = _driver;
-        }
 
         [SetUp]
         public void Setup()
         {
+            var config = new NLog.Config.XmlLoggingConfiguration("NLog.config");
+            LogManager.Configuration = config;
             if (isSeleniumTest())
             {
-                setupBrowser("Chrome", true, true);
+                Browser browser = new Browser();
+                logger.Info("Test detected as 'Selenium' based");
+                driver = browser.GetWebDriver("Chrome", true, true);
             }
         }
 
         [TearDown]
         public void TearDown()
         {
-            if(isSeleniumTest() && _driver != null)
+            if(isSeleniumTest())
             {
-                _driver.Quit();
-                _driver.Dispose();
+                logger.Info("Quitting browser");
+                driver.Quit();
+                driver.Dispose();
             }
         }
+
+       
     }
 
 

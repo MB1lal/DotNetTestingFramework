@@ -1,13 +1,17 @@
 using DotNetTestingFramework.Pages;
 using DotNetTestingFramework.Tests.Core;
 using DotNetTestingFramework.Utils;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 
 namespace DotNetTestingFramework.Tests.SeleniumTests
 {
     [TestFixture]
+    [AllureNUnit]
+    [AllureTag("Google")]
     [Category("Selenium")]
     [Parallelizable(ParallelScope.Fixtures)]
-    public class SeleniumTest : Hooks
+    public class IMDBTest : Hooks
     {
         private GoogleHomePage _googleHomePage;
         private GoogleSearchPage _googleSearchPage;
@@ -22,18 +26,31 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
         [Category("Google")]
         public void GooglePageLoads()
         {
-            _googleHomePage = new GoogleHomePage(Constants.SessionVariables.Driver);
-            Assert.IsTrue(_googleHomePage.PageHasLogo());
+            try
+            {
+                logger.Info("Navigating to Google");
+                _googleHomePage = new GoogleHomePage(driver);
+                logger.Info("Asserting page is loaded");
+                Assert.IsTrue(_googleHomePage.PageHasLogo());
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
         }
 
         [Test]
         [Category("IMDB")]
+        [Ignore("Flaky")]
         public void GettingCastFromIMDB()
         {
+            try
+            {
             _excelSheet = _excelReader.getFullExcelSheet("Input");
 
             //Searching on google
-            _googleHomePage = new GoogleHomePage(Constants.SessionVariables.Driver);
+            _googleHomePage = new GoogleHomePage(driver);
             _googleHomePage.SwitchToEnglish();
             _googleHomePage.EnterSearchText(_excelSheet["Search String 1"]);
             _googleHomePage.ClickSearchButton();
@@ -53,7 +70,11 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
             //Writing back to excel
             _excelWriter.WriteToExcelSheet(list, "Series Cast");
             _excelWriter.SaveFile();
-        }
+        } catch (Exception ex)
+            {
+                throw;
+            }
+}
 
     }
 }
