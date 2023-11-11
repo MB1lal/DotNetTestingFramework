@@ -9,11 +9,6 @@ namespace DotNetTestingFramework.Tests.Core
 {
     internal class BaseSteps : Hooks
     {
-        protected Status info = AventStack.ExtentReports.Status.Info;
-        protected Status error = AventStack.ExtentReports.Status.Error;
-        protected Status pass = AventStack.ExtentReports.Status.Pass;
-        protected Status warning = AventStack.ExtentReports.Status.Warning;
-        protected Status fail = AventStack.ExtentReports.Status.Fail;
 
         private UserConnector _userConnector = new UserConnector();
         private PetStoreConnector _petStoreConnector = new PetStoreConnector();

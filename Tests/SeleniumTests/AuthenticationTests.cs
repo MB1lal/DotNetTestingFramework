@@ -15,7 +15,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
         private HerokuMain? herokuMain;
         private AuthenticationPage? authenticationPage;
 
-        [Test]
+
         [TestCase("tomsmith", "SuperSecretPassword!", true, TestName = "Verify successful login")]
         [TestCase("admin", "admin", false, TestName = "Verify unsuccessful login")]
         public void UserAuthenticationTest(string username, string password, bool shouldSucceed)

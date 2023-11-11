@@ -11,7 +11,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
     [AllureTag("Google")]
     [Category("Selenium")]
     [Parallelizable(ParallelScope.Fixtures)]
-    public class IMDBTest : Hooks
+    internal class IMDBTest : BaseSteps
     {
         private GoogleHomePage _googleHomePage;
         private GoogleSearchPage _googleSearchPage;
@@ -46,8 +46,6 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
         [Ignore("Flaky")]
         public void GettingCastFromIMDB()
         {
-            try
-            {
             _excelSheet = _excelReader.getFullExcelSheet("Input");
 
             //Searching on google
@@ -59,29 +57,19 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
                 //Clicking on serach results
                 _googleSearchPage = new GoogleSearchPage();
                 Assert.IsTrue(_googleSearchPage.SearchPageIsLoaded());
-                extentReporting.LogStatusInReport(info, "Search results are loaded");
-                extentReporting.LogStatusInReport(info, "Opening searhc results using partial link text = " + _excelSheet["Search String 2"]);
                 _googleSearchPage.OpenLinkInNewTabUsingPartialText(_excelSheet["Search String 2"]);
 
                 //IMDB actions
                 _iMDBItemPage = new IMDBItemPage();
                 Assert.IsTrue(_iMDBItemPage.IsPageLoaded());
-                extentReporting.LogStatusInReport(info, "IMDB page is loaded");
-                extentReporting.LogStatusInReport(info, "Scrolling down to 'All cast & crew'");
                 _iMDBItemPage.ScrollDownToElement("All cast & crew");
-                extentReporting.LogStatusInReport(info, "Clicking on 'All cast & crew'");
                 _iMDBItemPage.ClickScrolledElement("All cast & crew");
-                extentReporting.LogStatusInReport(info, "Fetching cast table data");
                 List<List<string>> list = _iMDBItemPage.GetCastTableData();
 
             //Writing back to excel
             _excelWriter.WriteToExcelSheet(list, "Series Cast");
             _excelWriter.SaveFile();
-        } catch (Exception ex)
-            {
-                throw;
-            }
-}
+       }
 
     }
 }
