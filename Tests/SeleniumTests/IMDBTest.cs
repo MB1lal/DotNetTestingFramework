@@ -22,8 +22,9 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
         private Dictionary<string, string> _excelSheet;
 
 
+
         [Test]
-        [Category("Google")]
+        [Category("Google"), Category("Selenium")]
         public void GooglePageLoads()
         {
             try
@@ -55,17 +56,23 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
             _googleHomePage.EnterSearchText(_excelSheet["Search String 1"]);
             _googleHomePage.ClickSearchButton();
 
-            //Clicking on serach results
-            _googleSearchPage = new GoogleSearchPage();
-            Assert.IsTrue(_googleSearchPage.SearchPageIsLoaded());
-            _googleSearchPage.OpenLinkInNewTabUsingPartialText(_excelSheet["Search String 2"]);
+                //Clicking on serach results
+                _googleSearchPage = new GoogleSearchPage();
+                Assert.IsTrue(_googleSearchPage.SearchPageIsLoaded());
+                extentReporting.LogStatusInReport(info, "Search results are loaded");
+                extentReporting.LogStatusInReport(info, "Opening searhc results using partial link text = " + _excelSheet["Search String 2"]);
+                _googleSearchPage.OpenLinkInNewTabUsingPartialText(_excelSheet["Search String 2"]);
 
-            //IMDB actions
-            _iMDBItemPage = new IMDBItemPage();
-            Assert.IsTrue(_iMDBItemPage.IsPageLoaded());
-            _iMDBItemPage.ScrollDownToElement("All cast & crew");
-            _iMDBItemPage.ClickScrolledElement("All cast & crew");
-            List<List<string>> list = _iMDBItemPage.GetCastTableData();
+                //IMDB actions
+                _iMDBItemPage = new IMDBItemPage();
+                Assert.IsTrue(_iMDBItemPage.IsPageLoaded());
+                extentReporting.LogStatusInReport(info, "IMDB page is loaded");
+                extentReporting.LogStatusInReport(info, "Scrolling down to 'All cast & crew'");
+                _iMDBItemPage.ScrollDownToElement("All cast & crew");
+                extentReporting.LogStatusInReport(info, "Clicking on 'All cast & crew'");
+                _iMDBItemPage.ClickScrolledElement("All cast & crew");
+                extentReporting.LogStatusInReport(info, "Fetching cast table data");
+                List<List<string>> list = _iMDBItemPage.GetCastTableData();
 
             //Writing back to excel
             _excelWriter.WriteToExcelSheet(list, "Series Cast");

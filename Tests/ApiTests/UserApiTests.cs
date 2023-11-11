@@ -10,6 +10,7 @@ namespace DotNetTestingFramework.Tests.ApiTests
     [AllureNUnit]
     [AllureTag("@User")]
     [Category("UserOperations")]
+    [Category("api")]
     [Parallelizable(ParallelScope.Fixtures)]
     internal class UserApiTests : BaseSteps
     {

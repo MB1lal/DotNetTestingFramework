@@ -11,6 +11,7 @@ namespace DotNetTestingFramework.Tests.ApiTests
     [AllureNUnit]
     [AllureTag("@PetStore")]
     [Category("PetStore")]
+    [Category("api")]
     [Parallelizable(ParallelScope.Fixtures)]
     internal class PetStoreApiTests : BaseSteps
     {
