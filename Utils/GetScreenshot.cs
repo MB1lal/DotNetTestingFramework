@@ -1,10 +1,10 @@
-﻿using System.Drawing.Imaging;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace DotNetTestingFramework.Utils
 {
     public class GetScreenshot
     {
+        [Obsolete]
         public static string Capture(IWebDriver driver, string screenShotName)
         {
             ITakesScreenshot ts = (ITakesScreenshot)driver;

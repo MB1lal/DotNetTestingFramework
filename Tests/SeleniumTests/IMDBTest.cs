@@ -1,11 +1,17 @@
 using DotNetTestingFramework.Pages;
+using DotNetTestingFramework.Tests.Core;
 using DotNetTestingFramework.Utils;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 
 namespace DotNetTestingFramework.Tests.SeleniumTests
 {
     [TestFixture]
+    [AllureNUnit]
+    [AllureTag("Google")]
+    [Category("Selenium")]
     [Parallelizable(ParallelScope.Fixtures)]
-    internal class SeleniumTest : BaseSteps
+    public class IMDBTest : Hooks
     {
         private GoogleHomePage _googleHomePage;
         private GoogleSearchPage _googleSearchPage;
@@ -21,40 +27,34 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
         [Category("Google"), Category("Selenium")]
         public void GooglePageLoads()
         {
-            extentReporting.AddTestCase("Verfiy google home page loads successfully");
             try
             {
-                _googleHomePage = new GoogleHomePage(Constants.SessionVariables.Driver);
-                extentReporting.LogStatusInReport(info, "Google homepage is loading");
+                logger.Info("Navigating to Google");
+                _googleHomePage = new GoogleHomePage(driver);
+                logger.Info("Asserting page is loaded");
                 Assert.IsTrue(_googleHomePage.PageHasLogo());
-                extentReporting.LogStatusInReport(pass, "Google home page loaded successfully");
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
-                extentReporting.LogStatusInReport(fail, ex.ToString());
                 throw;
             }
-           
+
         }
 
         [Test]
-        [Ignore("Ignoring this test as it's pretty much deprecated")]
-        [Category("IMDB"), Category("Selenium")]
+        [Category("IMDB")]
+        [Ignore("Flaky")]
         public void GettingCastFromIMDB()
         {
-            extentReporting.AddTestCase("Getting cast from IMDB");
-           try
+            try
             {
-                _excelSheet = _excelReader.getFullExcelSheet("Input");
-                extentReporting.LogStatusInReport(info, "Fetched excel sheet data");
+            _excelSheet = _excelReader.getFullExcelSheet("Input");
 
-                //Searching on google
-                extentReporting.LogStatusInReport(info, "Navigating to google homepage");
-                _googleHomePage = new GoogleHomePage(Constants.SessionVariables.Driver);
-                _googleHomePage.SwitchToEnglish();
-                extentReporting.LogStatusInReport(info, "Searching for " + _excelSheet["Search String 1"]);
-                _googleHomePage.EnterSearchText(_excelSheet["Search String 1"]);
-                extentReporting.LogStatusInReport(info, "Clicking on search button");
-                _googleHomePage.ClickSearchButton();
+            //Searching on google
+            _googleHomePage = new GoogleHomePage(driver);
+            _googleHomePage.SwitchToEnglish();
+            _googleHomePage.EnterSearchText(_excelSheet["Search String 1"]);
+            _googleHomePage.ClickSearchButton();
 
                 //Clicking on serach results
                 _googleSearchPage = new GoogleSearchPage();
@@ -74,18 +74,14 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
                 extentReporting.LogStatusInReport(info, "Fetching cast table data");
                 List<List<string>> list = _iMDBItemPage.GetCastTableData();
 
-                //Writing back to excel
-                extentReporting.LogStatusInReport(info, "Writing to excel sheet under workbook 'Series Cast'");
-                _excelWriter.WriteToExcelSheet(list, "Series Cast");
-                extentReporting.LogStatusInReport(info, "Saving excel file");
-                _excelWriter.SaveFile();
-                extentReporting.LogStatusInReport(pass, "Excel file saved");
-            } catch (Exception ex)
+            //Writing back to excel
+            _excelWriter.WriteToExcelSheet(list, "Series Cast");
+            _excelWriter.SaveFile();
+        } catch (Exception ex)
             {
-                extentReporting.LogStatusInReport(fail, ex.ToString());
                 throw;
             }
-        }
+}
 
     }
 }

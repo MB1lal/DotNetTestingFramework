@@ -1,10 +1,11 @@
 ﻿using AventStack.ExtentReports;
 using DotNetTestingFramework.Connectors;
 using DotNetTestingFramework.Models;
+using NLog;
 using RestSharp;
 using System.Text.Json;
 
-namespace DotNetTestingFramework.Tests.ApiTests
+namespace DotNetTestingFramework.Tests.Core
 {
     internal class BaseSteps : Hooks
     {
@@ -39,13 +40,13 @@ namespace DotNetTestingFramework.Tests.ApiTests
         private PetStoreModel createNewStoreData()
         {
             PetStoreModel petStore = new PetStoreModel();
-            petStore.id = Faker.RandomNumber.Next(1,5000);
-            petStore.petId = Faker.RandomNumber.Next(1,5000);
+            petStore.id = Faker.RandomNumber.Next(1, 5000);
+            petStore.petId = Faker.RandomNumber.Next(1, 5000);
             petStore.quantity = Faker.RandomNumber.Next(1, 3);
             petStore.shipDate = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
             petStore.status = "placed";
             petStore.complete = true;
-           
+
             Constants.SessionVariables.PetStore = petStore;
 
             return petStore;
@@ -59,12 +60,14 @@ namespace DotNetTestingFramework.Tests.ApiTests
             petModel.status = "Available";
             Category category = new Category();
             category.id = Faker.RandomNumber.Next(1, 5000);
+            #pragma warning disable CS8601 // Possible null reference assignment.
             category.name = Faker.Lorem.Words(1).ToString();
+            #pragma warning restore CS8601 // Possible null reference assignment.
             petModel.category = category;
             petModel.name = Faker.Lorem.Words(1).ToString();
-            petModel.photoUrls = new List<string>() { "", ""};
+            petModel.photoUrls = new List<string>() { "", "" };
             Tag tag = new Tag();
-            tag.id  = Faker.RandomNumber.Next(1, 400);
+            tag.id = Faker.RandomNumber.Next(1, 400);
             tag.name = Faker.Lorem.Words(1).ToString();
             petModel.tags = new List<Tag>() { tag };
 
@@ -91,6 +94,7 @@ namespace DotNetTestingFramework.Tests.ApiTests
 
         protected void logoutUser()
         {
+            logger.Info("Logging out user");
             _userConnector.logoutUser();
         }
 
@@ -105,7 +109,7 @@ namespace DotNetTestingFramework.Tests.ApiTests
         {
             return _petStoreConnector.FetchOrder(orderId);
         }
-        protected RestResponse  fetchInvalidPetStoreOrder(int orderId)
+        protected RestResponse fetchInvalidPetStoreOrder(int orderId)
         {
             return _petStoreConnector.FetchDeletedOrder(orderId);
         }
@@ -152,5 +156,7 @@ namespace DotNetTestingFramework.Tests.ApiTests
         {
             _petConnector.UpdateThePetData(attribute, value);
         }
+
+
     }
 }

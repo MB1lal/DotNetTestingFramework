@@ -1,131 +1,86 @@
 ﻿using DotNetTestingFramework.Models;
+using DotNetTestingFramework.Tests.Core;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 using RestSharp;
 using System.Text.Json;
 
 namespace DotNetTestingFramework.Tests.ApiTests
 {
     [TestFixture]
+    [AllureNUnit]
+    [AllureTag("@Pets")]
     [Category("PetsTest")]
     [Category("api")]
     [Parallelizable(ParallelScope.Fixtures)]
     internal class PetsTest : BaseSteps
     {
 
-        [Test]
-        public void VerifyPetCanBeAddedThroughId()
+        [TestCase(null, TestName = "Verify a pet can be added")]
+        public void VerifyPetCanBeAddedThroughId(object? ignored)
         {
-            extentReporting.AddTestCase("Verify pet can be added through Id");
-            try
-            {
-                extentReporting.LogStatusInReport(info, "Adding a new pet");
-                addNewPetUsingId();
-                extentReporting.LogStatusInReport(info, "Fetching a pet using Id");
-                RestResponse restResponse = getPetUsingId(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
-                extentReporting.LogStatusInReport(info, "Pet Response = " + restResponse.Content);
-                PetModel actualPetModel = JsonSerializer.Deserialize<PetModel>(restResponse.Content);
-
-                Assert.That(actualPetModel.name.Equals(Constants.SessionVariables.PetModel.name));
-                Assert.That(actualPetModel.category.name.Equals(Constants.SessionVariables.PetModel.category.name));
-
-                extentReporting.LogStatusInReport(pass, "The correct pet has been found against id");
-
-            }
-            catch (Exception ex)
-            {
-                extentReporting.LogStatusInReport(fail, ex.ToString());
-                throw;
-            }
-            
+            logger.Info("Creating a pet");
+            addNewPetUsingId();
+            logger.Info("Fetching newly created pet");
+            RestResponse restResponse = getPetUsingId(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
+            PetModel actualPetModel = JsonSerializer.Deserialize<PetModel>(restResponse.Content);
+            logger.Info("Verifying pet is correctly created");
+            Assert.That(actualPetModel.name.Equals(Constants.SessionVariables.PetModel.name));
+            Assert.That(actualPetModel.category.name.Equals(Constants.SessionVariables.PetModel.category.name));
         }
 
-        [Test]
-        public void VerifyNewlyAddedPetThroughStatus()
+        [TestCase(null, TestName = "Verify a new pet can be added with 'sold' status")]
+        public void VerifyNewlyAddedPetThroughStatus(object? ignored)
         {
-            extentReporting.AddTestCase("Verify newly added pet through status");
-            try
-            {
-                extentReporting.LogStatusInReport(info, "Adding a new pet with status 'sold'");
-                addNewPetWithStatus("sold");
-                extentReporting.LogStatusInReport(info, "Fetching all pets with 'sold' status");
-                RestResponse restResponse = getPetUsingStatus("sold");
-                extentReporting.LogStatusInReport(info, "Pet Response = " + restResponse.Content);
-                Boolean isMatchFound = false;
-                string actualStatus = "";
+            logger.Info("Creating a pet with status 'sold'");
+            addNewPetWithStatus("sold");
+            logger.Info("Fetching all pets with status 'sold'");
+            RestResponse restResponse = getPetUsingStatus("sold");
+            Boolean isMatchFound = false;
+            string actualStatus = "";
 
-                PetModel[] actualPetModel = JsonSerializer.Deserialize<PetModel[]>(restResponse.Content);
-                foreach (var pet in actualPetModel)
+            PetModel[] actualPetModel = JsonSerializer.Deserialize<PetModel[]>(restResponse.Content);
+            foreach (var pet in actualPetModel)
+            {
+                if (pet.id == Constants.SessionVariables.PetModel.id)
                 {
-                    if (pet.id == Constants.SessionVariables.PetModel.id)
-                    {
-                        isMatchFound = true;
-                        actualStatus = pet.status;
-                    }
+                    isMatchFound = true;
+                    actualStatus = pet.status;
                 }
-
-                Assert.True(isMatchFound);
-                Assert.IsTrue(actualStatus.Equals(Constants.SessionVariables.PetModel.status));
-
-                extentReporting.LogStatusInReport(pass, "The correct pet has been found with status");
-            } catch (Exception ex)
-            {
-                extentReporting.LogStatusInReport(fail, ex.ToString());
-                throw;
             }
-            
+            logger.Info("Verifying newly created pet has correct status");
+            Assert.True(isMatchFound);
+            Assert.IsTrue(actualStatus.Equals(Constants.SessionVariables.PetModel.status));
         }
-
-        [Test]
-        public void VerifyPetCanBeDeleted()
+        
+        [TestCase(null, TestName = "Verify pet can be deleted")]
+        public void VerifyPetCanBeDeleted(object? ignored)
         {
-            extentReporting.AddTestCase("Verify pet can be deleted");
-            try
-            {
-                extentReporting.LogStatusInReport(info, "Adding a new pet");
-                addNewPetUsingId();
-                extentReporting.LogStatusInReport(info, "Deleting a pet using id");
-                deletePetData(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
-                RestResponse restResponse = getDeletedPetUsingId(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
-                extentReporting.LogStatusInReport(info, "Pet Response = " + restResponse.Content);
-                
-                Assert.That(restResponse.Content, Does.Contain("Pet not found"));
-
-                extentReporting.LogStatusInReport(pass, "Pet has been succesfully deleted");
-            } catch (Exception ex)
-            {
-                extentReporting.LogStatusInReport(fail, ex.ToString());
-                throw;
-            }
-
+            logger.Info("Creating a pet");
+            addNewPetUsingId();
+            logger.Info("Deleting newly created pet");
+            deletePetData(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
+            RestResponse restResponse = getDeletedPetUsingId(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
+            logger.Debug(restResponse.Content);
+            logger.Info("Verifying pet is deleted");
+            Assert.True(restResponse.Content.Contains("Pet not found"));
 
         }
 
-        [Test]
-        public void VerifyPetsDetailsCanBeUpdated()
+        [TestCase(null, TestName = "Verify pet details can be updated")]
+        public void VerifyPetsDetailsCanBeUpdated(object? ignored)
         {
-            extentReporting.AddTestCase("Verify pet details can be updated");
-            try
-            {
-                extentReporting.LogStatusInReport(info, "Adding a new pet");
-                addNewPetUsingId();
-                extentReporting.LogStatusInReport(info, "Updating pet's name to Unicorn");
-                updateThePet("name", "Unicorn");
-                extentReporting.LogStatusInReport(info, "Updating pet's status to 'sold'");
-                updateThePet("status", "sold");
-
-                RestResponse restResponse = getPetUsingId(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
-                extentReporting.LogStatusInReport(info, "Pet Response = " + restResponse.Content);
-                PetModel actualPetModel = JsonSerializer.Deserialize<PetModel>(restResponse.Content);
-
-                Assert.That(actualPetModel.name, Is.EqualTo("Unicorn"));
-                Assert.That(actualPetModel.status, Is.EqualTo("sold"));
-
-                extentReporting.LogStatusInReport(pass, "Pet details have been succesfully updated");
-            } catch (Exception ex)
-            {
-                extentReporting.LogStatusInReport(fail, ex.ToString());
-                throw;
-            }
-            
+            logger.Info("Creating a pet");
+            addNewPetUsingId();
+            logger.Info("Updating pet details");
+            updateThePet("name", "Unicorn");
+            updateThePet("status", "sold");
+            logger.Info("Fetching newly created pet");
+            RestResponse restResponse = getPetUsingId(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
+            PetModel actualPetModel = JsonSerializer.Deserialize<PetModel>(restResponse.Content);
+            logger.Info("Verifying pet details are updated");
+            Assert.That(actualPetModel.name, Is.EqualTo("Unicorn"));
+            Assert.That(actualPetModel.status, Is.EqualTo("sold"));
         }
 
     }
