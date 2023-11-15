@@ -13,14 +13,12 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
     [Parallelizable(ParallelScope.Fixtures)]
     internal class DropdownTests : BaseSteps
     {
-        private HerokuMain herokuMain;
         private DropdownPage dropdownPage;
 
         [TestCase("Option 1", TestName = "Verify dropdown option is correctly selected")]
         public void VerifyDropdownSelection(string option)
         {
-            herokuMain = new HerokuMain();
-            herokuMain.NavigateToPage("Dropdown");
+            NavigateToPage("Dropdown");
             dropdownPage = new DropdownPage(driver);
 
             logger.Info("Selecting dropdown option as 'Option 2'");

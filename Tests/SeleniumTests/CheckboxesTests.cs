@@ -12,14 +12,12 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
     [Parallelizable(ParallelScope.Fixtures)]
     internal class CheckboxesTests : BaseSteps
     {
-        private HerokuMain herokuMain;
         private CheckboxPage checkboxPage;
 
         [TestCase(null, TestName = "Verify checkboxes are checked")]
         public void VerifyCheckboxesChecking(object? ignored)
         {
-            herokuMain = new HerokuMain();
-            herokuMain.NavigateToPage("Checkboxes");
+            NavigateToPage("Checkboxes");
             checkboxPage = new CheckboxPage(driver);
 
 
@@ -33,8 +31,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
         [TestCase(null, TestName = "Verify checkboxes are unchecked")]
         public void VerifyCheckboxesUnchecking(object? ignored)
         {
-            herokuMain = new HerokuMain();
-            herokuMain.NavigateToPage("Checkboxes");
+            NavigateToPage("Checkboxes");
             checkboxPage = new CheckboxPage(driver);
 
 

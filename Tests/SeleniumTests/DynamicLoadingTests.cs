@@ -7,24 +7,22 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
 {
     [TestFixture]
     [AllureNUnit]
-    [AllureTag("@Heroku")]
+    [AllureTag("@Heroku", "@DynamicLoading")]
     [Category("Selenium")]
     internal class DynamicLoadingTests : BaseSteps
     {
-        private HerokuMain herokuMain;
         private DynamicLoadingPage dynamicLoadingPage;
 
         [TestCase(1, TestName = "Verify loading of hidden elements")]
         [TestCase(2, TestName = "Verify loading of newly created elements")]
         public void HiddenElementsTest(int exampleIndex)
         {
-            herokuMain = new HerokuMain();
             dynamicLoadingPage = new DynamicLoadingPage(driver);
             string elementText;
 
-            herokuMain.NavigateToPage("Dynamic Loading");
+            NavigateToPage("Dynamic Loading");
 
-            logger.Info("Navigating to Example " + exampleIndex + " Page");
+            logger.Info($"Navigating to Example {exampleIndex} Page");
             dynamicLoadingPage.ClickXExample(exampleIndex);
             switch(exampleIndex)
             {

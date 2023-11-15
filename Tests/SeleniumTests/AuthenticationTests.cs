@@ -12,7 +12,6 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
     [Parallelizable(ParallelScope.Fixtures)]
     internal class AuthenticationTests : BaseSteps
     {
-        private HerokuMain? herokuMain;
         private AuthenticationPage? authenticationPage;
 
 
@@ -20,8 +19,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
         [TestCase("admin", "admin", false, TestName = "Verify unsuccessful login")]
         public void UserAuthenticationTest(string username, string password, bool shouldSucceed)
     {
-            herokuMain = new HerokuMain();
-            herokuMain.NavigateToPage("Form Authentication");
+            NavigateToPage("Form Authentication");
             authenticationPage = new AuthenticationPage(driver);
 
             // Log steps

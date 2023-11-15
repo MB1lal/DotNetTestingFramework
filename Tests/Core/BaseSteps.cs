@@ -1,6 +1,8 @@
 ﻿using AventStack.ExtentReports;
 using DotNetTestingFramework.Connectors;
 using DotNetTestingFramework.Models;
+using DotNetTestingFramework.Pages;
+using DotNetTestingFramework.Tests.SeleniumTests;
 using NLog;
 using RestSharp;
 using System.Text.Json;
@@ -152,6 +154,12 @@ namespace DotNetTestingFramework.Tests.Core
             _petConnector.UpdateThePetData(attribute, value);
         }
 
+        protected void NavigateToPage(string pageName)
+        {
+            HerokuHomePage herokuHomePage = new HerokuHomePage(driver);
+            logger.Info($"Navigating to {pageName}");
+            herokuHomePage.NavigateToPage(pageName);
+        }
 
     }
 }
