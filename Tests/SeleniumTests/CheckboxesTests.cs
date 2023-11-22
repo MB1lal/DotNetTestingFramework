@@ -9,7 +9,6 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
     [AllureNUnit]
     [AllureTag("@Heroku")]
     [Category("Selenium")]
-    [Parallelizable(ParallelScope.Fixtures)]
     internal class CheckboxesTests : BaseSteps
     {
         private CheckboxPage checkboxPage;

@@ -8,9 +8,8 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
 {
     [TestFixture]
     [AllureNUnit]
-    [AllureTag("Google")]
+    [AllureTag("@Google", "@imdb")]
     [Category("Selenium")]
-    [Parallelizable(ParallelScope.Fixtures)]
     internal class IMDBTest : BaseSteps
     {
         private GoogleHomePage _googleHomePage;

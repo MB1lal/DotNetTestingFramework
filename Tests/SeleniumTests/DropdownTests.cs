@@ -8,9 +8,8 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
 {
     [TestFixture]
     [AllureNUnit]
-    [AllureTag("@Heroku")]
+    [AllureTag("@Heroku", "@dropdown")]
     [Category("Selenium")]
-    [Parallelizable(ParallelScope.Fixtures)]
     internal class DropdownTests : BaseSteps
     {
         private DropdownPage dropdownPage;
