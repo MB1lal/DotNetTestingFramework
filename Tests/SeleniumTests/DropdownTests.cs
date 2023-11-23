@@ -24,7 +24,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
             dropdownPage.SetDropdownOption(option);
 
             logger.Info("Verifying selected option");
-            Assert.AreEqual(dropdownPage.GetSelectedOption(), option);
+            Assert.That(option, Is.EqualTo(dropdownPage.GetSelectedOption()));
         }
     }
 }

@@ -21,8 +21,8 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
             fileUploadPage.SelectFileToUpload();
             fileUploadPage.UploadFile();
             logger.Info("Verifying file is correctly uploaded");
-            Assert.AreEqual("File Uploaded!", fileUploadPage.GetHeaderText(), "File not uploaded");
-            Assert.AreEqual("UploadFile.txt", fileUploadPage.GetUploadedFileName(), "Correct file is not uploaded");
+            Assert.That(fileUploadPage.GetHeaderText, Is.EqualTo("File Uploaded!"), "File not uploaded");
+            Assert.That(fileUploadPage.GetUploadedFileName(), Is.EqualTo("UploadFile.txt"), "Correct file is not uploaded");
         }
     }
 }

@@ -48,7 +48,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
             }
 
             logger.Info("Verifying text");
-            Assert.AreEqual(elementText, "Hello World!");
+            Assert.That(elementText, Is.EqualTo("Hello World!"));
 
         }
     }

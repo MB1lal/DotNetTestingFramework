@@ -34,7 +34,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
             foreach (var (frameName, expectedText) in frameVerifications)
             {
                 logger.Info($"Verifying text in {frameName} iFrames");
-                Assert.AreEqual(expectedText, nestedFramesPage.GetFrameText(frameName));
+                Assert.That(nestedFramesPage.GetFrameText(frameName), Is.EqualTo(expectedText));
             }
 
         }
@@ -56,7 +56,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
             iFramePage.EnterTextIntoContent("NUnit Automation Framework");
 
             logger.Info("Verifying text is entered correctly");
-            Assert.AreEqual("NUnit Automation Framework", iFramePage.GetContentText(), $"The text in content box is {iFramePage.GetContentText()}");
+            Assert.That(iFramePage.GetContentText(), Is.EqualTo("NUnit Automation Framework"), $"The text in content box is {iFramePage.GetContentText()}");
 
         }
     }
