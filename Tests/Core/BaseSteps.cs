@@ -1,6 +1,8 @@
 ﻿using AventStack.ExtentReports;
 using DotNetTestingFramework.Connectors;
 using DotNetTestingFramework.Models;
+using DotNetTestingFramework.Pages;
+using DotNetTestingFramework.Tests.SeleniumTests;
 using NLog;
 using RestSharp;
 using System.Text.Json;
@@ -9,11 +11,6 @@ namespace DotNetTestingFramework.Tests.Core
 {
     internal class BaseSteps : Hooks
     {
-        protected Status info = AventStack.ExtentReports.Status.Info;
-        protected Status error = AventStack.ExtentReports.Status.Error;
-        protected Status pass = AventStack.ExtentReports.Status.Pass;
-        protected Status warning = AventStack.ExtentReports.Status.Warning;
-        protected Status fail = AventStack.ExtentReports.Status.Fail;
 
         private UserConnector _userConnector = new UserConnector();
         private PetStoreConnector _petStoreConnector = new PetStoreConnector();
@@ -157,6 +154,12 @@ namespace DotNetTestingFramework.Tests.Core
             _petConnector.UpdateThePetData(attribute, value);
         }
 
+        protected void NavigateToPage(string pageName)
+        {
+            HerokuHomePage herokuHomePage = new HerokuHomePage(driver);
+            logger.Info($"Navigating to {pageName}");
+            herokuHomePage.NavigateToPage(pageName);
+        }
 
     }
 }

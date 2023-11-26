@@ -1,39 +1,57 @@
-# DotNetTestingFramework
+# DotNet Testing Framework
 
-An NUnit testing framwork written in C#.
+This project is a unit testing framework that uses NUnit, RestSharp and Selenium to verify the functionality of various APIs and web browser interactions.
 
 ## Table of Contents
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Running Tests Locally](#running-tests-locally)
-- [GitHub Actions Integration](#github-actions-integration)
-- [Dependencies](#dependencies)
 
-## Getting Started
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
+  - [1. Clone the Repository](#1-clone-the-repository)
+  - [2. Set Up Dependencies](#2-set-up-dependencies)
+  - [3. Configuration](#3-configuration)
+- [Running Tests](#running-tests)
+  - [Selenium Tests](#selenium-tests)
+  - [API Tests](#api-tests)
+- [Test Reports](#test-reports)
 
-### Prerequisites
+## Introduction
+This is a testing project which uses NUnit for testing both UI and API tests.
 
-Make sure you have nuget and dotnet framework 6.0 or greater installed on your local development machine.
+## Prerequisites
 
-### Installation
+- [.NET SDK](https://dotnet.microsoft.com/download)
+- [WebDriver](https://www.selenium.dev/documentation/en/webdriver/driver_requirements/#quick-reference)
 
-1. Clone this repository to your local machine:
+## Setup
 
-   ```git clone https://github.com/mb1lal/DotNetTestingFramework.git```
+Nuget restore the packages for setting the project up.
 
-## Running Tests Locally
-To run NUnit tests locally, use the following command:
-    ``` ```
+### 1. Clone the Repository
 
-## GitHub Actions Integration
-This project includes a GitHub Actions workflow to automate the execution of Cypress tests. The workflow is defined in the .github/workflows/main.yml file.
+	```git clone https://github.com/mb1lal/DotNetTestingFramework.git```
 
-When you push changes to your repository, GitHub Actions will automatically run the Cypress tests as specified in the workflow file.
+### 2. Set Up Dependencies
+Navigate to the project root and run:
+	
+	```dotnet restore```
 
-## Dependencies
-- 
-- 
-- 
-- 
-- 
+### 3. Configuration
+ToDo
+
+## Running Tests
+	
+	```dotnet test```
+
+### 1. Selenium Tests
+
+	```dotnet test --filter Category=Selenium```
+
+### 2. API Tests
+
+	```dotnet test --filter Category=Api```
+
+## Test Reports
+Test reports are generated using Allure [ToDo]
+
+

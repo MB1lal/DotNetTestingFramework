@@ -17,7 +17,7 @@
     <PackageReference Include="ExtentReports" Version="5.0.1" />
     <PackageReference Include="Faker.Net" Version="2.0.154" />
     <PackageReference Include="IronXL.Excel" Version="2023.11.12" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="NLog" Version="5.2.5" />
     <PackageReference Include="NUnit" Version="3.14.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
@@ -67,10 +67,14 @@
     <None Update="Resources\testData.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\UploadFile.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Output\" />
+    <Folder Include="Output\Reports\" />
   </ItemGroup>
 
 </Project>
