@@ -4,14 +4,8 @@ namespace DotNetTestingFramework.Connectors
 {
     internal class UserConnector
     {
-        private string _baseURI = "https://petstore.swagger.io/v2";
-
-
-        private RestClient baseRequest()
-        {
-           return new RestClient(_baseURI);
-           
-        }
+        private RestClient baseRequest() => new RestClient(Constants.SessionVariables.Config.urls.petBaseURI);
+        
 
         public void CreateNewUser(string user)
         {

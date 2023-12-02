@@ -1,9 +1,6 @@
-﻿using AventStack.ExtentReports;
-using DotNetTestingFramework.Connectors;
+﻿using DotNetTestingFramework.Connectors;
 using DotNetTestingFramework.Models;
 using DotNetTestingFramework.Pages;
-using DotNetTestingFramework.Tests.SeleniumTests;
-using NLog;
 using RestSharp;
 using System.Text.Json;
 

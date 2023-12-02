@@ -10,8 +10,7 @@ namespace DotNetTestingFramework.Tests.ApiTests
     [AllureNUnit]
     [AllureTag("@User")]
     [Category("UserOperations")]
-    [Category("api")]
-    [Parallelizable(ParallelScope.Fixtures)]
+    [Category("API")]
     internal class UserApiTests : BaseSteps
     {
         [TestCase(null, TestName = "Verify user is able to login")]

@@ -4,13 +4,7 @@ namespace DotNetTestingFramework.Connectors
 {
     internal class PetStoreConnector
     {
-        private string _baseURI = "https://petstore.swagger.io/v2/store";
-
-
-        private RestClient baseRequest()
-        {
-            return new RestClient(_baseURI);
-        }
+        private RestClient baseRequest() => new RestClient($"{Constants.SessionVariables.Config.urls.petBaseURI}/store");
 
         public void PlaceAnOrder(string body)
         {

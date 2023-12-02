@@ -1,6 +1,8 @@
 ﻿using DotNetTestingFramework.Utils;
 using NLog;
 using OpenQA.Selenium;
+using Configuration = DotNetTestingFramework.Utils.Configuration;
+
 
 namespace DotNetTestingFramework.Tests.Core
 {
@@ -8,12 +10,17 @@ namespace DotNetTestingFramework.Tests.Core
     {
         protected static Logger logger = LogManager.GetCurrentClassLogger();
         [ThreadStatic] protected static IWebDriver driver;
+        string absolutePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
 
-        private Boolean isSeleniumTest()
+       
+        private bool isSeleniumTest()
         {
-            // Check if any of the test methods have the "Selenium" category
-            return Attribute.IsDefined(GetType(), typeof(CategoryAttribute), false) &&
-               ((CategoryAttribute)Attribute.GetCustomAttribute(GetType(), typeof(CategoryAttribute))).Name == "Selenium";
+            try
+            {
+                return Attribute.IsDefined(GetType(), typeof(CategoryAttribute), false) &&
+              ((CategoryAttribute)Attribute.GetCustomAttribute(GetType(), typeof(CategoryAttribute))).Name == "Selenium";
+            } catch { return false; }
+           
         }
 
 
@@ -22,11 +29,16 @@ namespace DotNetTestingFramework.Tests.Core
         {
             var config = new NLog.Config.XmlLoggingConfiguration("NLog.config");
             LogManager.Configuration = config;
+
+            Constants.SessionVariables.Config = Configuration.LoadConfiguration(absolutePath);
+
             if (isSeleniumTest())
             {
                 Browser browser = new Browser();
                 logger.Info("Test detected as 'Selenium' based");
-                driver = browser.GetWebDriver("Chrome", true, true);
+                driver = browser.GetWebDriver(Constants.SessionVariables.Config.webBrowser.BrowserName,
+                                                 Constants.SessionVariables.Config.webBrowser.IsHeadless,
+                                                 Constants.SessionVariables.Config.webBrowser.IsPrivate);
             }
         }
 

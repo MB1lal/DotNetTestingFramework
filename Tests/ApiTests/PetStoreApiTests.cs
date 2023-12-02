@@ -11,8 +11,7 @@ namespace DotNetTestingFramework.Tests.ApiTests
     [AllureNUnit]
     [AllureTag("@PetStore")]
     [Category("PetStore")]
-    [Category("api")]
-    [Parallelizable(ParallelScope.Fixtures)]
+    [Category("API")]
     internal class PetStoreApiTests : BaseSteps
     {
         [TestCase(null, TestName = "Verify pet order can be placed")]
