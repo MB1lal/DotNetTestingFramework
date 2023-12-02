@@ -5,7 +5,7 @@ using NUnit.Allure.Core;
 using RestSharp;
 using System.Text.Json;
 
-namespace DotNetTestingFramework.Tests.ApiTests
+namespace DotNetTestingFramework.Tests.API_Tests
 {
     [TestFixture]
     [AllureNUnit]

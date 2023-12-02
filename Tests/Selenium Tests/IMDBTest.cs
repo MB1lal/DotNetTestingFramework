@@ -4,7 +4,7 @@ using DotNetTestingFramework.Utils;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 
-namespace DotNetTestingFramework.Tests.SeleniumTests
+namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
     [TestFixture]
     [AllureNUnit]
@@ -53,22 +53,22 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
             _googleHomePage.EnterSearchText(_excelSheet["Search String 1"]);
             _googleHomePage.ClickSearchButton();
 
-                //Clicking on serach results
-                _googleSearchPage = new GoogleSearchPage();
-                Assert.IsTrue(_googleSearchPage.SearchPageIsLoaded());
-                _googleSearchPage.OpenLinkInNewTabUsingPartialText(_excelSheet["Search String 2"]);
+            //Clicking on serach results
+            _googleSearchPage = new GoogleSearchPage();
+            Assert.IsTrue(_googleSearchPage.SearchPageIsLoaded());
+            _googleSearchPage.OpenLinkInNewTabUsingPartialText(_excelSheet["Search String 2"]);
 
-                //IMDB actions
-                _iMDBItemPage = new IMDBItemPage();
-                Assert.IsTrue(_iMDBItemPage.IsPageLoaded());
-                _iMDBItemPage.ScrollDownToElement("All cast & crew");
-                _iMDBItemPage.ClickScrolledElement("All cast & crew");
-                List<List<string>> list = _iMDBItemPage.GetCastTableData();
+            //IMDB actions
+            _iMDBItemPage = new IMDBItemPage();
+            Assert.IsTrue(_iMDBItemPage.IsPageLoaded());
+            _iMDBItemPage.ScrollDownToElement("All cast & crew");
+            _iMDBItemPage.ClickScrolledElement("All cast & crew");
+            List<List<string>> list = _iMDBItemPage.GetCastTableData();
 
             //Writing back to excel
             _excelWriter.WriteToExcelSheet(list, "Series Cast");
             _excelWriter.SaveFile();
-       }
+        }
 
     }
 }

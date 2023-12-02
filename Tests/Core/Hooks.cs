@@ -10,17 +10,17 @@ namespace DotNetTestingFramework.Tests.Core
     {
         protected static Logger logger = LogManager.GetCurrentClassLogger();
         [ThreadStatic] protected static IWebDriver driver;
-        string absolutePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
+        private readonly string absolutePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
 
-       
-        private bool isSeleniumTest()
+        private bool IsSeleniumTest()
         {
             try
             {
                 return Attribute.IsDefined(GetType(), typeof(CategoryAttribute), false) &&
               ((CategoryAttribute)Attribute.GetCustomAttribute(GetType(), typeof(CategoryAttribute))).Name == "Selenium";
-            } catch { return false; }
-           
+            }
+            catch { return false; }
+
         }
 
 
@@ -32,20 +32,18 @@ namespace DotNetTestingFramework.Tests.Core
 
             Constants.SessionVariables.Config = Configuration.LoadConfiguration(absolutePath);
 
-            if (isSeleniumTest())
+            if (IsSeleniumTest())
             {
-                Browser browser = new Browser();
                 logger.Info("Test detected as 'Selenium' based");
-                driver = browser.GetWebDriver(Constants.SessionVariables.Config.webBrowser.BrowserName,
-                                                 Constants.SessionVariables.Config.webBrowser.IsHeadless,
-                                                 Constants.SessionVariables.Config.webBrowser.IsPrivate);
+                var browserConfig = Constants.SessionVariables.Config.webBrowser;
+                driver = Browser.GetWebDriver(browserConfig.BrowserName, browserConfig.IsHeadless, browserConfig.IsPrivate);
             }
         }
 
         [TearDown]
         public void TearDown()
         {
-            if(isSeleniumTest())
+            if (IsSeleniumTest())
             {
                 logger.Info("Quitting browser");
                 driver.Quit();
@@ -53,7 +51,6 @@ namespace DotNetTestingFramework.Tests.Core
             }
         }
 
-       
     }
 
 

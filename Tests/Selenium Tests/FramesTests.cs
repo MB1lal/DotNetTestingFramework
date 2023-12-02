@@ -3,7 +3,7 @@ using DotNetTestingFramework.Tests.Core;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 
-namespace DotNetTestingFramework.Tests.SeleniumTests
+namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
     [TestFixture]
     [AllureNUnit]
@@ -15,13 +15,13 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
         public void VerifyNestedFrames(object? ignored)
         {
             NavigateToPage("Frames");
-            
+
             logger.Info("Navigating to Nested iFrames page");
-          
-            FramesPage framesPage = new FramesPage(driver);
+
+            FramesPage framesPage = new(driver);
             framesPage.NavigateToXFramesPage("Nested Frames");
-           
-            NestedFramesPage nestedFramesPage = new NestedFramesPage(driver);
+
+            NestedFramesPage nestedFramesPage = new(driver);
 
             var frameVerifications = new Dictionary<string, string>
             {
@@ -45,10 +45,10 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
             NavigateToPage("Frames");
 
             logger.Info("Navigating to iFrame page");
-            FramesPage framesPage = new FramesPage(driver);
+            FramesPage framesPage = new(driver);
             framesPage.NavigateToXFramesPage("iFrame");
 
-            IFramePage iFramePage = new IFramePage(driver);
+            IFramePage iFramePage = new(driver);
             logger.Info("Switching to iFrame");
             iFramePage.SwitchToIFrame();
 

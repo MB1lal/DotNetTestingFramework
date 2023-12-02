@@ -5,7 +5,7 @@ using NUnit.Allure.Core;
 using RestSharp;
 using System.Text.Json;
 
-namespace DotNetTestingFramework.Tests.ApiTests
+namespace DotNetTestingFramework.Tests.API_Tests
 {
     [TestFixture]
     [AllureNUnit]
@@ -51,7 +51,7 @@ namespace DotNetTestingFramework.Tests.ApiTests
             Assert.True(isMatchFound);
             Assert.IsTrue(actualStatus.Equals(Constants.SessionVariables.PetModel.status));
         }
-        
+
         [TestCase(null, TestName = "Verify pet can be deleted")]
         public void VerifyPetCanBeDeleted(object? ignored)
         {

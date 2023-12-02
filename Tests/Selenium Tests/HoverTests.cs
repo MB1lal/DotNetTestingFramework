@@ -3,7 +3,7 @@ using DotNetTestingFramework.Tests.Core;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 
-namespace DotNetTestingFramework.Tests.SeleniumTests
+namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
     [TestFixture]
     [AllureNUnit]
@@ -16,14 +16,14 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
             switch (profile)
             {
                 case "first":
-                   return 0;
+                    return 0;
 
                 case "second":
                     return 1;
 
                 case "third":
                     return 2;
-                  
+
                 default:
                     logger.Error("Invalid profile specified");
                     throw new ArgumentException();

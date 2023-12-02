@@ -3,7 +3,7 @@ using DotNetTestingFramework.Tests.Core;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 
-namespace DotNetTestingFramework.Tests.SeleniumTests
+namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
     [TestFixture]
     [AllureNUnit]

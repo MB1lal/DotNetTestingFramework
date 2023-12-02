@@ -4,7 +4,7 @@ using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using System.Text.Json;
 
-namespace DotNetTestingFramework.Tests.ApiTests
+namespace DotNetTestingFramework.Tests.API_Tests
 {
     [TestFixture]
     [AllureNUnit]
@@ -26,11 +26,11 @@ namespace DotNetTestingFramework.Tests.ApiTests
         }
 
         [TestCase(null, TestName = "Verify user is able to logout")]
-        public void UserLogoutTest(object? ignored) 
+        public void UserLogoutTest(object? ignored)
         {
             UserLoginTest(ignored);
             logoutUser();
         }
-        
+
     }
 }

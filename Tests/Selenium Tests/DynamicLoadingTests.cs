@@ -3,7 +3,7 @@ using DotNetTestingFramework.Tests.Core;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 
-namespace DotNetTestingFramework.Tests.SeleniumTests
+namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
     [TestFixture]
     [AllureNUnit]
@@ -24,7 +24,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
 
             logger.Info($"Navigating to Example {exampleIndex} Page");
             dynamicLoadingPage.ClickXExample(exampleIndex);
-            switch(exampleIndex)
+            switch (exampleIndex)
             {
                 case 1:
                     DynamicLoadingExample1Page dynamicLoadingExample1Page = new DynamicLoadingExample1Page(driver);
