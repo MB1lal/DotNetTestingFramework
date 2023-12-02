@@ -6,22 +6,22 @@ namespace DotNetTestingFramework.Pages
 {
     internal class HoverPage
     {
-        private IWebDriver _driver;
+        private readonly IWebDriver _driver;
 
         private const string FirstUserSelector = ".figure:nth-child(3)";
         private const string SecondUserSelector = ".figure:nth-child(4)";
         private const string ThirdUserSelector = ".figure:nth-child(5)";
 
         [FindsBy(How = How.CssSelector, Using = FirstUserSelector)]
-        private IWebElement _firstUser;
+        private readonly IWebElement _firstUser;
 
         [FindsBy(How = How.CssSelector, Using = SecondUserSelector)]
-        private IWebElement _secondUser;
+        private readonly IWebElement _secondUser;
 
         [FindsBy(How = How.CssSelector, Using = ThirdUserSelector)]
-        private IWebElement _thirdUser;
+        private readonly IWebElement _thirdUser;
 
-        private By profileName = By.CssSelector("h5");
+        private readonly By profileName = By.CssSelector("h5");
 
 
         public HoverPage(IWebDriver driver)
@@ -32,8 +32,8 @@ namespace DotNetTestingFramework.Pages
 
         public void HoverOverUserAvatar(string profile)
         {
-            Actions actions = new Actions(_driver);
-            switch(profile.ToLower())
+            Actions actions = new(_driver);
+            switch (profile.ToLower())
             {
                 case "first":
                     actions.MoveToElement(_firstUser).Perform();

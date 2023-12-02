@@ -5,24 +5,24 @@ namespace DotNetTestingFramework.Pages
 {
     public class AuthenticationPage
     {
-        private IWebDriver _driver;
+        private readonly IWebDriver _driver;
 
         [FindsBy(How = How.Id, Using = "username")]
-        private IWebElement? _txtUsername;
-      
+        private readonly IWebElement? _txtUsername;
+
         [FindsBy(How = How.Id, Using = "password")]
-        private IWebElement? _txtPassword;
+        private readonly IWebElement? _txtPassword;
 
         [FindsBy(How = How.CssSelector, Using = ".fa.fa-2x.fa-sign-in")]
-        private IWebElement? _btnLogin;
+        private readonly IWebElement? _btnLogin;
 
         [FindsBy(How = How.CssSelector, Using = ".icon-2x.icon-signout")]
-        private IWebElement? _btnLogout;
+        private readonly IWebElement? _btnLogout;
 
-        private string loggedInText = "You logged into a secure area!";
-        private string loggedOutText = "You logged out of the secure area!";
+        private readonly string loggedInText = "You logged into a secure area!";
+        private readonly string loggedOutText = "You logged out of the secure area!";
 
-        public AuthenticationPage(IWebDriver driver) 
+        public AuthenticationPage(IWebDriver driver)
         {
             _driver = driver;
             PageFactory.InitElements(_driver, this);
@@ -45,7 +45,7 @@ namespace DotNetTestingFramework.Pages
 
         public void ClickLogout()
         {
-            _btnLogout.Click(); 
+            _btnLogout.Click();
         }
 
         public bool IsLoggedIn()

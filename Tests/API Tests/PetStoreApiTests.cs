@@ -18,22 +18,22 @@ namespace DotNetTestingFramework.Tests.API_Tests
         public void OrderIsSuccesfullyPlaced(object? ignored)
         {
             logger.Info("Placing a pet order");
-            createNewPetStoreOder();
+            CreateNewPetStoreOder();
             logger.Info("Fetching all placed orders");
-            RestResponse restResponse = fetchPetStoreOrder(Constants.SessionVariables.PetStore.id);
+            RestResponse restResponse = FetchPetStoreOrder(Constants.SessionVariables.PetStore.Id);
             PetStoreModel actualStoreModel = JsonSerializer.Deserialize<PetStoreModel>(restResponse.Content);
             logger.Info("Verifying newly placed order exists");
-            Assert.That(actualStoreModel.id.Equals(Constants.SessionVariables.PetStore.id));
+            Assert.That(actualStoreModel.Id.Equals(Constants.SessionVariables.PetStore.Id));
         }
 
         [TestCase(null, TestName = "Verify pet order can be deleted")]
         public void OrderIsSuccessfullyDeleted(object? ignored)
         {
             logger.Info("Placing a pet order");
-            createNewPetStoreOder();
+            CreateNewPetStoreOder();
             logger.Info("Deletting newly placed pet order");
-            deletePetStoreOrder(Constants.SessionVariables.PetStore.id);
-            RestResponse restResponse = fetchInvalidPetStoreOrder(Constants.SessionVariables.PetStore.id);
+            DeletePetStoreOrder(Constants.SessionVariables.PetStore.Id);
+            RestResponse restResponse = FetchInvalidPetStoreOrder(Constants.SessionVariables.PetStore.Id);
             logger.Info("Verifying order is deleted");
             Assert.That(restResponse.Content.Contains("Order not found"));
         }

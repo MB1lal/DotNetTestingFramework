@@ -5,13 +5,13 @@ namespace DotNetTestingFramework.Pages
 {
     internal class IFramePage
     {
-        private IWebDriver _driver;
+        private readonly IWebDriver _driver;
 
         [FindsBy(How = How.Id, Using = "mce_0_ifr")]
-        private IWebElement? iFrameWithText;
+        private readonly IWebElement? iFrameWithText;
 
         [FindsBy(How = How.Id, Using = "tinymce")]
-        private IWebElement? txtContent;
+        private readonly IWebElement? txtContent;
 
         public IFramePage(IWebDriver driver)
         {
@@ -28,6 +28,6 @@ namespace DotNetTestingFramework.Pages
         }
 
         public string GetContentText() => txtContent.Text.Trim();
-        
+
     }
 }

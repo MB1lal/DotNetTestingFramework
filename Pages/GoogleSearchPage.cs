@@ -5,9 +5,9 @@ namespace DotNetTestingFramework.Pages
 {
     internal class GoogleSearchPage
     {
-        private IWebDriver _driver;
+        private readonly IWebDriver _driver;
         [FindsBy(How = How.Id, Using = "search")]
-        private IWebElement _searchdiv;
+        private readonly IWebElement _searchdiv;
 
 
         public GoogleSearchPage()
@@ -22,7 +22,7 @@ namespace DotNetTestingFramework.Pages
         }
 
         public void ClickPartialLinkText(string partiallinktext)
-        { 
+        {
             _driver.FindElement(By.PartialLinkText(partiallinktext)).Click();
         }
 
@@ -31,17 +31,18 @@ namespace DotNetTestingFramework.Pages
 
             IWebElement linktext = _driver.FindElement(By.PartialLinkText(partiallinktext));
             string keys;
-            
-            if(System.Environment.OSVersion.ToString().Contains("Mac"))
+
+            if (System.Environment.OSVersion.ToString().Contains("Mac"))
             {
                 keys = Keys.Command + Keys.Enter;
-            } else
+            }
+            else
             {
                 keys = Keys.Control + Keys.Enter;
             }
 
             linktext.SendKeys(keys);
-            _driver.SwitchTo().Window(_driver.WindowHandles[1]);    
-         }
+            _driver.SwitchTo().Window(_driver.WindowHandles[1]);
+        }
     }
 }

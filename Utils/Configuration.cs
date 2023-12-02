@@ -6,8 +6,8 @@ namespace DotNetTestingFramework.Utils
 {
     public class Configuration
     {
-        public WebBrowser webBrowser { get; set; }
-        public Urls urls { get; set; }
+        public WebBrowser WebBrowser { get; set; }
+        public Urls Urls { get; set; }
 
         public static Configuration LoadConfiguration(string filePath)
         {

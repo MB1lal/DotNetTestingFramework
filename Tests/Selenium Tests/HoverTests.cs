@@ -11,7 +11,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
     [Category("Selenium")]
     internal class HoverTests : BaseSteps
     {
-        private int getId(string profile)
+        private static int GetId(string profile)
         {
             switch (profile)
             {
@@ -26,7 +26,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
 
                 default:
                     logger.Error("Invalid profile specified");
-                    throw new ArgumentException();
+                    throw new Exception("Invalid profile specified");
             }
         }
 
@@ -37,7 +37,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
             {
                 NavigateToPage("Hovers");
 
-                HoverPage hoverPage = new HoverPage(driver);
+                HoverPage hoverPage = new(driver);
 
                 if (hoverPage == null)
                 {
@@ -57,7 +57,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
                     logger.Info($"Hovering over {profile} profile");
                     hoverPage.HoverOverUserAvatar(profile);
                     logger.Info("Verifying profile text");
-                    Assert.That(hoverPage.GetProfileText(getId(profile)), Is.EqualTo(expectedText));
+                    Assert.That(hoverPage.GetProfileText(GetId(profile)), Is.EqualTo(expectedText));
                 }
             }
             catch (Exception ex)

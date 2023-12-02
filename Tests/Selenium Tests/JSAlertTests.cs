@@ -15,7 +15,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         public void VerifyJSALerts(object? ignored)
         {
             NavigateToPage("JavaScript Alerts");
-            JSAlertsPage jSAlertsPage = new JSAlertsPage(driver);
+            JSAlertsPage jSAlertsPage = new(driver);
             logger.Info("Triggering JS ALert");
             jSAlertsPage.TriggerJSALert("JS Alert");
             logger.Info("Accepting the alert");
@@ -29,7 +29,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         public void VerifyJSConfirm(object? ignored)
         {
             NavigateToPage("JavaScript Alerts");
-            JSAlertsPage jSAlertsPage = new JSAlertsPage(driver);
+            JSAlertsPage jSAlertsPage = new(driver);
             logger.Info("Triggering JS Confirm");
             jSAlertsPage.TriggerJSALert("JS Confirm");
             logger.Info("Accepting the alert");
@@ -43,12 +43,11 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         {
             string inputText = "Test Input";
             NavigateToPage("JavaScript Alerts");
-            JSAlertsPage jSAlertsPage = new JSAlertsPage(driver);
+            JSAlertsPage jSAlertsPage = new(driver);
             logger.Info("Triggering JS Prompt");
             jSAlertsPage.TriggerJSALert("JS Prompt");
             logger.Info("Entering the text into alert");
             jSAlertsPage.EnterTextIntoAlert(inputText);
-            Thread.Sleep(4000);
             logger.Info("Verifying entered text was correct");
             Assert.That(jSAlertsPage.GetResultText(), Is.EqualTo($"You entered: {inputText}"));
         }

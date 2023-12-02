@@ -17,7 +17,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         [TestCase(2, TestName = "Verify loading of newly created elements")]
         public void HiddenElementsTest(int exampleIndex)
         {
-            dynamicLoadingPage = new DynamicLoadingPage(driver);
+            dynamicLoadingPage = new(driver);
             string elementText;
 
             NavigateToPage("Dynamic Loading");
@@ -27,7 +27,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
             switch (exampleIndex)
             {
                 case 1:
-                    DynamicLoadingExample1Page dynamicLoadingExample1Page = new DynamicLoadingExample1Page(driver);
+                    DynamicLoadingExample1Page dynamicLoadingExample1Page = new(driver);
                     logger.Info("Starting loading of element");
                     dynamicLoadingExample1Page.StartLoading();
                     logger.Info("Fetching text of element");
@@ -35,7 +35,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
                     break;
 
                 case 2:
-                    DynamicLoadingExample2Page dynamicLoadingExample2Page = new DynamicLoadingExample2Page(driver);
+                    DynamicLoadingExample2Page dynamicLoadingExample2Page = new(driver);
                     logger.Info("Starting loading of element");
                     dynamicLoadingExample2Page.StartLoading();
                     logger.Info("Fetching text of element");
@@ -49,7 +49,6 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
 
             logger.Info("Verifying text");
             Assert.That(elementText, Is.EqualTo("Hello World!"));
-
         }
     }
 }

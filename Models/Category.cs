@@ -5,9 +5,9 @@ namespace DotNetTestingFramework.Models
     internal class Category
     {
         [JsonProperty("id")]
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [JsonProperty("name")]
-        public string name { get; set; }
+        public string? Name { get; set; }
     }
 }

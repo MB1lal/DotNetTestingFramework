@@ -16,8 +16,6 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         private GoogleSearchPage _googleSearchPage;
         private IMDBItemPage _iMDBItemPage;
 
-        private ExcelReader _excelReader = new ExcelReader();
-        private ExcelWriter _excelWriter = new ExcelWriter();
         private Dictionary<string, string> _excelSheet;
 
 
@@ -26,18 +24,10 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         [Category("Google"), Category("Selenium")]
         public void GooglePageLoads()
         {
-            try
-            {
-                logger.Info("Navigating to Google");
-                _googleHomePage = new GoogleHomePage(driver);
-                logger.Info("Asserting page is loaded");
-                Assert.IsTrue(_googleHomePage.PageHasLogo());
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-
+            logger.Info("Navigating to Google");
+            _googleHomePage = new GoogleHomePage(driver);
+            logger.Info("Asserting page is loaded");
+            Assert.That(_googleHomePage.PageHasLogo(), Is.True);
         }
 
         [Test]
@@ -45,7 +35,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         [Ignore("Flaky")]
         public void GettingCastFromIMDB()
         {
-            _excelSheet = _excelReader.getFullExcelSheet("Input");
+            _excelSheet = ExcelReader.GetFullExcelSheet("Input");
 
             //Searching on google
             _googleHomePage = new GoogleHomePage(driver);
@@ -55,19 +45,19 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
 
             //Clicking on serach results
             _googleSearchPage = new GoogleSearchPage();
-            Assert.IsTrue(_googleSearchPage.SearchPageIsLoaded());
+            Assert.That(_googleSearchPage.SearchPageIsLoaded(), Is.True);
             _googleSearchPage.OpenLinkInNewTabUsingPartialText(_excelSheet["Search String 2"]);
 
             //IMDB actions
             _iMDBItemPage = new IMDBItemPage();
-            Assert.IsTrue(_iMDBItemPage.IsPageLoaded());
+            Assert.That(_iMDBItemPage.IsPageLoaded(), Is.True);
             _iMDBItemPage.ScrollDownToElement("All cast & crew");
             _iMDBItemPage.ClickScrolledElement("All cast & crew");
             List<List<string>> list = _iMDBItemPage.GetCastTableData();
 
             //Writing back to excel
-            _excelWriter.WriteToExcelSheet(list, "Series Cast");
-            _excelWriter.SaveFile();
+            ExcelWriter.WriteToExcelSheet(list, "Series Cast");
+            ExcelWriter.SaveFile();
         }
 
     }

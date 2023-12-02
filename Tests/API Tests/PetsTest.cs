@@ -19,15 +19,15 @@ namespace DotNetTestingFramework.Tests.API_Tests
         public void VerifyPetCanBeAddedThroughId(object? ignored)
         {
             logger.Info("Creating a pet");
-            addNewPetUsingId();
+            AddNewPetUsingId();
             logger.Info("Fetching newly created pet");
-            RestResponse restResponse = getPetUsingId(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
+            RestResponse restResponse = GetPetUsingId(int.Parse(Constants.SessionVariables.PetModel.Id.ToString()));
             PetModel actualPetModel = JsonSerializer.Deserialize<PetModel>(restResponse.Content);
             logger.Info("Verifying pet is correctly created");
             Assert.Multiple(() =>
             {
-                Assert.That(actualPetModel.name, Is.EqualTo(Constants.SessionVariables.PetModel.name));
-                Assert.That(actualPetModel.category.name, Is.EqualTo(Constants.SessionVariables.PetModel.category.name));
+                Assert.That(actualPetModel.Name, Is.EqualTo(Constants.SessionVariables.PetModel.Name));
+                Assert.That(actualPetModel.Category.Name, Is.EqualTo(Constants.SessionVariables.PetModel.Category.Name));
             });
         }
 
@@ -35,26 +35,26 @@ namespace DotNetTestingFramework.Tests.API_Tests
         public void VerifyNewlyAddedPetThroughStatus(object? ignored)
         {
             logger.Info("Creating a pet with status 'sold'");
-            addNewPetWithStatus("sold");
+            AddNewPetWithStatus("sold");
             logger.Info("Fetching all pets with status 'sold'");
-            RestResponse restResponse = getPetUsingStatus("sold");
+            RestResponse restResponse = GetPetUsingStatus("sold");
             bool isMatchFound = false;
             string actualStatus = "";
 
             PetModel[] actualPetModel = JsonSerializer.Deserialize<PetModel[]>(restResponse.Content);
             foreach (var pet in actualPetModel)
             {
-                if (pet.id == Constants.SessionVariables.PetModel.id)
+                if (pet.Id == Constants.SessionVariables.PetModel.Id)
                 {
                     isMatchFound = true;
-                    actualStatus = pet.status;
+                    actualStatus = pet.Status;
                 }
             }
             logger.Info("Verifying newly created pet has correct status");
             Assert.Multiple(() =>
             {
                 Assert.That(isMatchFound, Is.True);
-                Assert.That(actualStatus, Is.EqualTo(Constants.SessionVariables.PetModel.status));
+                Assert.That(actualStatus, Is.EqualTo(Constants.SessionVariables.PetModel.Status));
             });
         }
 
@@ -62,10 +62,10 @@ namespace DotNetTestingFramework.Tests.API_Tests
         public void VerifyPetCanBeDeleted(object? ignored)
         {
             logger.Info("Creating a pet");
-            addNewPetUsingId();
+            AddNewPetUsingId();
             logger.Info("Deleting newly created pet");
-            deletePetData(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
-            RestResponse restResponse = getDeletedPetUsingId(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
+            DeletePetData(int.Parse(Constants.SessionVariables.PetModel.Id.ToString()));
+            RestResponse restResponse = GetDeletedPetUsingId(int.Parse(Constants.SessionVariables.PetModel.Id.ToString()));
             logger.Debug(restResponse.Content);
             logger.Info("Verifying pet is deleted");
             Assert.That(restResponse.Content, Does.Contain("Pet not found"));
@@ -76,18 +76,18 @@ namespace DotNetTestingFramework.Tests.API_Tests
         public void VerifyPetsDetailsCanBeUpdated(object? ignored)
         {
             logger.Info("Creating a pet");
-            addNewPetUsingId();
+            AddNewPetUsingId();
             logger.Info("Updating pet details");
-            updateThePet("name", "Unicorn");
-            updateThePet("status", "sold");
+            UpdateThePet("name", "Unicorn");
+            UpdateThePet("status", "sold");
             logger.Info("Fetching newly created pet");
-            RestResponse restResponse = getPetUsingId(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
+            RestResponse restResponse = GetPetUsingId(int.Parse(Constants.SessionVariables.PetModel.Id.ToString()));
             PetModel actualPetModel = JsonSerializer.Deserialize<PetModel>(restResponse.Content);
             logger.Info("Verifying pet details are updated");
             Assert.Multiple(() =>
             {
-                Assert.That(actualPetModel.name, Is.EqualTo("Unicorn"));
-                Assert.That(actualPetModel.status, Is.EqualTo("sold"));
+                Assert.That(actualPetModel.Name, Is.EqualTo("Unicorn"));
+                Assert.That(actualPetModel.Status, Is.EqualTo("sold"));
             });
         }
 

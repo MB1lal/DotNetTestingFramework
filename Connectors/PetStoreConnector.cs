@@ -4,34 +4,34 @@ namespace DotNetTestingFramework.Connectors
 {
     internal class PetStoreConnector
     {
-        private RestClient baseRequest() => new RestClient($"{Constants.SessionVariables.Config.urls.petBaseURI}/store");
+        private static RestClient BaseRequest() => new RestClient($"{Constants.SessionVariables.Config.Urls.PetBaseURI}/store");
 
-        public void PlaceAnOrder(string body)
+        public static void PlaceAnOrder(string body)
         {
             RestRequest request = new RestRequest("/order", Method.Post).AddBody(body);
-            RestResponse response = baseRequest().Execute(request);
-            Assert.IsTrue(response.IsSuccessful);
+            RestResponse response = BaseRequest().Execute(request);
+            Assert.That(response.IsSuccessful, Is.True);
         }
 
-        public RestResponse FetchOrder(int orderId)
+        public static RestResponse FetchOrder(int orderId)
         {
             RestRequest request = new RestRequest("/order/" + orderId, Method.Get);
-            RestResponse response = baseRequest().Execute(request);
-            Assert.IsTrue(response.IsSuccessful);
+            RestResponse response = BaseRequest().Execute(request);
+            Assert.That(response.IsSuccessful, Is.True);
             return response;
         }
-        
-        public void DeleteOrder(int orderId)
+
+        public static void DeleteOrder(int orderId)
         {
             RestRequest request = new RestRequest("/order/" + orderId, Method.Delete);
-            RestResponse response = baseRequest().Execute(request);
-            Assert.IsTrue(response.IsSuccessful);
+            RestResponse response = BaseRequest().Execute(request);
+            Assert.That(response.IsSuccessful, Is.True);
         }
 
-        public RestResponse FetchDeletedOrder(int orderId)
+        public static RestResponse FetchDeletedOrder(int orderId)
         {
             RestRequest request = new RestRequest("/order/" + orderId, Method.Get);
-            RestResponse response = baseRequest().Execute(request);
+            RestResponse response = BaseRequest().Execute(request);
             return response;
         }
 

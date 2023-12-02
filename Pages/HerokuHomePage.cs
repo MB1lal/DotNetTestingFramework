@@ -6,7 +6,7 @@ namespace DotNetTestingFramework.Pages
 {
     internal class HerokuHomePage : BaseSteps
     {
-        private readonly string _url = Constants.SessionVariables.Config.urls.herokuURL;
+        private readonly string _url = Constants.SessionVariables.Config.Urls.HerokuURL;
 
         [FindsBy(How = How.LinkText, Using = "Form Authentication")]
         private readonly IWebElement _formAuthentiation;

@@ -8,152 +8,155 @@ namespace DotNetTestingFramework.Tests.Core
 {
     internal class BaseSteps : Hooks
     {
-
-        private UserConnector _userConnector = new UserConnector();
-        private PetStoreConnector _petStoreConnector = new PetStoreConnector();
-        private PetConnector _petConnector = new PetConnector();
-
-        private UserModel createNewUserData()
+        private static UserModel CreateNewUserData()
         {
-            UserModel user = new UserModel();
-            user.id = Faker.RandomNumber.Next();
-            user.username = Faker.Internet.UserName();
-            user.firstName = Faker.Name.First();
-            user.lastName = Faker.Name.Last();
-            user.email = Faker.Internet.Email();
-            user.password = Faker.Internet.DomainWord() + Faker.Internet.UserName();
-            user.phone = Faker.Phone.Number();
-            user.userStatus = Faker.RandomNumber.Next();
+            UserModel user = new()
+            {
+                Id = Faker.RandomNumber.Next(),
+                Username = Faker.Internet.UserName(),
+                FirstName = Faker.Name.First(),
+                LastName = Faker.Name.Last(),
+                Email = Faker.Internet.Email(),
+                Password = Faker.Internet.DomainWord() + Faker.Internet.UserName(),
+                Phone = Faker.Phone.Number(),
+                UserStatus = Faker.RandomNumber.Next()
+            };
 
-            Constants.SessionVariables.Username = user.username;
-            Constants.SessionVariables.Password = user.password;
+            Constants.SessionVariables.Username = user.Username;
+            Constants.SessionVariables.Password = user.Password;
 
             return user;
         }
 
-        private PetStoreModel createNewStoreData()
+        private static PetStoreModel CreateNewStoreData()
         {
-            PetStoreModel petStore = new PetStoreModel();
-            petStore.id = Faker.RandomNumber.Next(1, 5000);
-            petStore.petId = Faker.RandomNumber.Next(1, 5000);
-            petStore.quantity = Faker.RandomNumber.Next(1, 3);
-            petStore.shipDate = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
-            petStore.status = "placed";
-            petStore.complete = true;
+            PetStoreModel petStore = new()
+            {
+                Id = Faker.RandomNumber.Next(1, 5000),
+                PetId = Faker.RandomNumber.Next(1, 5000),
+                Quantity = Faker.RandomNumber.Next(1, 3),
+                ShipDate = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffZ"),
+                Status = "placed",
+                Complete = true
+            };
 
             Constants.SessionVariables.PetStore = petStore;
 
             return petStore;
         }
 
-        private PetModel createNewPetData()
+        private static PetModel CreateNewPetData()
         {
-            PetModel petModel = new PetModel();
+            PetModel petModel = new()
+            {
+                Id = Faker.RandomNumber.Next(1, 5000),
+                Status = "Available"
+            };
+            Category category = new()
+            {
+                Id = Faker.RandomNumber.Next(1, 5000),
+                Name = Faker.Lorem.Words(1).ToString()
+            };
 
-            petModel.id = Faker.RandomNumber.Next(1, 5000);
-            petModel.status = "Available";
-            Category category = new Category();
-            category.id = Faker.RandomNumber.Next(1, 5000);
-            #pragma warning disable CS8601 // Possible null reference assignment.
-            category.name = Faker.Lorem.Words(1).ToString();
-            #pragma warning restore CS8601 // Possible null reference assignment.
-            petModel.category = category;
-            petModel.name = Faker.Lorem.Words(1).ToString();
-            petModel.photoUrls = new List<string>() { "", "" };
-            Tag tag = new Tag();
-            tag.id = Faker.RandomNumber.Next(1, 400);
-            tag.name = Faker.Lorem.Words(1).ToString();
-            petModel.tags = new List<Tag>() { tag };
+            petModel.Category = category;
+            petModel.Name = Faker.Lorem.Words(1).ToString();
+            petModel.PhotoUrls = new List<string>() { "", "" };
+            Tag tag = new()
+            {
+                Id = Faker.RandomNumber.Next(1, 400),
+                Name = Faker.Lorem.Words(1).ToString()
+            };
+            petModel.Tags = new List<Tag>() { tag };
 
             Constants.SessionVariables.PetModel = petModel;
 
             return petModel;
         }
 
-        protected void createNewUser()
+        protected static void CreateNewUser()
         {
-            UserModel userModel = createNewUserData();
-            _userConnector.CreateNewUser(JsonSerializer.Serialize(userModel));
+            UserModel userModel = CreateNewUserData();
+            UserConnector.CreateNewUser(JsonSerializer.Serialize(userModel));
         }
 
-        protected RestResponse getUser(string username)
+        protected static RestResponse GetUser(string username)
         {
-            return _userConnector.GetUser(username);
+            return UserConnector.GetUser(username);
         }
 
-        protected void loginUser(string username, string password)
+        protected static void LoginUser(string username, string password)
         {
-            Constants.SessionVariables.UserResponse = _userConnector.loginUser(username, password);
+            Constants.SessionVariables.UserResponse = UserConnector.LoginUser(username, password);
         }
 
-        protected void logoutUser()
+        protected static void LogoutUser()
         {
             logger.Info("Logging out user");
-            _userConnector.logoutUser();
+            UserConnector.LogoutUser();
         }
 
-        protected void createNewPetStoreOder()
+        protected static void CreateNewPetStoreOder()
         {
-            PetStoreModel petStoreModel = createNewStoreData();
-            _petStoreConnector.PlaceAnOrder(JsonSerializer.Serialize(petStoreModel));
+            PetStoreModel petStoreModel = CreateNewStoreData();
+            PetStoreConnector.PlaceAnOrder(JsonSerializer.Serialize(petStoreModel));
 
         }
 
-        protected RestResponse fetchPetStoreOrder(int orderId)
+        protected static RestResponse FetchPetStoreOrder(int orderId)
         {
-            return _petStoreConnector.FetchOrder(orderId);
+            return PetStoreConnector.FetchOrder(orderId);
         }
-        protected RestResponse fetchInvalidPetStoreOrder(int orderId)
+        protected static RestResponse FetchInvalidPetStoreOrder(int orderId)
         {
-            return _petStoreConnector.FetchDeletedOrder(orderId);
-        }
-
-        protected void deletePetStoreOrder(int orderId)
-        {
-            _petStoreConnector.DeleteOrder(orderId);
+            return PetStoreConnector.FetchDeletedOrder(orderId);
         }
 
-        protected void addNewPetUsingId()
+        protected static void DeletePetStoreOrder(int orderId)
         {
-            PetModel petModel = createNewPetData();
-            _petConnector.AddAPetUsingId(JsonSerializer.Serialize(petModel));
+            PetStoreConnector.DeleteOrder(orderId);
         }
 
-        protected RestResponse getPetUsingId(int id)
+        protected static void AddNewPetUsingId()
         {
-            return _petConnector.GetPetUsingId(id);
+            PetModel petModel = CreateNewPetData();
+            PetConnector.AddAPetUsingId(JsonSerializer.Serialize(petModel));
         }
 
-        protected void addNewPetWithStatus(string status)
+        protected static RestResponse GetPetUsingId(int id)
         {
-            PetModel petModel = createNewPetData();
-            petModel.status = status;
-            _petConnector.AddAPetUsingId(JsonSerializer.Serialize(petModel));
+            return PetConnector.GetPetUsingId(id);
         }
 
-        protected RestResponse getPetUsingStatus(string status)
+        protected static void AddNewPetWithStatus(string status)
         {
-            return _petConnector.GetPetUsingStatus(status);
+            PetModel petModel = CreateNewPetData();
+            petModel.Status = status;
+            PetConnector.AddAPetUsingId(JsonSerializer.Serialize(petModel));
         }
 
-        protected void deletePetData(int id)
+        protected static RestResponse GetPetUsingStatus(string status)
         {
-            _petConnector.DeletePetUsingId(id);
+            return PetConnector.GetPetUsingStatus(status);
         }
 
-        protected RestResponse getDeletedPetUsingId(int id)
+        protected static void DeletePetData(int id)
         {
-            return _petConnector.GetDeletedPetUsingId(id);
+            PetConnector.DeletePetUsingId(id);
         }
 
-        protected void updateThePet(string attribute, string value)
+        protected static RestResponse GetDeletedPetUsingId(int id)
         {
-            _petConnector.UpdateThePetData(attribute, value);
+            return PetConnector.GetDeletedPetUsingId(id);
         }
 
-        protected void NavigateToPage(string pageName)
+        protected static void UpdateThePet(string attribute, string value)
         {
-            HerokuHomePage herokuHomePage = new HerokuHomePage(driver);
+            PetConnector.UpdateThePetData(attribute, value);
+        }
+
+        protected static void NavigateToPage(string pageName)
+        {
+            HerokuHomePage herokuHomePage = new(driver);
             logger.Info($"Navigating to {pageName}");
             herokuHomePage.NavigateToPage(pageName);
         }

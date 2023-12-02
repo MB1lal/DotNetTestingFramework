@@ -8,7 +8,7 @@ namespace DotNetTestingFramework.Tests.Core
 {
     public class Hooks
     {
-        protected static Logger logger = LogManager.GetCurrentClassLogger();
+        protected readonly static Logger logger = LogManager.GetCurrentClassLogger();
         [ThreadStatic] protected static IWebDriver driver;
         private readonly string absolutePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
 
@@ -35,7 +35,7 @@ namespace DotNetTestingFramework.Tests.Core
             if (IsSeleniumTest())
             {
                 logger.Info("Test detected as 'Selenium' based");
-                var browserConfig = Constants.SessionVariables.Config.webBrowser;
+                var browserConfig = Constants.SessionVariables.Config.WebBrowser;
                 driver = Browser.GetWebDriver(browserConfig.BrowserName, browserConfig.IsHeadless, browserConfig.IsPrivate);
             }
         }
