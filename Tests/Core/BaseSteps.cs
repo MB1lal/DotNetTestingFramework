@@ -12,18 +12,18 @@ namespace DotNetTestingFramework.Tests.Core
         {
             UserModel user = new()
             {
-                Id = Faker.RandomNumber.Next(),
-                Username = Faker.Internet.UserName(),
-                FirstName = Faker.Name.First(),
-                LastName = Faker.Name.Last(),
-                Email = Faker.Internet.Email(),
-                Password = Faker.Internet.DomainWord() + Faker.Internet.UserName(),
-                Phone = Faker.Phone.Number(),
-                UserStatus = Faker.RandomNumber.Next()
+                id = Faker.RandomNumber.Next(),
+                username = Faker.Internet.UserName(),
+                firstName = Faker.Name.First(),
+                lastName = Faker.Name.Last(),
+                email = Faker.Internet.Email(),
+                password = Faker.Internet.DomainWord() + Faker.Internet.UserName(),
+                phone = Faker.Phone.Number(),
+                userStatus = Faker.RandomNumber.Next()
             };
 
-            Constants.SessionVariables.Username = user.Username;
-            Constants.SessionVariables.Password = user.Password;
+            Constants.SessionVariables.Username = user.username;
+            Constants.SessionVariables.Password = user.password;
 
             return user;
         }
@@ -32,12 +32,12 @@ namespace DotNetTestingFramework.Tests.Core
         {
             PetStoreModel petStore = new()
             {
-                Id = Faker.RandomNumber.Next(1, 5000),
-                PetId = Faker.RandomNumber.Next(1, 5000),
-                Quantity = Faker.RandomNumber.Next(1, 3),
-                ShipDate = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffZ"),
-                Status = "placed",
-                Complete = true
+                id = Faker.RandomNumber.Next(1, 5000),
+                petId = Faker.RandomNumber.Next(1, 5000),
+                quantity = Faker.RandomNumber.Next(1, 3),
+                shipDate = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffZ"),
+                status = "placed",
+                complete = true
             };
 
             Constants.SessionVariables.PetStore = petStore;
@@ -49,24 +49,24 @@ namespace DotNetTestingFramework.Tests.Core
         {
             PetModel petModel = new()
             {
-                Id = Faker.RandomNumber.Next(1, 5000),
-                Status = "Available"
+                id = Faker.RandomNumber.Next(1, 5000),
+                status = "Available"
             };
             Category category = new()
             {
-                Id = Faker.RandomNumber.Next(1, 5000),
-                Name = Faker.Lorem.Words(1).ToString()
+                id = Faker.RandomNumber.Next(1, 5000),
+                name = Faker.Company.CatchPhrase()
             };
 
-            petModel.Category = category;
-            petModel.Name = Faker.Lorem.Words(1).ToString();
-            petModel.PhotoUrls = new List<string>() { "", "" };
+            petModel.category = category;
+            petModel.name = Faker.Company.CatchPhrase();
+            petModel.photoUrls = new List<string>() { "", "" };
             Tag tag = new()
             {
-                Id = Faker.RandomNumber.Next(1, 400),
-                Name = Faker.Lorem.Words(1).ToString()
+                id = Faker.RandomNumber.Next(1, 400),
+                name = Faker.Company.CatchPhrase()
             };
-            petModel.Tags = new List<Tag>() { tag };
+            petModel.tags = new List<Tag>() { tag };
 
             Constants.SessionVariables.PetModel = petModel;
 
@@ -130,7 +130,7 @@ namespace DotNetTestingFramework.Tests.Core
         protected static void AddNewPetWithStatus(string status)
         {
             PetModel petModel = CreateNewPetData();
-            petModel.Status = status;
+            petModel.status = status;
             PetConnector.AddAPetUsingId(JsonSerializer.Serialize(petModel));
         }
 

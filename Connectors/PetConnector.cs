@@ -5,12 +5,14 @@ namespace DotNetTestingFramework.Connectors
 {
     internal class PetConnector
     {
-        private static RestClient BaseRequest() => new RestClient($"{Constants.SessionVariables.Config.Urls.PetBaseURI}/pet");
+        private static RestClient BaseRequest() => new RestClient(Constants.SessionVariables.Config.Urls.PetBaseURI + "/pet");
 
         public static void AddAPetUsingId(string pet)
         {
             RestRequest request = new RestRequest("", Method.Post).AddBody(pet);
             RestResponse response = BaseRequest().Execute(request);
+            Console.WriteLine(pet);
+            Console.WriteLine(response.StatusCode);
             Assert.That(response.IsSuccessful, Is.True);
         }
 
@@ -18,6 +20,8 @@ namespace DotNetTestingFramework.Connectors
         {
             RestRequest request = new RestRequest("/" + id, Method.Get);
             RestResponse response = BaseRequest().Execute(request);
+            Console.WriteLine($"Id={id}");
+            Console.WriteLine(response.Content);
             Assert.That(response.IsSuccessful, Is.True);
             return response;
         }
@@ -46,7 +50,7 @@ namespace DotNetTestingFramework.Connectors
 
         public static void UpdateThePetData(string attribute, string value)
         {
-            RestRequest request = new RestRequest($"/{Constants.SessionVariables.PetModel.Id}", Method.Post)
+            RestRequest request = new RestRequest($"/{Constants.SessionVariables.PetModel.id}", Method.Post)
                 .AddHeader("Content-Type", ContentType.FormUrlEncoded)
                 .AddParameter(ContentType.FormUrlEncoded, attribute + "=" + value, ParameterType.RequestBody);
             RestResponse response = BaseRequest().Execute(request);

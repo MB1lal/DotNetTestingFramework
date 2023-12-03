@@ -20,10 +20,10 @@ namespace DotNetTestingFramework.Tests.API_Tests
             logger.Info("Placing a pet order");
             CreateNewPetStoreOder();
             logger.Info("Fetching all placed orders");
-            RestResponse restResponse = FetchPetStoreOrder(Constants.SessionVariables.PetStore.Id);
+            RestResponse restResponse = FetchPetStoreOrder(Constants.SessionVariables.PetStore.id);
             PetStoreModel actualStoreModel = JsonSerializer.Deserialize<PetStoreModel>(restResponse.Content);
             logger.Info("Verifying newly placed order exists");
-            Assert.That(actualStoreModel.Id.Equals(Constants.SessionVariables.PetStore.Id));
+            Assert.That(actualStoreModel.id.Equals(Constants.SessionVariables.PetStore.id));
         }
 
         [TestCase(null, TestName = "Verify pet order can be deleted")]
@@ -32,8 +32,8 @@ namespace DotNetTestingFramework.Tests.API_Tests
             logger.Info("Placing a pet order");
             CreateNewPetStoreOder();
             logger.Info("Deletting newly placed pet order");
-            DeletePetStoreOrder(Constants.SessionVariables.PetStore.Id);
-            RestResponse restResponse = FetchInvalidPetStoreOrder(Constants.SessionVariables.PetStore.Id);
+            DeletePetStoreOrder(Constants.SessionVariables.PetStore.id);
+            RestResponse restResponse = FetchInvalidPetStoreOrder(Constants.SessionVariables.PetStore.id);
             logger.Info("Verifying order is deleted");
             Assert.That(restResponse.Content.Contains("Order not found"));
         }

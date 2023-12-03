@@ -20,7 +20,7 @@ namespace DotNetTestingFramework.Tests.API_Tests
             CreateNewUser();
             UserModel model = JsonSerializer.Deserialize<UserModel>(GetUser(Constants.SessionVariables.Username).Content);
             logger.Info("Asserting new user is created");
-            Assert.That(model.Username.Equals(Constants.SessionVariables.Username));
+            Assert.That(model.username.Equals(Constants.SessionVariables.Username));
             logger.Info("Logging in using created user");
             LoginUser(Constants.SessionVariables.Username, Constants.SessionVariables.Password);
         }

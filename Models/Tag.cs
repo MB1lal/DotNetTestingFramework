@@ -5,9 +5,9 @@ namespace DotNetTestingFramework.Models
     internal class Tag
     {
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public int id { get; set; }
 
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string name { get; set; }
     }
 }
