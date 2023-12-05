@@ -4,7 +4,7 @@ namespace DotNetTestingFramework.Connectors
 {
     internal class PetStoreConnector
     {
-        private static RestClient BaseRequest() => new RestClient($"{Constants.SessionVariables.Config.Urls.PetBaseURI}/store");
+        private static RestClient BaseRequest() => new($"{Constants.SessionVariables.Config.Urls.PetBaseURI}/store");
 
         public static void PlaceAnOrder(string body)
         {

@@ -4,7 +4,7 @@ namespace DotNetTestingFramework.Connectors
 {
     internal class UserConnector
     {
-        private static RestClient BaseRequest() => new RestClient(Constants.SessionVariables.Config.Urls.PetBaseURI);
+        private static RestClient BaseRequest() => new(Constants.SessionVariables.Config.Urls.PetBaseURI);
 
 
         public static void CreateNewUser(string user)

@@ -10,7 +10,7 @@ namespace DotNetTestingFramework.Models
         [JsonProperty("category")]
         public Category category { get; set; }
 
-        [JsonProperty(nameof(name))]
+        [JsonProperty("name")]
         public string name { get; set; }
 
         [JsonProperty("photoUrls")]
