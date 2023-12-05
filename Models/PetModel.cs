@@ -5,7 +5,7 @@ namespace DotNetTestingFramework.Models
     internal class PetModel
     {
         [JsonProperty("id")]
-        public Int64 id { get; set; }
+        public long id { get; set; }
 
         [JsonProperty("category")]
         public Category category { get; set; }

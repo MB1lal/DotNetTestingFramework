@@ -5,16 +5,16 @@ using NUnit.Allure.Core;
 
 namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
-    [TestFixture]
+    [TestFixture, Description("Verify checkbox scenarios for Heroku Web App")]
     [AllureNUnit]
-    [AllureTag("@Heroku")]
+    [AllureTag("@Heroku", "@checkboxes")]
     [Category("Selenium")]
     internal class CheckboxesTests : BaseSteps
     {
         private CheckboxPage checkboxPage;
 
-        [TestCase(null, TestName = "Verify checkboxes are checked")]
-        public void VerifyCheckboxesChecking(object? ignored)
+        [Test, Description("Verify checkboxes are checked")]
+        public void VerifyCheckboxesChecking()
         {
             NavigateToPage("Checkboxes");
             checkboxPage = new CheckboxPage(driver);
@@ -27,8 +27,8 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
             Assert.That(checkboxPage.IsChecked(1), Is.True);
         }
 
-        [TestCase(null, TestName = "Verify checkboxes are unchecked")]
-        public void VerifyCheckboxesUnchecking(object? ignored)
+        [Test, Description("Verify checkboxes are unchecked")]
+        public void VerifyCheckboxesUnchecking()
         {
             NavigateToPage("Checkboxes");
             checkboxPage = new CheckboxPage(driver);

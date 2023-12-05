@@ -5,14 +5,14 @@ using NUnit.Allure.Core;
 
 namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
-    [TestFixture]
+    [TestFixture, Description("Verify JavaScript popups on Heroku Web App")]
     [AllureNUnit]
     [AllureTag("@Heroku", "@JSAlerts")]
     [Category("Selenium")]
     internal class JSAlertTests : BaseSteps
     {
-        [TestCase(null, TestName = "Verifying interaction with JS Alerts")]
-        public void VerifyJSALerts(object? ignored)
+        [Test, Description("Verifying interaction with JS Alerts")]
+        public void VerifyJSALerts()
         {
             NavigateToPage("JavaScript Alerts");
             JSAlertsPage jSAlertsPage = new(driver);
@@ -25,8 +25,8 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
 
         }
 
-        [TestCase(null, TestName = "Verifying interaction with JS Confirm")]
-        public void VerifyJSConfirm(object? ignored)
+        [Test, Description("Verifying interaction with JS Confirm")]
+        public void VerifyJSConfirm()
         {
             NavigateToPage("JavaScript Alerts");
             JSAlertsPage jSAlertsPage = new(driver);
@@ -38,8 +38,8 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
             Assert.That(jSAlertsPage.GetResultText(), Is.EqualTo("You clicked: Cancel"));
         }
 
-        [TestCase(null, TestName = "Verifying interaction with JS Prompt")]
-        public void VerifyJSPrompts(object? ignored)
+        [Test, Description("Verifying interaction with JS Prompt")]
+        public void VerifyJSPrompts()
         {
             string inputText = "Test Input";
             NavigateToPage("JavaScript Alerts");

@@ -5,9 +5,9 @@ using NUnit.Allure.Core;
 
 namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
-    [TestFixture]
+    [TestFixture, Description("Verify login/logout cases for Heroku Web App")]
     [AllureNUnit]
-    [AllureTag("@Heroku")]
+    [AllureTag("@Heroku", "@Login")]
     [Category("Selenium")]
     internal class AuthenticationTests : BaseSteps
     {
@@ -35,8 +35,8 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
             Assert.That(actualResult, Is.EqualTo(shouldSucceed), $"User login should be {expectedResult}.");
         }
 
-        [TestCase(null, TestName = "Verify user logout")]
-        public void UserLogoutTest(object? ignored)
+        [Test, Description("Verify user logout")]
+        public void UserLogoutTest()
         {
             UserAuthenticationTest("tomsmith", "SuperSecretPassword!", true);
 

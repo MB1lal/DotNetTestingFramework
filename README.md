@@ -52,9 +52,9 @@ ToDo
 
 ### 2. API Tests
 
-	```dotnet test --filter Category=Api```
+	```dotnet test --filter Category=API```
 
 ## Test Reports
-Test reports are generated using Allure [ToDo]
+Test reports are generated using Allure
 
 

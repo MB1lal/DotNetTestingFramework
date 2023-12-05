@@ -5,19 +5,18 @@ using NUnit.Allure.Core;
 
 namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
-    [TestFixture]
+    [TestFixture, Description("Verify dynamic loading of elements in Heroku Web App")]
     [AllureNUnit]
     [AllureTag("@Heroku", "@DynamicLoading")]
     [Category("Selenium")]
     internal class DynamicLoadingTests : BaseSteps
     {
-        private DynamicLoadingPage dynamicLoadingPage;
 
         [TestCase(1, TestName = "Verify loading of hidden elements")]
         [TestCase(2, TestName = "Verify loading of newly created elements")]
         public void HiddenElementsTest(int exampleIndex)
         {
-            dynamicLoadingPage = new(driver);
+            DynamicLoadingPage dynamicLoadingPage = new(driver);
             string elementText;
 
             NavigateToPage("Dynamic Loading");
