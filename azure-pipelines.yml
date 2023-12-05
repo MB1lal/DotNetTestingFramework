@@ -2,7 +2,6 @@ name: NUnit Tests
 
 trigger:
 - master
-- setup-github-pipeline
 
 jobs:
 - job: build
