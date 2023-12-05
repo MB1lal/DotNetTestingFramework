@@ -5,19 +5,19 @@ using NUnit.Allure.Core;
 
 namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
-    [TestFixture]
+    [TestFixture, Description("Verify file uploading on Heroku Web App")]
     [AllureNUnit]
     [AllureTag("@Heroku", "@FileUpload")]
     [Category("Selenium")]
     internal class FileUploadTests : BaseSteps
     {
 
-        [TestCase(null, TestName = "Verifyt file is succesfully uploaded")]
-        public void VerifyFileUpload(object? ignored)
+        [Test, Description("Verify file is succesfully uploaded")]
+        public void VerifyFileUpload()
         {
             NavigateToPage("File Upload");
             logger.Info("Uploading a file");
-            FileUploadPage fileUploadPage = new FileUploadPage(driver);
+            FileUploadPage fileUploadPage = new(driver);
             fileUploadPage.SelectFileToUpload();
             fileUploadPage.UploadFile();
             logger.Info("Verifying file is correctly uploaded");

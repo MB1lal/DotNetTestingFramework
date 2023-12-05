@@ -7,7 +7,7 @@ using System.Text.Json;
 
 namespace DotNetTestingFramework.Tests.API_Tests
 {
-    [TestFixture]
+    [TestFixture, Description("Verify pet controller API")]
     [AllureNUnit]
     [AllureTag("@Pets")]
     [Category("PetsTest")]
@@ -15,8 +15,8 @@ namespace DotNetTestingFramework.Tests.API_Tests
     internal class PetsTest : BaseSteps
     {
 
-        [TestCase(null, TestName = "Verify a pet can be added")]
-        public void VerifyPetCanBeAddedThroughId(object? ignored)
+        [Test, Description("Verify a pet can be added")]
+        public void VerifyPetCanBeAddedThroughId()
         {
             logger.Info("Creating a pet");
             AddNewPetUsingId();
@@ -31,8 +31,8 @@ namespace DotNetTestingFramework.Tests.API_Tests
             });
         }
 
-        [TestCase(null, TestName = "Verify a new pet can be added with 'sold' status")]
-        public void VerifyNewlyAddedPetThroughStatus(object? ignored)
+        [Test, Description("Verify a new pet can be added with 'sold' status")]
+        public void VerifyNewlyAddedPetThroughStatus()
         {
             logger.Info("Creating a pet with status 'sold'");
             AddNewPetWithStatus("sold");
@@ -58,8 +58,8 @@ namespace DotNetTestingFramework.Tests.API_Tests
             });
         }
 
-        [TestCase(null, TestName = "Verify pet can be deleted")]
-        public void VerifyPetCanBeDeleted(object? ignored)
+        [Test, Description("Verify pet can be deleted")]
+        public void VerifyPetCanBeDeleted()
         {
             logger.Info("Creating a pet");
             AddNewPetUsingId();
@@ -72,8 +72,8 @@ namespace DotNetTestingFramework.Tests.API_Tests
 
         }
 
-        [TestCase(null, TestName = "Verify pet details can be updated")]
-        public void VerifyPetsDetailsCanBeUpdated(object? ignored)
+        [Test, Description("Verify pet details can be updated")]
+        public void VerifyPetsDetailsCanBeUpdated()
         {
             logger.Info("Creating a pet");
             AddNewPetUsingId();

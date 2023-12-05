@@ -5,7 +5,7 @@ using NUnit.Allure.Core;
 
 namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
-    [TestFixture]
+    [TestFixture, Description("Verify hovering scenarios on Heroku Web App")]
     [AllureNUnit]
     [AllureTag("@Heroku", "@hover")]
     [Category("Selenium")]
@@ -30,8 +30,8 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
             }
         }
 
-        [TestCase(null, TestName = "Verify all names are correct on hovering over profile images")]
-        public void VerifyProfileTextOnHover(object? ignored)
+        [Test, Description("Verify all names are correct on hovering over profile images")]
+        public void VerifyProfileTextOnHover()
         {
             try
             {
@@ -63,7 +63,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
             catch (Exception ex)
             {
                 logger.Error($"Test failed: {ex.Message}");
-                throw; // Re-throw the exception to mark the test as failed
+                throw;
             }
         }
     }

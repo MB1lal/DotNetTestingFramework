@@ -5,14 +5,14 @@ using NUnit.Allure.Core;
 
 namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
-    [TestFixture]
+    [TestFixture, Description("Verifying handling of multiple tabs using Heroku Web App")]
     [AllureNUnit]
     [AllureTag("@Heroku", "@MultiWindow")]
     [Category("Selenium")]
     internal class MultiWindowTests : BaseSteps
     {
-        [TestCase(null, TestName = "Verify navigation between multiple tabs in a browser")]
-        public void VerifyMultipleTabsHandling(object? ignored)
+        [Test, Description("Verify navigation between multiple tabs in a browser")]
+        public void VerifyMultipleTabsHandling()
         {
             NavigateToPage("multiple windows");
             MultiWindowPage multiWindowPage = new(driver);

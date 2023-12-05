@@ -5,14 +5,14 @@ using NUnit.Allure.Core;
 
 namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
-    [TestFixture]
+    [TestFixture, Description("Verify iFrames scenarios on Heroku Web App")]
     [AllureNUnit]
     [AllureTag("@Heroku", "@iFrames")]
     [Category("Selenium")]
     internal class FramesTests : BaseSteps
     {
-        [TestCase(null, TestName = "Verify text in Nested iFrames")]
-        public void VerifyNestedFrames(object? ignored)
+        [Test, Description("Verify text in Nested iFrames")]
+        public void VerifyNestedFrames()
         {
             NavigateToPage("Frames");
 
@@ -39,8 +39,8 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
 
         }
 
-        [TestCase(null, TestName = "Verify text in an iFrame")]
-        public void VerifyiFrames(object? ignored)
+        [Test, Description("Verify text in an iFrame")]
+        public void VerifyiFrames()
         {
             NavigateToPage("Frames");
 

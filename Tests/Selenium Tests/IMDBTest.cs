@@ -6,10 +6,11 @@ using NUnit.Allure.Core;
 
 namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
-    [TestFixture]
+    [TestFixture, Description("Verifying cast from IMDB")]
     [AllureNUnit]
     [AllureTag("@Google", "@imdb")]
     [Category("Selenium")]
+    [Ignore("Deprecated")]
     internal class IMDBTest : BaseSteps
     {
         private GoogleHomePage _googleHomePage;

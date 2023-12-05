@@ -10,10 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="C:\Users\MB1LA\.nuget\packages\allure.net.commons\2.10.0\contentFiles\any\netstandard2.0\allureConfig.Template.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Allure.Net.Commons" Version="2.11.0" />
     <PackageReference Include="Allure.NUnit" Version="2.11.0" />
     <PackageReference Include="DotNetSeleniumExtras.PageObjects.Core" Version="4.14.1" />
@@ -21,6 +17,7 @@
     <PackageReference Include="ExtentReports" Version="5.0.1" />
     <PackageReference Include="Faker.Net" Version="2.0.154" />
     <PackageReference Include="IronXL.Excel" Version="2023.12.19" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="NLog" Version="5.2.7" />
     <PackageReference Include="NUnit" Version="4.0.1" />
@@ -41,19 +38,6 @@
     <PackageReference Include="WebDriverManager" Version="2.17.1" />
   </ItemGroup>
   <Target Name="Replace" AfterTargets="CoreCompile">
-
-    <PropertyGroup>
-
-      <InputFile>allureConfig.json</InputFile>
-
-      <OutputFile>allureConfig.json</OutputFile>
-
-    </PropertyGroup>
-
-    <WriteLinesToFile File="$(OutputFile)" Lines="$([System.IO.File]::ReadAllText($(InputFile)).Replace('$Directory','$(MSBuildProjectDirectory)\AllureResults\$([System.DateTime]::Now.ToString(yyyy_MM_dd_HH_mm_ss))'))" Overwrite="true" Encoding="Unicode" />
-
-    <WriteLinesToFile File="$(OutputFile)" Lines="$([System.IO.File]::ReadAllText($(InputFile)).Replace('\','//'))" Overwrite="true" Encoding="Unicode" />
-
   </Target>
 
   <Target Name="MakeMyDir" AfterTargets="Build">
@@ -62,9 +46,6 @@
 
   </Target>
   <ItemGroup>
-    <None Update="allureConfig.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="config.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

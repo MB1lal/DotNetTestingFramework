@@ -6,7 +6,7 @@ using NUnit.Allure.Core;
 
 namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
-    [TestFixture]
+    [TestFixture, Description("Verify dropdown scenarios using Heroku Web App")]
     [AllureNUnit]
     [AllureTag("@Heroku", "@dropdown")]
     [Category("Selenium")]

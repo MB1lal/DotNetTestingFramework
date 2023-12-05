@@ -7,15 +7,15 @@ using System.Text.Json;
 
 namespace DotNetTestingFramework.Tests.API_Tests
 {
-    [TestFixture]
+    [TestFixture, Description("Verify pet store API")]
     [AllureNUnit]
     [AllureTag("@PetStore")]
     [Category("PetStore")]
     [Category("API")]
     internal class PetStoreApiTests : BaseSteps
     {
-        [TestCase(null, TestName = "Verify pet order can be placed")]
-        public void OrderIsSuccesfullyPlaced(object? ignored)
+        [Test, Description("Verify pet order can be placed")]
+        public void OrderIsSuccesfullyPlaced()
         {
             logger.Info("Placing a pet order");
             CreateNewPetStoreOder();
@@ -23,11 +23,11 @@ namespace DotNetTestingFramework.Tests.API_Tests
             RestResponse restResponse = FetchPetStoreOrder(Constants.SessionVariables.PetStore.id);
             PetStoreModel actualStoreModel = JsonSerializer.Deserialize<PetStoreModel>(restResponse.Content);
             logger.Info("Verifying newly placed order exists");
-            Assert.That(actualStoreModel.id.Equals(Constants.SessionVariables.PetStore.id));
+            Assert.That(actualStoreModel.id, Is.EqualTo(Constants.SessionVariables.PetStore.id));
         }
 
-        [TestCase(null, TestName = "Verify pet order can be deleted")]
-        public void OrderIsSuccessfullyDeleted(object? ignored)
+        [Test, Description("Verify pet order can be deleted")]
+        public void OrderIsSuccessfullyDeleted()
         {
             logger.Info("Placing a pet order");
             CreateNewPetStoreOder();
@@ -35,7 +35,7 @@ namespace DotNetTestingFramework.Tests.API_Tests
             DeletePetStoreOrder(Constants.SessionVariables.PetStore.id);
             RestResponse restResponse = FetchInvalidPetStoreOrder(Constants.SessionVariables.PetStore.id);
             logger.Info("Verifying order is deleted");
-            Assert.That(restResponse.Content.Contains("Order not found"));
+            Assert.That(restResponse.Content, Does.Contain("Order not found"));
         }
     }
 }
