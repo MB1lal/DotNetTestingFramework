@@ -2,7 +2,7 @@ name: NUnit Tests
 
 on:
   push:
-    branches: [ "setup-github-pipeline" ]
+    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
