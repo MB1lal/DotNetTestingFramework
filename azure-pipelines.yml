@@ -1,59 +1,27 @@
-pool:
-  name: Azure Pipelines
-  vmImage: 'windows-latest'
-  demands:
-  - msbuild
-  - visualstudio
-  - vstest
+name: NUnit Tests
 
-steps:
-- task: NuGetToolInstaller@0
-  displayName: 'Use NuGet'
-  inputs:
-    versionSpec: 6.x
-    checkLatest: true
+trigger:
+- master
 
-- task: NuGetCommand@2
-  displayName: 'NuGet restore'
-  inputs:
-    restoreSolution: '$(Parameters.solution)'
-    noCache: true
+jobs:
+- job: build
+  pool:
+    vmImage: 'windows-latest'
+  steps:
+  - checkout: self
 
-- task: VSBuild@1
-  displayName: 'Build solution **\*.sln'
-  inputs:
-    solution: '$(Parameters.solution)'
-    platform: '$(BuildPlatform)'
-    configuration: '$(BuildConfiguration)'
-    clean: true
-    msbuildArgs: '/v:d'
+  - task: UseDotNet@2
+    inputs:
+      version: 6.0.x
+      installationPath: $(Agent.ToolsDirectory)/dotnet
 
-- task: VSTest@2
-  displayName: 'VsTest - testAssemblies'
-  inputs:
-    testAssemblyVer2: |
-     **\$(BuildConfiguration)\**\DotNetTestingFramework.dll
-     !**\obj\**
-    platform: '$(BuildPlatform)'
-    configuration: '$(BuildConfiguration)'
+  - task: DotNetCoreCLI@2
+    displayName: 'Restore dependencies'
+    inputs:
+      command: restore
 
-- task: PublishSymbols@2
-  displayName: 'Publish symbols path'
-  inputs:
-    SearchPattern: '**\bin\**\*.pdb'
-    PublishSymbols: false
-  continueOnError: true
-
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
-  inputs:
-    SourceFolder: '$(system.defaultworkingdirectory)'
-    Contents: '**\bin\$(BuildConfiguration)\**'
-    TargetFolder: '$(build.artifactstagingdirectory)'
-  condition: succeededOrFailed()
-
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: drop'
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-  condition: succeededOrFailed()
+  - task: DotNetCoreCLI@2
+    displayName: 'Test'
+    inputs:
+      command: test
+      projects: '**/DotNetTestingFramework.csproj'
