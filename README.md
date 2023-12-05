@@ -1,7 +1,7 @@
 # DotNet Testing Framework
 
 [![NUnit Tests](https://github.com/MB1lal/DotNetTestingFramework/actions/workflows/dotnet-desktop.yml/badge.svg?branch=master)](https://github.com/MB1lal/DotNetTestingFramework/actions/workflows/dotnet-desktop.yml)
-
+[![Build Status](https://dev.azure.com/mb1lal/DesktopTest/_apis/build/status%2FMB1lal.DotNetTestingFramework?branchName=master)](https://dev.azure.com/mb1lal/DesktopTest/_build/latest?definitionId=3&branchName=master)
 
 This project is a unit testing framework that uses NUnit, RestSharp and Selenium to verify the functionality of various APIs and web browser interactions.
 
