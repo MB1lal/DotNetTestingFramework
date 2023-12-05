@@ -6,14 +6,14 @@ namespace DotNetTestingFramework.Pages
 {
     internal class DropdownPage
     {
-        private IWebDriver _driver;
+        private readonly IWebDriver _driver;
 
         [FindsBy(How = How.Id, Using = "dropdown")]
-        private IWebElement? dropdownElement;
+        private readonly IWebElement? dropdownElement;
 
-        private SelectElement dropdown;
+        private readonly SelectElement dropdown;
 
-        public DropdownPage(IWebDriver driver) 
+        public DropdownPage(IWebDriver driver)
         {
             _driver = driver;
             PageFactory.InitElements(_driver, this);

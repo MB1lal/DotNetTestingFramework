@@ -8,6 +8,6 @@ namespace DotNetTestingFramework.Models
         public int id { get; set; }
 
         [JsonProperty("name")]
-        public string name { get; set; }
+        public string? name { get; set; }
     }
 }

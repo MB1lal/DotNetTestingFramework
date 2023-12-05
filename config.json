@@ -1,0 +1,12 @@
+{
+  "WebBrowser": {
+    "IsHeadless": true,
+    "IsPrivate": true,
+    "BrowserName": "Chrome"
+  },
+  "Urls": {
+    "HerokuURL": "https://the-internet.herokuapp.com/",
+    "PetBaseURI": "https://petstore.swagger.io/v2"
+
+  }
+}

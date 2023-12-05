@@ -7,14 +7,14 @@ namespace DotNetTestingFramework.Pages
 {
     public class DynamicLoadingExample2Page
     {
-        private IWebDriver _driver;
+        private readonly IWebDriver _driver;
         [FindsBy(How = How.CssSelector, Using = "#start > button")]
-        private IWebElement? btnStart;
+        private readonly IWebElement? btnStart;
 
-        private By loadingBar = By.Id("loading");
+        private readonly By loadingBar = By.Id("loading");
 
         [FindsBy(How = How.Id, Using = "finish")]
-        private IWebElement? txtHello;
+        private readonly IWebElement? txtHello;
 
         public DynamicLoadingExample2Page(IWebDriver driver)
         {
@@ -26,7 +26,7 @@ namespace DotNetTestingFramework.Pages
 
         private void WaitForLoadingToFinish()
         {
-            WebDriverWait wait = new WebDriverWait(_driver, System.TimeSpan.FromSeconds(30));
+            WebDriverWait wait = new(_driver, System.TimeSpan.FromSeconds(30));
             wait.Until(ExpectedConditions.InvisibilityOfElementLocated(loadingBar));
         }
 

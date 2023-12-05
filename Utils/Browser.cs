@@ -7,18 +7,18 @@ namespace DotNetTestingFramework.Utils
 {
     internal class Browser
     {
-        private IWebDriver _getChromeDriver(Boolean isHeadless, Boolean isPrivate)
+        private static IWebDriver GetChromeDriver(Boolean isHeadless, Boolean isPrivate)
         {
-            ChromeOptions options = new ChromeOptions();
-            if(isHeadless)
+            ChromeOptions options = new();
+            if (isHeadless)
             {
                 options.AddArgument("--headless");
             }
-            if(isPrivate)
+            if (isPrivate)
             {
                 options.AddArgument("--incognito");
             }
-          
+
             options.AddArgument("--disable-download-notification");
             options.AddArgument("--disable-gpu");
             options.AddArgument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36");
@@ -27,14 +27,14 @@ namespace DotNetTestingFramework.Utils
             return new ChromeDriver(options);
         }
 
-        private IWebDriver _getEdgeDriver(Boolean isHeadless, Boolean isPrivate) 
+        private static IWebDriver GetEdgeDriver(Boolean isHeadless, Boolean isPrivate)
         {
-            EdgeOptions options = new EdgeOptions();
-            if(isHeadless)
+            EdgeOptions options = new();
+            if (isHeadless)
             {
                 options.AddArgument("--headless");
             }
-            if(isPrivate)
+            if (isPrivate)
             {
                 options.AddArgument("--incognito");
             }
@@ -42,10 +42,10 @@ namespace DotNetTestingFramework.Utils
             return new EdgeDriver(options);
         }
 
-        private IWebDriver _getFirefoxDriver(Boolean isHeadless, Boolean isPrivate)
+        private static IWebDriver GetFirefoxDriver(Boolean isHeadless, Boolean isPrivate)
         {
-            FirefoxOptions options = new FirefoxOptions();
-            FirefoxProfile profile = new FirefoxProfile();
+            FirefoxOptions options = new();
+            FirefoxProfile profile = new();
 
             options.AddArgument("-window-size=1920x1080");
 
@@ -63,22 +63,15 @@ namespace DotNetTestingFramework.Utils
             return new FirefoxDriver(options);
         }
 
-        public IWebDriver GetWebDriver(string browserName, Boolean isHeadless, Boolean isPrivate)
+        public static IWebDriver GetWebDriver(string browserName, Boolean isHeadless, Boolean isPrivate)
         {
-            switch (browserName.ToLower())
+            return browserName.ToLower() switch
             {
-                case "chrome":
-                    return _getChromeDriver(isHeadless, isPrivate);
-
-                case "edge":
-                    return _getEdgeDriver(isHeadless, isPrivate);
-
-                case "firefox":
-                    return _getFirefoxDriver(isHeadless, isPrivate);
-
-                default:
-                    throw new ArgumentException("Incorrect browser specified");
-            }
+                "chrome" => GetChromeDriver(isHeadless, isPrivate),
+                "edge" => GetEdgeDriver(isHeadless, isPrivate),
+                "firefox" => GetFirefoxDriver(isHeadless, isPrivate),
+                _ => throw new ArgumentException("Incorrect browser specified"),
+            };
         }
     }
 }

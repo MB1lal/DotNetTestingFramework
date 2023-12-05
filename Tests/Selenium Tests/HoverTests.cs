@@ -3,7 +3,7 @@ using DotNetTestingFramework.Tests.Core;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 
-namespace DotNetTestingFramework.Tests.SeleniumTests
+namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
     [TestFixture]
     [AllureNUnit]
@@ -11,22 +11,22 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
     [Category("Selenium")]
     internal class HoverTests : BaseSteps
     {
-        private int getId(string profile)
+        private static int GetId(string profile)
         {
             switch (profile)
             {
                 case "first":
-                   return 0;
+                    return 0;
 
                 case "second":
                     return 1;
 
                 case "third":
                     return 2;
-                  
+
                 default:
                     logger.Error("Invalid profile specified");
-                    throw new ArgumentException();
+                    throw new Exception("Invalid profile specified");
             }
         }
 
@@ -37,7 +37,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
             {
                 NavigateToPage("Hovers");
 
-                HoverPage hoverPage = new HoverPage(driver);
+                HoverPage hoverPage = new(driver);
 
                 if (hoverPage == null)
                 {
@@ -57,7 +57,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
                     logger.Info($"Hovering over {profile} profile");
                     hoverPage.HoverOverUserAvatar(profile);
                     logger.Info("Verifying profile text");
-                    Assert.That(hoverPage.GetProfileText(getId(profile)), Is.EqualTo(expectedText));
+                    Assert.That(hoverPage.GetProfileText(GetId(profile)), Is.EqualTo(expectedText));
                 }
             }
             catch (Exception ex)

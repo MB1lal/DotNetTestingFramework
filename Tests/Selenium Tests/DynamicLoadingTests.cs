@@ -3,7 +3,7 @@ using DotNetTestingFramework.Tests.Core;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 
-namespace DotNetTestingFramework.Tests.SeleniumTests
+namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
     [TestFixture]
     [AllureNUnit]
@@ -17,17 +17,17 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
         [TestCase(2, TestName = "Verify loading of newly created elements")]
         public void HiddenElementsTest(int exampleIndex)
         {
-            dynamicLoadingPage = new DynamicLoadingPage(driver);
+            dynamicLoadingPage = new(driver);
             string elementText;
 
             NavigateToPage("Dynamic Loading");
 
             logger.Info($"Navigating to Example {exampleIndex} Page");
             dynamicLoadingPage.ClickXExample(exampleIndex);
-            switch(exampleIndex)
+            switch (exampleIndex)
             {
                 case 1:
-                    DynamicLoadingExample1Page dynamicLoadingExample1Page = new DynamicLoadingExample1Page(driver);
+                    DynamicLoadingExample1Page dynamicLoadingExample1Page = new(driver);
                     logger.Info("Starting loading of element");
                     dynamicLoadingExample1Page.StartLoading();
                     logger.Info("Fetching text of element");
@@ -35,7 +35,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
                     break;
 
                 case 2:
-                    DynamicLoadingExample2Page dynamicLoadingExample2Page = new DynamicLoadingExample2Page(driver);
+                    DynamicLoadingExample2Page dynamicLoadingExample2Page = new(driver);
                     logger.Info("Starting loading of element");
                     dynamicLoadingExample2Page.StartLoading();
                     logger.Info("Fetching text of element");
@@ -49,7 +49,6 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
 
             logger.Info("Verifying text");
             Assert.That(elementText, Is.EqualTo("Hello World!"));
-
         }
     }
 }

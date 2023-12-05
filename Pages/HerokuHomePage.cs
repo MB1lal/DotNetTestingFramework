@@ -6,41 +6,41 @@ namespace DotNetTestingFramework.Pages
 {
     internal class HerokuHomePage : BaseSteps
     {
-        private string _url = "https://the-internet.herokuapp.com/";
+        private readonly string _url = Constants.SessionVariables.Config.Urls.HerokuURL;
 
         [FindsBy(How = How.LinkText, Using = "Form Authentication")]
-        private IWebElement _formAuthentiation;
+        private readonly IWebElement _formAuthentiation;
 
         [FindsBy(How = How.LinkText, Using = "Checkboxes")]
-        private IWebElement _checkboxesPage;
+        private readonly IWebElement _checkboxesPage;
 
         [FindsBy(How = How.LinkText, Using = "Dropdown")]
-        private IWebElement _dropdownPage;
+        private readonly IWebElement _dropdownPage;
 
         [FindsBy(How = How.LinkText, Using = "Dynamic Loading")]
-        private IWebElement _dynamicLoadingPage;
+        private readonly IWebElement _dynamicLoadingPage;
 
         [FindsBy(How = How.LinkText, Using = "File Download")]
-        private IWebElement _fileDownloadPage;
+        private readonly IWebElement _fileDownloadPage;
 
         [FindsBy(How = How.LinkText, Using = "File Upload")]
-        private IWebElement _fileUploadPage;
+        private readonly IWebElement _fileUploadPage;
 
         [FindsBy(How = How.LinkText, Using = "Frames")]
-        private IWebElement _framesPage;
+        private readonly IWebElement _framesPage;
 
         [FindsBy(How = How.LinkText, Using = "Hovers")]
-        private IWebElement _hoversPage;
+        private readonly IWebElement _hoversPage;
 
         [FindsBy(How = How.LinkText, Using = "JavaScript Alerts")]
-        private IWebElement _javaScriptAlertsPage;
+        private readonly IWebElement _javaScriptAlertsPage;
 
         [FindsBy(How = How.LinkText, Using = "Multiple Windows")]
-        private IWebElement _multiWindowPage;
+        private readonly IWebElement _multiWindowPage;
 
         [FindsBy(How = How.LinkText, Using = "Notification Messages")]
-        private IWebElement _notificationMessages;
-        
+        private readonly IWebElement _notificationMessages;
+
         public HerokuHomePage(IWebDriver webDriver)
         {
             PageFactory.InitElements(webDriver, this);
@@ -49,7 +49,7 @@ namespace DotNetTestingFramework.Pages
 
         public void NavigateToPage(string pageName)
         {
-            switch(pageName.ToLower())
+            switch (pageName.ToLower())
             {
                 case "form authentication":
                     _formAuthentiation.Click();
@@ -89,6 +89,6 @@ namespace DotNetTestingFramework.Pages
                     throw new ArgumentException("Invalid page specified");
             }
         }
-    
+
     }
 }

@@ -5,25 +5,25 @@ namespace DotNetTestingFramework.Pages
 {
     internal class NestedFramesPage
     {
-        private IWebDriver _driver;
+        private readonly IWebDriver _driver;
 
         [FindsBy(How = How.Name, Using = "frame-top")]
-        private IWebElement? frameTop;
+        private readonly IWebElement? frameTop;
 
         [FindsBy(How = How.Name, Using = "frame-left")]
-        private IWebElement? topLeftFrame;
+        private readonly IWebElement? topLeftFrame;
 
         [FindsBy(How = How.Name, Using = "frame-right")]
-        private IWebElement? topRightFrame;
+        private readonly IWebElement? topRightFrame;
 
         [FindsBy(How = How.Name, Using = "frame-middle")]
-        private IWebElement? topMiddleFrame;
-        
+        private readonly IWebElement? topMiddleFrame;
+
         [FindsBy(How = How.Name, Using = "frame-bottom")]
-        private IWebElement? childBottomFrame;
+        private readonly IWebElement? childBottomFrame;
 
         [FindsBy(How = How.CssSelector, Using = "body")]
-        private IWebElement? frameText;
+        private readonly IWebElement? frameText;
 
 
         public NestedFramesPage(IWebDriver driver)
@@ -34,7 +34,7 @@ namespace DotNetTestingFramework.Pages
 
         private void SwitchToFrame(string frameId)
         {
-            switch(frameId)
+            switch (frameId)
             {
                 case "Top Left":
                     _driver.SwitchTo().Frame(topLeftFrame);
@@ -56,7 +56,7 @@ namespace DotNetTestingFramework.Pages
 
         private void NavigateToExpectedFrameLayer(string frameId)
         {
-            if(frameId != "Bottom")
+            if (frameId != "Bottom")
             {
                 _driver.SwitchTo().Frame(frameTop);
             }
@@ -68,7 +68,7 @@ namespace DotNetTestingFramework.Pages
             NavigateToExpectedFrameLayer(frameId);
             string frameText = this.frameText.Text;
 
-            if(frameId != "Bottom")
+            if (frameId != "Bottom")
             {
                 _driver.SwitchTo().ParentFrame().SwitchTo().ParentFrame();
             }

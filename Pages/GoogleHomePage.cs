@@ -5,26 +5,24 @@ namespace DotNetTestingFramework.Pages
 {
     public class GoogleHomePage
     {
-        private IWebDriver _driver;
-        private string _url = "https://www.google.com";
+        private readonly string _url = "https://www.google.com";
 
         [FindsBy(How = How.Name, Using = "q")]
-        private IWebElement _searchTextBox;
+        private readonly IWebElement _searchTextBox;
 
         [FindsBy(How = How.Name, Using = "btnK")]
-        private IWebElement _searchBtn;
+        private readonly IWebElement _searchBtn;
 
         [FindsBy(How = How.ClassName, Using = "lnXdpd")]
-        private IWebElement _pageLogo;
+        private readonly IWebElement _pageLogo;
 
         [FindsBy(How = How.LinkText, Using = "English")]
-        private IWebElement _englishElement;
+        private readonly IWebElement _englishElement;
 
         public GoogleHomePage(IWebDriver driver)
         {
-            _driver = driver;
             PageFactory.InitElements(driver, this);
-            _driver.Navigate().GoToUrl(_url);
+            driver.Navigate().GoToUrl(_url);
         }
 
         public Boolean PageHasLogo()
@@ -44,7 +42,7 @@ namespace DotNetTestingFramework.Pages
 
         public void SwitchToEnglish()
         {
-            if(_englishElement.Displayed)
+            if (_englishElement.Displayed)
             {
                 _englishElement.Click();
             }

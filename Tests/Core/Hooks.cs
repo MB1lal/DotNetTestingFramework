@@ -1,19 +1,26 @@
 ﻿using DotNetTestingFramework.Utils;
 using NLog;
 using OpenQA.Selenium;
+using Configuration = DotNetTestingFramework.Utils.Configuration;
+
 
 namespace DotNetTestingFramework.Tests.Core
 {
     public class Hooks
     {
-        protected static Logger logger = LogManager.GetCurrentClassLogger();
+        protected readonly static Logger logger = LogManager.GetCurrentClassLogger();
         [ThreadStatic] protected static IWebDriver driver;
+        private readonly string absolutePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
 
-        private Boolean isSeleniumTest()
+        private bool IsSeleniumTest()
         {
-            // Check if any of the test methods have the "Selenium" category
-            return Attribute.IsDefined(GetType(), typeof(CategoryAttribute), false) &&
-               ((CategoryAttribute)Attribute.GetCustomAttribute(GetType(), typeof(CategoryAttribute))).Name == "Selenium";
+            try
+            {
+                return Attribute.IsDefined(GetType(), typeof(CategoryAttribute), false) &&
+              ((CategoryAttribute)Attribute.GetCustomAttribute(GetType(), typeof(CategoryAttribute))).Name == "Selenium";
+            }
+            catch { return false; }
+
         }
 
 
@@ -22,18 +29,21 @@ namespace DotNetTestingFramework.Tests.Core
         {
             var config = new NLog.Config.XmlLoggingConfiguration("NLog.config");
             LogManager.Configuration = config;
-            if (isSeleniumTest())
+
+            Constants.SessionVariables.Config = Configuration.LoadConfiguration(absolutePath);
+
+            if (IsSeleniumTest())
             {
-                Browser browser = new Browser();
                 logger.Info("Test detected as 'Selenium' based");
-                driver = browser.GetWebDriver("Chrome", true, true);
+                var browserConfig = Constants.SessionVariables.Config.WebBrowser;
+                driver = Browser.GetWebDriver(browserConfig.BrowserName, browserConfig.IsHeadless, browserConfig.IsPrivate);
             }
         }
 
         [TearDown]
         public void TearDown()
         {
-            if(isSeleniumTest())
+            if (IsSeleniumTest())
             {
                 logger.Info("Quitting browser");
                 driver.Quit();
@@ -41,7 +51,6 @@ namespace DotNetTestingFramework.Tests.Core
             }
         }
 
-       
     }
 
 

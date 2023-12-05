@@ -10,18 +10,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Allure.Net.Commons" Version="2.10.0" />
-    <PackageReference Include="Allure.NUnit" Version="2.10.0" />
+    <Content Remove="C:\Users\MB1LA\.nuget\packages\allure.net.commons\2.10.0\contentFiles\any\netstandard2.0\allureConfig.Template.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Allure.Net.Commons" Version="2.11.0" />
+    <PackageReference Include="Allure.NUnit" Version="2.11.0" />
     <PackageReference Include="DotNetSeleniumExtras.PageObjects.Core" Version="4.14.1" />
     <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
     <PackageReference Include="ExtentReports" Version="5.0.1" />
     <PackageReference Include="Faker.Net" Version="2.0.154" />
-    <PackageReference Include="IronXL.Excel" Version="2023.11.12" />
+    <PackageReference Include="IronXL.Excel" Version="2023.12.19" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
-    <PackageReference Include="NLog" Version="5.2.5" />
-    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NLog" Version="5.2.7" />
+    <PackageReference Include="NUnit" Version="4.0.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
-    <PackageReference Include="NUnit.Analyzers" Version="3.9.0">
+    <PackageReference Include="NUnit.Analyzers" Version="3.10.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -60,6 +64,9 @@
   <ItemGroup>
     <None Update="allureConfig.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -6,10 +6,10 @@ namespace DotNetTestingFramework.Pages
     internal class FramesPage
     {
         [FindsBy(How = How.LinkText, Using = "Nested Frames")]
-        private IWebElement? nestedFramesPage;
+        private readonly IWebElement? nestedFramesPage;
 
         [FindsBy(How = How.LinkText, Using = "iFrame")]
-        private IWebElement? iFramesPage;
+        private readonly IWebElement? iFramesPage;
 
         public FramesPage(IWebDriver driver)
         {
@@ -18,7 +18,7 @@ namespace DotNetTestingFramework.Pages
 
         public void NavigateToXFramesPage(string page)
         {
-            switch(page.ToLower())
+            switch (page.ToLower())
             {
                 case "iframe":
                     iFramesPage.Click();

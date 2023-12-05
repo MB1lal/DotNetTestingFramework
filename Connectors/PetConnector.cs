@@ -5,57 +5,52 @@ namespace DotNetTestingFramework.Connectors
 {
     internal class PetConnector
     {
-        private string _baseURI = "https://petstore.swagger.io/v2/pet";
+        private static RestClient BaseRequest() => new(Constants.SessionVariables.Config.Urls.PetBaseURI + "/pet");
 
-        private RestClient baseRequest()
-        {
-            return new RestClient(_baseURI);
-        }
-
-        public void AddAPetUsingId(string pet)
+        public static void AddAPetUsingId(string pet)
         {
             RestRequest request = new RestRequest("", Method.Post).AddBody(pet);
-            RestResponse response = baseRequest().Execute(request);
-            Assert.IsTrue(response.IsSuccessful);
+            RestResponse response = BaseRequest().Execute(request);
+            Assert.That(response.IsSuccessful, Is.True);
         }
 
-        public RestResponse GetPetUsingId(int id)
+        public static RestResponse GetPetUsingId(int id)
         {
             RestRequest request = new RestRequest("/" + id, Method.Get);
-            RestResponse response = baseRequest().Execute(request);
-            Assert.IsTrue(response.IsSuccessful);
+            RestResponse response = BaseRequest().Execute(request);
+            Assert.That(response.IsSuccessful, Is.True);
             return response;
         }
 
-        public RestResponse GetPetUsingStatus(string status)
+        public static RestResponse GetPetUsingStatus(string status)
         {
             RestRequest request = new RestRequest("/findByStatus", Method.Get).AddParameter("status", status);
-            RestResponse response = baseRequest().Execute<PetModel[]>(request);
-            Assert.IsTrue(response.IsSuccessStatusCode);
+            RestResponse response = BaseRequest().Execute<PetModel[]>(request);
+            Assert.That(response.IsSuccessStatusCode, Is.True);
             return response;
         }
 
-        public void DeletePetUsingId(int id)
+        public static void DeletePetUsingId(int id)
         {
             RestRequest request = new RestRequest("/" + id, Method.Delete);
-            RestResponse response = baseRequest().Execute(request);
-            Assert.IsTrue(response.IsSuccessStatusCode);
+            RestResponse response = BaseRequest().Execute(request);
+            Assert.That(response.IsSuccessStatusCode, Is.True);
         }
 
-        public RestResponse GetDeletedPetUsingId(int id)
+        public static RestResponse GetDeletedPetUsingId(int id)
         {
             RestRequest request = new RestRequest("/" + id, Method.Get);
-            RestResponse response = baseRequest().Execute(request);
+            RestResponse response = BaseRequest().Execute(request);
             return response;
         }
 
-        public void UpdateThePetData(string attribute, string value)
+        public static void UpdateThePetData(string attribute, string value)
         {
-            RestRequest request = new RestRequest("/" + Constants.SessionVariables.PetModel.id, Method.Post)
+            RestRequest request = new RestRequest($"/{Constants.SessionVariables.PetModel.id}", Method.Post)
                 .AddHeader("Content-Type", ContentType.FormUrlEncoded)
                 .AddParameter(ContentType.FormUrlEncoded, attribute + "=" + value, ParameterType.RequestBody);
-            RestResponse response = baseRequest().Execute(request);
-            Assert.IsTrue(response.IsSuccessStatusCode);
+            RestResponse response = BaseRequest().Execute(request);
+            Assert.That(response.IsSuccessStatusCode, Is.True);
         }
     }
 }

@@ -3,7 +3,7 @@ using DotNetTestingFramework.Tests.Core;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 
-namespace DotNetTestingFramework.Tests.SeleniumTests
+namespace DotNetTestingFramework.Tests.Selenium_Tests
 {
     [TestFixture]
     [AllureNUnit]
@@ -17,7 +17,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
         [TestCase("tomsmith", "SuperSecretPassword!", true, TestName = "Verify successful login")]
         [TestCase("admin", "admin", false, TestName = "Verify unsuccessful login")]
         public void UserAuthenticationTest(string username, string password, bool shouldSucceed)
-    {
+        {
             NavigateToPage("Form Authentication");
             authenticationPage = new AuthenticationPage(driver);
 
@@ -32,7 +32,7 @@ namespace DotNetTestingFramework.Tests.SeleniumTests
             // Verify the login result
             bool actualResult = authenticationPage.IsLoggedIn();
             string expectedResult = shouldSucceed ? "successful" : "unsuccessful";
-            Assert.That(actualResult, Is.EqualTo(shouldSucceed), $"User login should be {expectedResult}."); 
+            Assert.That(actualResult, Is.EqualTo(shouldSucceed), $"User login should be {expectedResult}.");
         }
 
         [TestCase(null, TestName = "Verify user logout")]
