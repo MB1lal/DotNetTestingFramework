@@ -2,7 +2,7 @@ name: Deploy Allure Reports - Linux
 
 on:
   workflow_run:
-    workflows: [ NUnit Tests - Windows ]
+    workflows: [ NUnit-Tests-Windows ]
     types: [ completed ]
 
 jobs:
