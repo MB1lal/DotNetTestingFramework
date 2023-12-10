@@ -31,5 +31,5 @@ jobs:
         uses: actions/upload-artifact@v3.1.3
         with:
           name: allure-results
-          path: ./allure-results
+          path: /bin/debug/.net6.0/allure-results
           retention-days: 20
