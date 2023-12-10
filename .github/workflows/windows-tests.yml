@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - Allure_Reporting_Upload
   pull_request:
     branches:
       - master
@@ -28,8 +27,9 @@ jobs:
       - name: Test
         run: dotnet test
 
-      - uses: actions/upload-artifact@master
+      - name: Upload Allure Results
+        uses: actions/upload-artifact@v3.1.3
         with:
           name: allure-results
-          path: allure-results
+          path: ./allure-results
           retention-days: 20
