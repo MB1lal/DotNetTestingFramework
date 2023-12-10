@@ -1,4 +1,4 @@
-name: NUnit Tests
+name: NUnit Tests - Windows
 
 on:
   push:
