@@ -35,7 +35,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         {
             try
             {
-                NavigateToPage("Hovers");
+                NavigateToXPage("Hovers");
 
                 HoverPage hoverPage = new(driver);
 

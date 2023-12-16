@@ -6,27 +6,29 @@ namespace DotNetTestingFramework.Pages
     internal class NestedFramesPage
     {
         private readonly IWebDriver _driver;
-
+#pragma warning disable CS0649
         [FindsBy(How = How.Name, Using = "frame-top")]
-        private readonly IWebElement? frameTop;
+        private readonly IWebElement frameTop;
 
         [FindsBy(How = How.Name, Using = "frame-left")]
-        private readonly IWebElement? topLeftFrame;
+        private readonly IWebElement topLeftFrame;
 
         [FindsBy(How = How.Name, Using = "frame-right")]
-        private readonly IWebElement? topRightFrame;
+        private readonly IWebElement topRightFrame;
 
         [FindsBy(How = How.Name, Using = "frame-middle")]
-        private readonly IWebElement? topMiddleFrame;
+        private readonly IWebElement topMiddleFrame;
 
         [FindsBy(How = How.Name, Using = "frame-bottom")]
-        private readonly IWebElement? childBottomFrame;
+        private readonly IWebElement childBottomFrame;
 
         [FindsBy(How = How.CssSelector, Using = "body")]
-        private readonly IWebElement? frameText;
+        private readonly IWebElement frameText;
+#pragma warning restore CS0649
 
-
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public NestedFramesPage(IWebDriver driver)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             PageFactory.InitElements(driver, this);
             _driver = driver;

@@ -6,13 +6,16 @@ namespace DotNetTestingFramework.Pages
     internal class GoogleSearchPage
     {
         private readonly IWebDriver _driver;
+#pragma warning disable CS0649
         [FindsBy(How = How.Id, Using = "search")]
         private readonly IWebElement _searchdiv;
+#pragma warning restore CS0649
 
-
-        public GoogleSearchPage()
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public GoogleSearchPage(IWebDriver driver)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
-            _driver = Constants.SessionVariables.Driver;
+            _driver = driver;
             PageFactory.InitElements(_driver, this);
         }
 

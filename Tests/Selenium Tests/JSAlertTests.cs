@@ -14,7 +14,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         [Test, Description("Verifying interaction with JS Alerts")]
         public void VerifyJSALerts()
         {
-            NavigateToPage("JavaScript Alerts");
+            NavigateToXPage("JavaScript Alerts");
             JSAlertsPage jSAlertsPage = new(driver);
             logger.Info("Triggering JS ALert");
             jSAlertsPage.TriggerJSALert("JS Alert");
@@ -28,7 +28,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         [Test, Description("Verifying interaction with JS Confirm")]
         public void VerifyJSConfirm()
         {
-            NavigateToPage("JavaScript Alerts");
+            NavigateToXPage("JavaScript Alerts");
             JSAlertsPage jSAlertsPage = new(driver);
             logger.Info("Triggering JS Confirm");
             jSAlertsPage.TriggerJSALert("JS Confirm");
@@ -42,7 +42,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         public void VerifyJSPrompts()
         {
             string inputText = "Test Input";
-            NavigateToPage("JavaScript Alerts");
+            NavigateToXPage("JavaScript Alerts");
             JSAlertsPage jSAlertsPage = new(driver);
             logger.Info("Triggering JS Prompt");
             jSAlertsPage.TriggerJSALert("JS Prompt");

@@ -14,7 +14,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         [Test, Description("Verify text in Nested iFrames")]
         public void VerifyNestedFrames()
         {
-            NavigateToPage("Frames");
+            NavigateToXPage("Frames");
 
             logger.Info("Navigating to Nested iFrames page");
 
@@ -42,7 +42,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         [Test, Description("Verify text in an iFrame")]
         public void VerifyiFrames()
         {
-            NavigateToPage("Frames");
+            NavigateToXPage("Frames");
 
             logger.Info("Navigating to iFrame page");
             FramesPage framesPage = new(driver);

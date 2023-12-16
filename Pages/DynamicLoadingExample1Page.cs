@@ -10,16 +10,18 @@ namespace DotNetTestingFramework.Pages
     public class DynamicLoadingExample1Page
     {
         private readonly IWebDriver _driver;
-
+#pragma warning disable CS0649
         [FindsBy(How = How.CssSelector, Using = "#start > button")]
-        private readonly IWebElement? btnStart;
+        private readonly IWebElement btnStart;
 
         private readonly By loadingBar = By.Id("loading");
 
         [FindsBy(How = How.Id, Using = "finish")]
-        private readonly IWebElement? txtHello;
-
+        private readonly IWebElement txtHello;
+#pragma warning restore CS0649
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public DynamicLoadingExample1Page(IWebDriver driver)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             _driver = driver;
             PageFactory.InitElements(_driver, this);

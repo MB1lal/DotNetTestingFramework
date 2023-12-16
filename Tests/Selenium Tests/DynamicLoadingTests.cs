@@ -19,7 +19,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
             DynamicLoadingPage dynamicLoadingPage = new(driver);
             string elementText;
 
-            NavigateToPage("Dynamic Loading");
+            NavigateToXPage("Dynamic Loading");
 
             logger.Info($"Navigating to Example {exampleIndex} Page");
             dynamicLoadingPage.ClickXExample(exampleIndex);

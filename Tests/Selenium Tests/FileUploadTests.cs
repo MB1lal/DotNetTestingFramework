@@ -15,7 +15,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         [Test, Description("Verify file is succesfully uploaded")]
         public void VerifyFileUpload()
         {
-            NavigateToPage("File Upload");
+            NavigateToXPage("File Upload");
             logger.Info("Uploading a file");
             FileUploadPage fileUploadPage = new(driver);
             fileUploadPage.SelectFileToUpload();

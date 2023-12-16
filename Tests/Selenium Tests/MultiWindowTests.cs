@@ -14,7 +14,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         [Test, Description("Verify navigation between multiple tabs in a browser")]
         public void VerifyMultipleTabsHandling()
         {
-            NavigateToPage("multiple windows");
+            NavigateToXPage("multiple windows");
             MultiWindowPage multiWindowPage = new(driver);
 
             logger.Info("Clicking button to open link in a new tab");

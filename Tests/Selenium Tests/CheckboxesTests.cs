@@ -11,12 +11,12 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
     [Category("Selenium")]
     internal class CheckboxesTests : BaseSteps
     {
-        private CheckboxPage checkboxPage;
+        private CheckboxPage? checkboxPage;
 
         [Test, Description("Verify checkboxes are checked")]
         public void VerifyCheckboxesChecking()
         {
-            NavigateToPage("Checkboxes");
+            NavigateToXPage("Checkboxes");
             checkboxPage = new CheckboxPage(driver);
 
 
@@ -30,7 +30,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         [Test, Description("Verify checkboxes are unchecked")]
         public void VerifyCheckboxesUnchecking()
         {
-            NavigateToPage("Checkboxes");
+            NavigateToXPage("Checkboxes");
             checkboxPage = new CheckboxPage(driver);
 
 

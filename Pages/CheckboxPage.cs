@@ -8,14 +8,16 @@ namespace DotNetTestingFramework.Pages
     {
         private readonly IWebDriver _driver;
         private readonly static Logger logger = LogManager.GetCurrentClassLogger();
-
+#pragma warning disable CS0649
         [FindsBy(How = How.CssSelector, Using = "#checkboxes > input:first-of-type")]
-        private readonly IWebElement? checkbox1;
+        private readonly IWebElement checkbox1;
 
         [FindsBy(How = How.CssSelector, Using = "#checkboxes > input:nth-of-type(2)")]
-        private readonly IWebElement? checkbox2;
-
+        private readonly IWebElement checkbox2;
+#pragma warning restore CS0649
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public CheckboxPage(IWebDriver driver)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             _driver = driver;
             PageFactory.InitElements(_driver, this);

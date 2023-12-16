@@ -6,7 +6,7 @@ namespace DotNetTestingFramework.Pages
     public class GoogleHomePage
     {
         private readonly string _url = "https://www.google.com";
-
+#pragma warning disable CS0649
         [FindsBy(How = How.Name, Using = "q")]
         private readonly IWebElement _searchTextBox;
 
@@ -18,8 +18,10 @@ namespace DotNetTestingFramework.Pages
 
         [FindsBy(How = How.LinkText, Using = "English")]
         private readonly IWebElement _englishElement;
-
+#pragma warning restore CS0649
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public GoogleHomePage(IWebDriver driver)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             PageFactory.InitElements(driver, this);
             driver.Navigate().GoToUrl(_url);
