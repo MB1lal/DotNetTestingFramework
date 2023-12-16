@@ -29,19 +29,13 @@ jobs:
         
       - name: Check current directory
         run: |
-              cd bin
-              ls
-              cd Debug
-              ls
-              cd net6.0
-              ls
-              cd allure-results
-              ls
+             echo $GITHUB_WORKSPACE
+             echo allure.results.directory=$GITHUB_WORKSPACE
         
       - name: Upload Allure Results
         uses: actions/upload-artifact@v3.1.3
         with:
           name: allure-results
-          path: /bin/Debug/net6.0/allure-results
+          path: D:\a\DotNetTestingFramework\DotNetTestingFramework\bin\Debug\net6.0\allure-results
           if-no-files-found: fail
           retention-days: 20
