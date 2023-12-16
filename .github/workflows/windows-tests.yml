@@ -28,7 +28,15 @@ jobs:
         run: dotnet test
         
       - name: Check current directory
-        run: ls
+        run: |
+              cd bin
+              ls
+              cd Debug
+              ls
+              cd net6.0
+              ls
+              cd allure-results
+              ls
         
       - name: Upload Allure Results
         uses: actions/upload-artifact@v3.1.3
