@@ -9,15 +9,17 @@ namespace DotNetTestingFramework.Pages
     internal class IMDBItemPage
     {
         private readonly IWebDriver _driver;
-
+#pragma warning disable CS0649
         [FindsBy(How = How.Id, Using = "home_img")]
         private readonly IWebElement _imdbLogo;
 
         private readonly By _castTableRow = By.XPath("//*[@id='fullcredits_content']/table[3]/tbody/tr");
-
-        public IMDBItemPage()
+#pragma warning restore CS0649
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public IMDBItemPage(IWebDriver driver)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
-            _driver = Constants.SessionVariables.Driver;
+            _driver = driver;
             PageFactory.InitElements(_driver, this);
         }
 
@@ -35,7 +37,7 @@ namespace DotNetTestingFramework.Pages
         public void ClickScrolledElement(string elementText)
         {
             By linkText = By.LinkText(elementText);
-            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(30));
+            WebDriverWait wait = new(_driver, TimeSpan.FromSeconds(30));
             wait.Until(ExpectedConditions.ElementToBeClickable(linkText));
 
             IWebElement targetElement = _driver.FindElement(linkText);

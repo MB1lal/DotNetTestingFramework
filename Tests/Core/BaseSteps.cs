@@ -154,7 +154,7 @@ namespace DotNetTestingFramework.Tests.Core
             PetConnector.UpdateThePetData(attribute, value);
         }
 
-        protected static void NavigateToPage(string pageName)
+        protected static void NavigateToXPage(string pageName)
         {
             HerokuHomePage herokuHomePage = new(driver);
             logger.Info($"Navigating to {pageName}");

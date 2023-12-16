@@ -18,7 +18,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
         [TestCase("admin", "admin", false, TestName = "Verify unsuccessful login")]
         public void UserAuthenticationTest(string username, string password, bool shouldSucceed)
         {
-            NavigateToPage("Form Authentication");
+            NavigateToXPage("Form Authentication");
             authenticationPage = new AuthenticationPage(driver);
 
             // Log steps
@@ -42,7 +42,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
 
             // Log out
             logger.Info("Logging out");
-            authenticationPage.ClickLogout();
+            authenticationPage!.ClickLogout();
 
             // Verify logout
             bool actualResult = authenticationPage.IsLoggedOut();

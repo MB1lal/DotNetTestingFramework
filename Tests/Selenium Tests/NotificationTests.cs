@@ -19,7 +19,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
                 "Action successful",
                 "Action unsuccesful, please try again"
             };
-            NavigateToPage("Notification Messages");
+            NavigateToXPage("Notification Messages");
             NotificationsPage notificationsPage = new(driver);
             logger.Info("Generating a new notification");
             notificationsPage.GenerateNewNotification();

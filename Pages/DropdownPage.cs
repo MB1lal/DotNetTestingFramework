@@ -7,13 +7,16 @@ namespace DotNetTestingFramework.Pages
     internal class DropdownPage
     {
         private readonly IWebDriver _driver;
-
+#pragma warning disable CS0649
         [FindsBy(How = How.Id, Using = "dropdown")]
-        private readonly IWebElement? dropdownElement;
+        private readonly IWebElement dropdownElement;
 
         private readonly SelectElement dropdown;
+#pragma warning restore CS0649
 
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public DropdownPage(IWebDriver driver)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             _driver = driver;
             PageFactory.InitElements(_driver, this);

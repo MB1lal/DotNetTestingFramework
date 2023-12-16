@@ -9,18 +9,23 @@ namespace DotNetTestingFramework.Tests.Core
     public class Hooks
     {
         protected readonly static Logger logger = LogManager.GetCurrentClassLogger();
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         [ThreadStatic] protected static IWebDriver driver;
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         private readonly string absolutePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
 
         private bool IsSeleniumTest()
         {
             try
             {
-                return Attribute.IsDefined(GetType(), typeof(CategoryAttribute), false) &&
-              ((CategoryAttribute)Attribute.GetCustomAttribute(GetType(), typeof(CategoryAttribute))).Name == "Selenium";
-            }
-            catch { return false; }
+                var attribute = Attribute.GetCustomAttribute(GetType(), typeof(CategoryAttribute)) as CategoryAttribute;
 
+                return attribute != null && attribute.Name == "Selenium";
+            }
+            catch
+            {
+                return false;
+            }
         }
 
 

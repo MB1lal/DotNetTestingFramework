@@ -13,11 +13,11 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
     [Ignore("Deprecated")]
     internal class IMDBTest : BaseSteps
     {
-        private GoogleHomePage _googleHomePage;
-        private GoogleSearchPage _googleSearchPage;
-        private IMDBItemPage _iMDBItemPage;
+        private GoogleHomePage? _googleHomePage;
+        private GoogleSearchPage? _googleSearchPage;
+        private IMDBItemPage? _iMDBItemPage;
 
-        private Dictionary<string, string> _excelSheet;
+        private Dictionary<string, string>? _excelSheet;
 
 
 
@@ -45,12 +45,12 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
             _googleHomePage.ClickSearchButton();
 
             //Clicking on serach results
-            _googleSearchPage = new GoogleSearchPage();
+            _googleSearchPage = new GoogleSearchPage(driver);
             Assert.That(_googleSearchPage.SearchPageIsLoaded(), Is.True);
             _googleSearchPage.OpenLinkInNewTabUsingPartialText(_excelSheet["Search String 2"]);
 
             //IMDB actions
-            _iMDBItemPage = new IMDBItemPage();
+            _iMDBItemPage = new IMDBItemPage(driver);
             Assert.That(_iMDBItemPage.IsPageLoaded(), Is.True);
             _iMDBItemPage.ScrollDownToElement("All cast & crew");
             _iMDBItemPage.ClickScrolledElement("All cast & crew");

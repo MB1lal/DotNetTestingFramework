@@ -5,23 +5,25 @@ namespace DotNetTestingFramework.Pages
 {
     internal class JSAlertsPage
     {
-        private IWebDriver _driver;
-
+        private readonly IWebDriver _driver;
+#pragma warning disable CS0649
         [FindsBy(How = How.CssSelector, Using = "button[onclick='jsAlert()']")]
-        private IWebElement _btnJSAlert;
+        private readonly IWebElement _btnJSAlert;
 
         [FindsBy(How = How.CssSelector, Using = "button[onclick='jsConfirm()']")]
-        private IWebElement _btnJSConfirm;
+        private readonly IWebElement _btnJSConfirm;
 
         [FindsBy(How = How.CssSelector, Using = "button[onclick='jsPrompt()']")]
-        private IWebElement _btnJSPrompt;
+        private readonly IWebElement _btnJSPrompt;
 
         [FindsBy(How = How.Id, Using = "result")]
-        private IWebElement _lblResult;
-
+        private readonly IWebElement _lblResult;
+#pragma warning restore CS0649
         private IAlert _alert;
 
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public JSAlertsPage(IWebDriver driver)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             PageFactory.InitElements(driver, this);
             _driver = driver;
@@ -33,7 +35,7 @@ namespace DotNetTestingFramework.Pages
 
         public void TriggerJSALert(string alertType)
         {
-            switch(alertType)
+            switch (alertType)
             {
                 case "JS Alert":
                     _btnJSAlert.Click();
@@ -47,7 +49,7 @@ namespace DotNetTestingFramework.Pages
                     _btnJSPrompt.Click();
                     break;
 
-                 default:
+                default:
                     throw new ArgumentException("Invalid alert type specified");
             }
         }
@@ -57,10 +59,10 @@ namespace DotNetTestingFramework.Pages
         public void InteractWithAlert(string interaction)
         {
             _alert = _driver.SwitchTo().Alert();
-            switch(interaction)
+            switch (interaction)
             {
                 case "OK":
-                    _alert.Accept(); 
+                    _alert.Accept();
                     break;
 
                 case "CANCEL":

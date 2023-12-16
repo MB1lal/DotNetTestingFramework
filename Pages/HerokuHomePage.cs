@@ -7,7 +7,7 @@ namespace DotNetTestingFramework.Pages
     internal class HerokuHomePage : BaseSteps
     {
         private readonly string _url = Constants.SessionVariables.Config.Urls.HerokuURL;
-
+#pragma warning disable CS0649
         [FindsBy(How = How.LinkText, Using = "Form Authentication")]
         private readonly IWebElement _formAuthentiation;
 
@@ -40,8 +40,10 @@ namespace DotNetTestingFramework.Pages
 
         [FindsBy(How = How.LinkText, Using = "Notification Messages")]
         private readonly IWebElement _notificationMessages;
-
+#pragma warning restore CS0649
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public HerokuHomePage(IWebDriver webDriver)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             PageFactory.InitElements(webDriver, this);
             webDriver.Navigate().GoToUrl(_url);

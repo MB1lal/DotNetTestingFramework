@@ -21,8 +21,8 @@ namespace DotNetTestingFramework.Tests.API_Tests
             logger.Info("Creating a pet");
             AddNewPetUsingId();
             logger.Info("Fetching newly created pet");
-            RestResponse restResponse = GetPetUsingId(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
-            PetModel actualPetModel = JsonSerializer.Deserialize<PetModel>(restResponse.Content);
+            RestResponse restResponse = GetPetUsingId(int.Parse(Constants.SessionVariables.PetModel!.id.ToString()));
+            PetModel actualPetModel = JsonSerializer.Deserialize<PetModel>(restResponse.Content!)!;
             logger.Info("Verifying pet is correctly created");
             Assert.Multiple(() =>
             {
@@ -41,10 +41,10 @@ namespace DotNetTestingFramework.Tests.API_Tests
             bool isMatchFound = false;
             string actualStatus = "";
 
-            PetModel[] actualPetModel = JsonSerializer.Deserialize<PetModel[]>(restResponse.Content);
+            PetModel[] actualPetModel = JsonSerializer.Deserialize<PetModel[]>(restResponse.Content!)!;
             foreach (var pet in actualPetModel)
             {
-                if (pet.id == Constants.SessionVariables.PetModel.id)
+                if (pet.id == Constants.SessionVariables.PetModel!.id)
                 {
                     isMatchFound = true;
                     actualStatus = pet.status;
@@ -54,7 +54,7 @@ namespace DotNetTestingFramework.Tests.API_Tests
             Assert.Multiple(() =>
             {
                 Assert.That(isMatchFound, Is.True);
-                Assert.That(actualStatus, Is.EqualTo(Constants.SessionVariables.PetModel.status));
+                Assert.That(actualStatus, Is.EqualTo(Constants.SessionVariables.PetModel!.status));
             });
         }
 
@@ -64,7 +64,7 @@ namespace DotNetTestingFramework.Tests.API_Tests
             logger.Info("Creating a pet");
             AddNewPetUsingId();
             logger.Info("Deleting newly created pet");
-            DeletePetData(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
+            DeletePetData(int.Parse(Constants.SessionVariables.PetModel!.id.ToString()));
             RestResponse restResponse = GetDeletedPetUsingId(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
             logger.Debug(restResponse.Content);
             logger.Info("Verifying pet is deleted");
@@ -81,8 +81,8 @@ namespace DotNetTestingFramework.Tests.API_Tests
             UpdateThePet("name", "Unicorn");
             UpdateThePet("status", "sold");
             logger.Info("Fetching newly created pet");
-            RestResponse restResponse = GetPetUsingId(int.Parse(Constants.SessionVariables.PetModel.id.ToString()));
-            PetModel actualPetModel = JsonSerializer.Deserialize<PetModel>(restResponse.Content);
+            RestResponse restResponse = GetPetUsingId(int.Parse(Constants.SessionVariables.PetModel!.id.ToString()));
+            PetModel actualPetModel = JsonSerializer.Deserialize<PetModel>(restResponse.Content!)!;
             logger.Info("Verifying pet details are updated");
             Assert.Multiple(() =>
             {

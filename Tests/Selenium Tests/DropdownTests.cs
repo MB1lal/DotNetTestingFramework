@@ -12,12 +12,12 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
     [Category("Selenium")]
     internal class DropdownTests : BaseSteps
     {
-        private DropdownPage dropdownPage;
+        private DropdownPage? dropdownPage;
 
         [TestCase("Option 1", TestName = "Verify dropdown option is correctly selected")]
         public void VerifyDropdownSelection(string option)
         {
-            NavigateToPage("Dropdown");
+            NavigateToXPage("Dropdown");
             dropdownPage = new DropdownPage(driver);
 
             logger.Info("Selecting dropdown option as 'Option 2'");
