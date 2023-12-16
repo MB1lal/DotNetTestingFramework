@@ -4,6 +4,8 @@ on:
   workflow_run:
     workflows: [ NUnit-Tests-Windows ]
     types: [ completed ]
+    branches:
+      - 'master'
 
 jobs:
   deploy:
