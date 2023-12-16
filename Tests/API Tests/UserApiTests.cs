@@ -18,11 +18,11 @@ namespace DotNetTestingFramework.Tests.API_Tests
         {
             logger.Info("Creating a new user");
             CreateNewUser();
-            UserModel model = JsonSerializer.Deserialize<UserModel>(GetUser(Constants.SessionVariables.Username).Content);
+            UserModel model = JsonSerializer.Deserialize<UserModel>(GetUser(Constants.SessionVariables.Username!).Content!)!;
             logger.Info("Asserting new user is created");
             Assert.That(model.username, Is.EqualTo(Constants.SessionVariables.Username));
             logger.Info("Logging in using created user");
-            LoginUser(Constants.SessionVariables.Username, Constants.SessionVariables.Password);
+            LoginUser(Constants.SessionVariables.Username!, Constants.SessionVariables.Password!);
         }
 
         [Test, Description("Verify user is able to logout")]

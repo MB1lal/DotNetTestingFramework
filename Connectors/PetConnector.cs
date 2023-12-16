@@ -46,7 +46,7 @@ namespace DotNetTestingFramework.Connectors
 
         public static void UpdateThePetData(string attribute, string value)
         {
-            RestRequest request = new RestRequest($"/{Constants.SessionVariables.PetModel.id}", Method.Post)
+            RestRequest request = new RestRequest($"/{Constants.SessionVariables.PetModel!.id}", Method.Post)
                 .AddHeader("Content-Type", ContentType.FormUrlEncoded)
                 .AddParameter(ContentType.FormUrlEncoded, attribute + "=" + value, ParameterType.RequestBody);
             RestResponse response = BaseRequest().Execute(request);

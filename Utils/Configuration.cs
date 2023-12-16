@@ -15,7 +15,7 @@ namespace DotNetTestingFramework.Utils
             try
             {
                 string json = File.ReadAllText(filePath);
-                Configuration configuration = JsonSerializer.Deserialize<Configuration>(json);
+                Configuration configuration = JsonSerializer.Deserialize<Configuration>(json)!;
                 return configuration;
             }
             catch (Exception ex)
@@ -24,7 +24,7 @@ namespace DotNetTestingFramework.Utils
                 var config = new NLog.Config.XmlLoggingConfiguration("NLog.config");
                 LogManager.Configuration = config;
                 logger.Error($"Error loading configuration: {ex.Message}");
-                return null;
+                return null!;
             }
         }
 

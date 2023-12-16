@@ -39,12 +39,6 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
 
                 HoverPage hoverPage = new(driver);
 
-                if (hoverPage == null)
-                {
-                    logger.Error("Failed to initialize HoverPage");
-                    Assert.Fail("Failed to initialize HoverPage");
-                }
-
                 var profiles = new Dictionary<string, string>
             {
                 { "first", "name: user1" },
@@ -55,7 +49,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
                 foreach (var (profile, expectedText) in profiles)
                 {
                     logger.Info($"Hovering over {profile} profile");
-                    hoverPage.HoverOverUserAvatar(profile);
+                    hoverPage!.HoverOverUserAvatar(profile);
                     logger.Info("Verifying profile text");
                     Assert.That(hoverPage.GetProfileText(GetId(profile)), Is.EqualTo(expectedText));
                 }

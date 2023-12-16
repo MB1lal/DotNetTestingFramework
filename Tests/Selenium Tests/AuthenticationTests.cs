@@ -42,7 +42,7 @@ namespace DotNetTestingFramework.Tests.Selenium_Tests
 
             // Log out
             logger.Info("Logging out");
-            authenticationPage.ClickLogout();
+            authenticationPage!.ClickLogout();
 
             // Verify logout
             bool actualResult = authenticationPage.IsLoggedOut();
