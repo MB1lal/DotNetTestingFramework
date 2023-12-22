@@ -36,7 +36,7 @@ jobs:
           retention-days: 20
 
   deploy:
-    needs: build  # This indicates that the 'deploy' job depends on the completion of the 'build' job.
+    needs: build  
     runs-on: ubuntu-latest
 
     steps:
@@ -50,6 +50,21 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
+
+      - name: Debug Step 1
+        run: |
+          echo "Debugging the contents of the artifact..."
+          pwd
+          ls
+          
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v4.1.0
+
+      - name: Debug Step 2
+        run: |
+          echo "Debugging the contents of the artifact..."
+          pwd
+          ls    
       
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
