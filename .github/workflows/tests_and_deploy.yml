@@ -41,7 +41,8 @@ jobs:
 
     steps:
       - name: Get Allure history
-        uses: actions/checkout@v4.1.1
+        # uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v2
         if: always()
         continue-on-error: false
         with:
@@ -67,7 +68,8 @@ jobs:
   
       - name: Deploy report to Github Pages
         if: always()
-        uses: peaceiris/actions-github-pages@v3.1.12
+        # uses: peaceiris/actions-github-pages@v3.1.12
+        uses: peaceiris/actions-github-pages@v2
         with:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
