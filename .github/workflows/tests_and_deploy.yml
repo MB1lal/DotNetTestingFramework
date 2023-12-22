@@ -52,18 +52,14 @@ jobs:
         uses: actions/download-artifact@v4.1.0
         with:
           name: allure-results
-       
-      - name: Debug Step 1
-        run: |
-          echo "Debugging the contents of the artifact..."
-          ls
+          path: ./allure-results
       
-      - name: Test marketplace action
+      - name: Generate report
         uses: simple-elf/allure-report-action@master
         if: always()
         id: allure-report
         with:
-          allure_results: gh-pages/allure-results
+          allure_results: allure-results
           gh_pages: gh-pages
           allure_report: allure-report
           allure_history: allure-history
