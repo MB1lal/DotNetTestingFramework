@@ -1,4 +1,4 @@
-name: All Workflows
+name: NUnit Tests and Deploy Allure Reports
 
 on:
   push:
