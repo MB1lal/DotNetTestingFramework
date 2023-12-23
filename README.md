@@ -1,6 +1,6 @@
 # DotNet Testing Framework
 
-[![NUnit Tests](https://github.com/MB1lal/DotNetTestingFramework/actions/workflows/dotnet-desktop.yml/badge.svg?branch=master)](https://github.com/MB1lal/DotNetTestingFramework/actions/workflows/dotnet-desktop.yml)
+[![NUnit Tests and Deploy Allure Reports](https://github.com/MB1lal/DotNetTestingFramework/actions/workflows/tests_and_deploy.yml/badge.svg)](https://github.com/MB1lal/DotNetTestingFramework/actions/workflows/tests_and_deploy.yml)
 
 [![pages-build-deployment](https://github.com/MB1lal/DotNetTestingFramework/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/MB1lal/DotNetTestingFramework/actions/workflows/pages/pages-build-deployment)
 
