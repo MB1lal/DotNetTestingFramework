@@ -1,4 +1,0 @@
-2023-12-23 10:44:36.1150 Creating a pet
-2023-12-23 10:44:36.3392 Updating pet details
-2023-12-23 10:44:36.7656 Fetching newly created pet
-2023-12-23 10:44:36.9699 Verifying pet details are updated
