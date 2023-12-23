@@ -1,5 +1,0 @@
-2023-12-23 10:47:56.2482 Test detected as 'Selenium' based
-2023-12-23 10:47:58.5029 Navigating to File Upload
-2023-12-23 10:47:58.7266 Uploading a file
-2023-12-23 10:47:58.9218 Verifying file is correctly uploaded
-2023-12-23 10:47:58.9635 Quitting browser
