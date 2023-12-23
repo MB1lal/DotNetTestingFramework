@@ -80,7 +80,7 @@ jobs:
       #     PUBLISH_DIR: allure-report
       - name: Deploy report to GitHub Pages
         if: always()
-        uses: actions/deploy-pages@v4.0.4
+        uses: actions/deploy-pages@v4.0.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
