@@ -1,0 +1,70 @@
+{
+  "uuid": "6a7a4944-e95f-4452-b454-58f385e500b4",
+  "historyId": "8d06e2ffc9472f6d26d0ec0d4c6e73b1",
+  "testCaseId": "571b8267c9dce02be5cef92208828f66",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.ApiTests.PetsTest.VerifyPetCanBeAddedThroughId(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#16"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.ApiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyPetCanBeAddedThroughId"
+    },
+    {
+      "name": "testClass",
+      "value": "PetsTest"
+    },
+    {
+      "name": "tag",
+      "value": "@Pets"
+    },
+    {
+      "name": "tag",
+      "value": "PetsTest"
+    }
+  ],
+  "links": [],
+  "name": "Verify a pet can be added",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify a pet can be added"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "39b762ca869241008c39293578119c32-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1699387467538,
+  "stop": 1699387468767
+}

@@ -1,0 +1,6 @@
+2023-12-03 13:36:46.6502 Creating a pet
+{"Id":3579,"Category":{"Id":3168,"Name":"Faker.Extensions.EnumerableExtensions\u002B\u003CTimes\u003Ed__0\u00601[System.String]"},"Name":"Faker.Extensions.EnumerableExtensions\u002B\u003CTimes\u003Ed__0\u00601[System.String]","PhotoUrls":["",""],"Tags":[{"Id":177,"Name":"Faker.Extensions.EnumerableExtensions\u002B\u003CTimes\u003Ed__0\u00601[System.String]"}],"Status":"Available"}
+OK
+2023-12-03 13:36:47.6580 Fetching newly created pet
+Id=3579
+{"code":1,"type":"error","message":"Pet not found"}

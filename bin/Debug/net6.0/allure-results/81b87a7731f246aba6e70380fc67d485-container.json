@@ -1,0 +1,14 @@
+{
+  "uuid": "2479936d-5248-4de2-8666-eebb49af2929",
+  "name": "DotNetTestingFramework.Tests.SeleniumTests.AuthenticationTests",
+  "children": [
+    "b97fac77-af80-4b1d-9043-acc4b8c6deb4",
+    "5de3b739-815d-4009-b8b4-a313dd4cecde",
+    "6c5c06bf-4647-439e-b560-2939c27947ad"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1699383167404,
+  "stop": 1699383191881
+}

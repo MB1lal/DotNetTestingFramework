@@ -1,0 +1,71 @@
+{
+  "uuid": "e263af2d-8c27-4ee6-bccb-fc3c3b923f89",
+  "historyId": "8d7a7e037de12f2f40cf8dcd3c673374",
+  "testCaseId": "4e9ec9a9c7e38c85ab09b2b87cfdb47d",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.CheckboxesTests.VerifyCheckboxesChecking(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyCheckboxesChecking"
+    },
+    {
+      "name": "testClass",
+      "value": "CheckboxesTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify checkboxes are checked",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify checkboxes are checked"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "7fb66d8f-a601-42ec-b20d-44abfb9d481e-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null",
+      "excluded": false
+    }
+  ],
+  "start": 1701739215125,
+  "stop": 1701739220573
+}

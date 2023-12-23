@@ -1,0 +1,12 @@
+{
+  "uuid": "e4b18146-8edc-4a44-a406-0abf2b602583",
+  "name": "DotNetTestingFramework.Tests.Selenium_Tests.DynamicLoadingTests.Verify loading of newly created elements",
+  "children": [
+    "08fed4ca-7b45-43a4-8898-1746738009ba"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701546198712,
+  "stop": 1701546209454
+}

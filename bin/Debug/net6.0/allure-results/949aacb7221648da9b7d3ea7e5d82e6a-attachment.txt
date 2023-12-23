@@ -1,0 +1,4 @@
+2023-12-02 17:09:52.3972 C:\Users\MB1LA\source\repos\MB1lal\DotNetTestingFramework\bin\Debug\net6.0\config.json
+2023-12-02 17:09:52.8182 
+2023-12-02 17:09:52.8182 Test detected as 'Selenium' based
+2023-12-02 17:09:52.8432 Quitting browser

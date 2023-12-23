@@ -1,0 +1,75 @@
+{
+  "uuid": "42953d90-b715-43f3-b73d-e98e484d27d4",
+  "historyId": "ce6225351dc61604f62176d0af2c38cc",
+  "testCaseId": "f7446d49c6279a34bff0bb61a10cf1a6",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.API_Tests.PetStoreApiTests.OrderIsSuccessfullyDeleted(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.API_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "OrderIsSuccessfullyDeleted"
+    },
+    {
+      "name": "testClass",
+      "value": "PetStoreApiTests"
+    },
+    {
+      "name": "tag",
+      "value": "@PetStore"
+    },
+    {
+      "name": "tag",
+      "value": "PetStore"
+    },
+    {
+      "name": "tag",
+      "value": "API"
+    }
+  ],
+  "links": [],
+  "name": "Verify pet order can be deleted",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at DotNetTestingFramework.Connectors.PetStoreConnector.DeleteOrder(Int32 orderId) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Connectors\\PetStoreConnector.cs:line 28\r\n   at DotNetTestingFramework.Tests.Core.BaseSteps.DeletePetStoreOrder(Int32 orderId) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Core\\BaseSteps.cs:line 116\r\n   at DotNetTestingFramework.Tests.API_Tests.PetStoreApiTests.OrderIsSuccessfullyDeleted(Object ignored) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\API Tests\\PetStoreApiTests.cs:line 35\r\n"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "e52293b3e61f4522a2303d371154a50d-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1701546181891,
+  "stop": 1701546183525
+}

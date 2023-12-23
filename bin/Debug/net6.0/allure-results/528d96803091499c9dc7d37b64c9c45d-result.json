@@ -1,0 +1,70 @@
+{
+  "uuid": "a2e4c2ea-fc39-4fa0-a4ab-a8775f0573a0",
+  "historyId": "c58c9eaea1292c1ca1c3f3e884d31b5f",
+  "testCaseId": "2d755f5b0e41ce09f07c8ef6901d4667",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.ApiTests.PetStoreApiTests.OrderIsSuccessfullyDeleted(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#12"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.ApiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "OrderIsSuccessfullyDeleted"
+    },
+    {
+      "name": "testClass",
+      "value": "PetStoreApiTests"
+    },
+    {
+      "name": "tag",
+      "value": "@PetStore"
+    },
+    {
+      "name": "tag",
+      "value": "PetStore"
+    }
+  ],
+  "links": [],
+  "name": "Verify pet order can be deleted",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify pet order can be deleted"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "78ad1488ed5b428b8e79ebca5748f97e-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1699385441639,
+  "stop": 1699385443494
+}

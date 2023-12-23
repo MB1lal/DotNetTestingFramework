@@ -1,0 +1,12 @@
+{
+  "uuid": "4bde680b-8d47-4932-9203-ff369eaba538",
+  "name": "DotNetTestingFramework.Tests.Selenium_Tests.FramesTests",
+  "children": [
+    "ea1c20ef-96bb-4af8-aea3-0a1c32c7b3d1"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701739339246,
+  "stop": 1701739347385
+}

@@ -1,0 +1,70 @@
+{
+  "uuid": "f1e85b3b-383d-4089-a891-16a8974eb29b",
+  "historyId": "52af2863ee9a1bcf58dd6e4289d9c94e",
+  "testCaseId": "ec46463b846fb2ea4ac325ddabc8f83c",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.ApiTests.PetsTest.VerifyNewlyAddedPetThroughStatus(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#16"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.ApiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyNewlyAddedPetThroughStatus"
+    },
+    {
+      "name": "testClass",
+      "value": "PetsTest"
+    },
+    {
+      "name": "tag",
+      "value": "@Pets"
+    },
+    {
+      "name": "tag",
+      "value": "PetsTest"
+    }
+  ],
+  "links": [],
+  "name": "Verify a new pet can be added with 'sold' status",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify a new pet can be added with 'sold' status"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "dc5ab3936a4c4ef993f201701e8988f6-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1699385439784,
+  "stop": 1699385441658
+}

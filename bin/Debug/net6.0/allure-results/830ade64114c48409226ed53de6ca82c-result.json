@@ -1,0 +1,74 @@
+{
+  "uuid": "77de9479-1718-4be2-8c53-224f0375302b",
+  "historyId": "28873635e56d24a74afac3d211e91d3c",
+  "testCaseId": "22f856ee9a42d99ce0ae3cde9bc01c13",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.DynamicLoadingTests.HiddenElementsTest(System.Int32)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "HiddenElementsTest"
+    },
+    {
+      "name": "testClass",
+      "value": "DynamicLoadingTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@DynamicLoading"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify loading of newly created elements",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify loading of newly created elements"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "bf3f365f848a4a7a9c6ff73129ea4863-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "exampleIndex",
+      "value": "2"
+    }
+  ],
+  "start": 1701531668597,
+  "stop": 1701531678525
+}

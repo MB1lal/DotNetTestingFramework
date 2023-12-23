@@ -1,0 +1,12 @@
+{
+  "uuid": "a2a49362-8cd5-4205-a9fb-d06db158e222",
+  "name": "DotNetTestingFramework.Tests.Selenium_Tests.HoverTests",
+  "children": [
+    "402299ac-c68c-42e2-a417-786459cd8695"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701546196793,
+  "stop": 1701546203211
+}

@@ -1,0 +1,13 @@
+{
+  "uuid": "dac2f0c1-bc46-43d8-8351-ef889ff02b01",
+  "name": "DotNetTestingFramework.Tests.ApiTests.UserApiTests",
+  "children": [
+    "6f38f4bf-2cbd-4d02-8167-674ad56970de",
+    "e1df1223-5655-4e0c-9d8b-a5c8e16542fa"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1699387278511,
+  "stop": 1699387283514
+}

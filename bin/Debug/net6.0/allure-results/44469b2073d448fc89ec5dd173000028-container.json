@@ -1,0 +1,12 @@
+{
+  "uuid": "04f744f5-76d4-4d4d-bdef-1599cb6cec98",
+  "name": "DotNetTestingFramework.Tests.SeleniumTests.FramesTests.Verify text in an iFrame",
+  "children": [
+    "d8ab4919-01a6-4b91-8714-118771bd9cd7"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1700688178545,
+  "stop": 1700688183333
+}

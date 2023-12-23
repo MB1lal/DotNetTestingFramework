@@ -1,0 +1,12 @@
+{
+  "uuid": "47b4b7d0-2438-481d-93e6-cdbc804faba3",
+  "name": "DotNetTestingFramework.Tests.Selenium_Tests.JSAlertTests.Verifying interaction with JS Prompt",
+  "children": [
+    "5ad34b09-289c-43e5-b50b-e560c528c1ea"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701530521772,
+  "stop": 1701530530115
+}

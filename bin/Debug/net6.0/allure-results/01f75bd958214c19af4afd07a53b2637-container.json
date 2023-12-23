@@ -1,0 +1,12 @@
+{
+  "uuid": "a3d1414f-cbe1-4a13-a24e-662bee587bb3",
+  "name": "DotNetTestingFramework.Tests.Selenium_Tests.AuthenticationTests.Verify user logout",
+  "children": [
+    "01381d1d-88b8-413a-9551-7287b85f66b3"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701739227627,
+  "stop": 1701739234067
+}

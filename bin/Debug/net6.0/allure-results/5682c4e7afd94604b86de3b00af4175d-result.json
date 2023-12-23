@@ -1,0 +1,75 @@
+{
+  "uuid": "0d544d0c-670d-42af-a84a-65af4d475f1c",
+  "historyId": "f760ae15306fffb4fc1d0e05c1c3bd9a",
+  "testCaseId": "05c06f23935465ff5fe8325acf7522f6",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.JSAlertTests.VerifyJSPrompts(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyJSPrompts"
+    },
+    {
+      "name": "testClass",
+      "value": "JSAlertTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@JSAlerts"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verifying interaction with JS Prompt",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.ArgumentException : Argument is of an illegal typeOpenQA.Selenium.Alert (Parameter 'arg')",
+    "trace": "   at OpenQA.Selenium.WebDriver.ConvertObjectToJavaScriptObject(Object arg)\r\n   at OpenQA.Selenium.WebDriver.ConvertArgumentsToJavaScriptObjects(Object[] args)\r\n   at OpenQA.Selenium.WebDriver.ExecuteScriptCommand(String script, String commandName, Object[] args)\r\n   at OpenQA.Selenium.WebDriver.ExecuteScript(String script, Object[] args)\r\n   at DotNetTestingFramework.Pages.JSAlertsPage.EnterTextIntoAlert(String inputText) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Pages\\JSAlertsPage.cs:line 80\r\n   at DotNetTestingFramework.Tests.SeleniumTests.JSAlertTests.VerifyJSPrompts(Object ignored) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\SeleniumTests\\JSAlertTests.cs:line 50"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "f03f90192f4841d09d9363ad41bbc916-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1701518395602,
+  "stop": 1701518400784
+}
