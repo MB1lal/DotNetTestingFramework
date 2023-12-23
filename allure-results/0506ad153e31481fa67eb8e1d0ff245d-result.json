@@ -1,0 +1,74 @@
+{
+  "uuid": "99e11bec-f8b1-4695-aaa6-8c6229a00fe3",
+  "historyId": "8d2c2943029e3f86c4da57eb48cb145c",
+  "testCaseId": "30c92c2f920f668093ba63fa3f67dedf",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.FramesTests.VerifyiFrames(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyiFrames"
+    },
+    {
+      "name": "testClass",
+      "value": "FramesTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@iFrames"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify text in an iFrame",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify text in an iFrame"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "be4cc19db3594652a395aeec782cb375-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1700688367055,
+  "stop": 1700688372335
+}

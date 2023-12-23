@@ -1,0 +1,74 @@
+{
+  "uuid": "2e2c814a-1cde-4d8f-bd84-c3de3c88691b",
+  "historyId": "1dfadf117e852ffafdbe71015b65e913",
+  "testCaseId": "29036f982f68cff6c603bd1e07d84d17",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.HoverTests.VerifyProfileTextOnHover(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyProfileTextOnHover"
+    },
+    {
+      "name": "testClass",
+      "value": "HoverTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@hover"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify all names are correct on hovering over profile images",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify all names are correct on hovering over profile images"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "b3638824f49f49d8b95f46e91f37db67-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1701528105001,
+  "stop": 1701528110232
+}

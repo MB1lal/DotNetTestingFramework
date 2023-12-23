@@ -1,0 +1,70 @@
+{
+  "uuid": "7d94e52c-a77a-45fd-96c7-6b9dd761449b",
+  "historyId": "8efc17caf7a64bfba49147f9e38b615a",
+  "testCaseId": "b7e7a12bf696e305ec47f1b7a4b5e75b",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.API_Tests.PetStoreApiTests.OrderIsSuccesfullyPlaced()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.API_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "OrderIsSuccesfullyPlaced"
+    },
+    {
+      "name": "testClass",
+      "value": "PetStoreApiTests"
+    },
+    {
+      "name": "tag",
+      "value": "@PetStore"
+    },
+    {
+      "name": "tag",
+      "value": "PetStore"
+    },
+    {
+      "name": "tag",
+      "value": "API"
+    }
+  ],
+  "links": [],
+  "name": "OrderIsSuccesfullyPlaced",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OrderIsSuccesfullyPlaced"
+  },
+  "stage": "finished",
+  "description": "Verify pet order can be placed\nVerify pet store API\n",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "aa424202-3526-41aa-9c0f-d3bcc6a1b467-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1701785064838,
+  "stop": 1701785068212
+}

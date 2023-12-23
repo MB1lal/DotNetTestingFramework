@@ -1,0 +1,70 @@
+{
+  "uuid": "955347aa-c7af-4cc5-9932-b47734edd90b",
+  "historyId": "8181e18e40e174cd0065acba2347c7ec",
+  "testCaseId": "62b79e2f5562542d9777bf08a9f90264",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.CheckboxesTests.VerifyCheckboxesUnchecking()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyCheckboxesUnchecking"
+    },
+    {
+      "name": "testClass",
+      "value": "CheckboxesTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@checkboxes"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "VerifyCheckboxesUnchecking",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "VerifyCheckboxesUnchecking"
+  },
+  "stage": "finished",
+  "description": "Verify checkboxes are unchecked\nVerify checkbox scenarios for Heroku Web App\n",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "6eb503a9-6957-4256-abb5-632cf3a7832c-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1702735973783,
+  "stop": 1702735978234
+}

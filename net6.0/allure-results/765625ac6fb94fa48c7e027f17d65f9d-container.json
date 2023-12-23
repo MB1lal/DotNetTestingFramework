@@ -1,0 +1,12 @@
+{
+  "uuid": "de362317-946e-45e4-b9d8-e63a0054bf63",
+  "name": "DotNetTestingFramework.Tests.Selenium_Tests.DropdownTests.Verify dropdown option is correctly selected",
+  "children": [
+    "900f0774-2d33-43d0-96cc-743c7dca1cf1"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701546183574,
+  "stop": 1701546190459
+}

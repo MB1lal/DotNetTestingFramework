@@ -1,0 +1,70 @@
+{
+  "uuid": "eecef533-25be-40ee-bc11-84552e3e1583",
+  "historyId": "3963eae45a660a1776b2448b1066fbe2",
+  "testCaseId": "bbeffc7847cfe9fc16bea9aaa8d66994",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.FramesTests.VerifyiFrames()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyiFrames"
+    },
+    {
+      "name": "testClass",
+      "value": "FramesTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@iFrames"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "VerifyiFrames",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "VerifyiFrames"
+  },
+  "stage": "finished",
+  "description": "Verify text in an iFrame\nVerify iFrames scenarios on Heroku Web App\n",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "b46aa895-54cf-4067-a37a-7d5002202dd9-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1702735978237,
+  "stop": 1702735984088
+}

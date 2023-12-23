@@ -1,0 +1,4 @@
+2023-11-26 23:38:12.2769 Test detected as 'Selenium' based
+2023-11-26 23:38:19.9975 Navigating to Hover
+2023-11-26 23:38:19.9975 Invalid page specified
+2023-11-26 23:38:20.0392 Quitting browser

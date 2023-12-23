@@ -1,0 +1,70 @@
+{
+  "uuid": "f951a49f-cca3-4ef4-a499-da7639830983",
+  "historyId": "d7ab5624581f7df7d0dcd76a666ad56a",
+  "testCaseId": "573faded284c26874dc2d22d7a31be79",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.MultiWindowTests.VerifyMultipleTabsHandling()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyMultipleTabsHandling"
+    },
+    {
+      "name": "testClass",
+      "value": "MultiWindowTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@MultiWindow"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "VerifyMultipleTabsHandling",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "VerifyMultipleTabsHandling"
+  },
+  "stage": "finished",
+  "description": "Verify navigation between multiple tabs in a browser\nVerifying handling of multiple tabs using Heroku Web App\n",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "501014ac-9271-4d63-9815-1fc7ea6916e5-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1702735985579,
+  "stop": 1702735990310
+}

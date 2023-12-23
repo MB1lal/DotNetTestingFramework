@@ -1,0 +1,12 @@
+{
+  "uuid": "38bc5d21-3325-4182-acb5-22a1f0c1f051",
+  "name": "DotNetTestingFramework.Tests.SeleniumTests.HoverTests.Verify all names are correct on hovering over profile images",
+  "children": [
+    "9f1984cc-45af-4097-ae82-83afd5e729f5"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701519641356,
+  "stop": 1701519641573
+}

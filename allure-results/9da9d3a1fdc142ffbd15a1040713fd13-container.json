@@ -1,0 +1,12 @@
+{
+  "uuid": "ed54ad80-b97a-4cf4-a47d-2eac9ae21179",
+  "name": "DotNetTestingFramework.Tests.API_Tests.PetsTest.VerifyPetCanBeDeleted",
+  "children": [
+    "c699d939-f36b-4f55-bced-b31925f1f7ce"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701783533037,
+  "stop": 1701783534832
+}

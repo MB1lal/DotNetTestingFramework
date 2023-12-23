@@ -1,0 +1,75 @@
+{
+  "uuid": "f31abecc-8ce9-4385-8684-35e7e8358272",
+  "historyId": "379519947ea0795604fa90695e4999ad",
+  "testCaseId": "a02cb57569550b037c97046f06884d91",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.API_Tests.UserApiTests.UserLoginTest(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.API_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "UserLoginTest"
+    },
+    {
+      "name": "testClass",
+      "value": "UserApiTests"
+    },
+    {
+      "name": "tag",
+      "value": "@User"
+    },
+    {
+      "name": "tag",
+      "value": "UserOperations"
+    },
+    {
+      "name": "tag",
+      "value": "API"
+    }
+  ],
+  "links": [],
+  "name": "Verify user is able to login",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at DotNetTestingFramework.Connectors.UserConnector.GetUser(String username) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Connectors\\UserConnector.cs:line 21\r\n   at DotNetTestingFramework.Tests.Core.BaseSteps.GetUser(String username) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Core\\BaseSteps.cs:line 84\r\n   at DotNetTestingFramework.Tests.API_Tests.UserApiTests.UserLoginTest(Object ignored) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\API Tests\\UserApiTests.cs:line 21\r\n"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "c4710a423ce54b6488b76224208a6805-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1701546179243,
+  "stop": 1701546181848
+}

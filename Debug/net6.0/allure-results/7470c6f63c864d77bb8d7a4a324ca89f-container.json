@@ -1,0 +1,14 @@
+{
+  "uuid": "72e6f994-5479-47f1-bad8-36b9ff1f72bd",
+  "name": "DotNetTestingFramework.Tests.Selenium_Tests.JSAlertTests",
+  "children": [
+    "d554eb8a-717f-4b58-9844-b50b9ba54094",
+    "d1c79200-0a46-4aa0-8418-500080b96b4e",
+    "edfec7aa-8de9-43d4-88df-60d6635add3d"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1702737368679,
+  "stop": 1702737382001
+}

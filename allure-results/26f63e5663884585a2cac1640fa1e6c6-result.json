@@ -1,0 +1,76 @@
+{
+  "uuid": "90ae4969-e813-4ba0-aba3-9795b2a5ff97",
+  "historyId": "17eef93b8f046a97999570e44fb2a70a",
+  "testCaseId": "e83a7403bc00a043a6ca72cc400e35f2",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.NotificationTests.VerifyNotificationMessages(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyNotificationMessages"
+    },
+    {
+      "name": "testClass",
+      "value": "NotificationTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@Notifications"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify notification messages",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.ArgumentException : Invalid page specified",
+    "trace": "   at DotNetTestingFramework.Pages.HerokuHomePage.NavigateToPage(String pageName) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Pages\\HerokuHomePage.cs:line 89\r\n   at DotNetTestingFramework.Tests.Core.BaseSteps.NavigateToPage(String pageName) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Core\\BaseSteps.cs:line 161\r\n   at DotNetTestingFramework.Tests.Selenium_Tests.NotificationTests.VerifyNotificationMessages(Object ignored) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Selenium Tests\\NotificationTests.cs:line 22"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "fb41b098-e5d9-47b8-af8e-eddbf2f79a62-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null",
+      "excluded": false
+    }
+  ],
+  "start": 1701737618688,
+  "stop": 1701737624056
+}

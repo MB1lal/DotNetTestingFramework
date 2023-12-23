@@ -1,0 +1,74 @@
+{
+  "uuid": "0ad1cad6-173a-4c7d-86d6-39cdd78a924f",
+  "historyId": "c74c404e51eef0b87116fb8c6fc60a78",
+  "testCaseId": "30ea04607fe358376bd9d2e4c6daf078",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.ApiTests.UserApiTests.UserLoginTest(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.ApiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "UserLoginTest"
+    },
+    {
+      "name": "testClass",
+      "value": "UserApiTests"
+    },
+    {
+      "name": "tag",
+      "value": "@User"
+    },
+    {
+      "name": "tag",
+      "value": "UserOperations"
+    },
+    {
+      "name": "tag",
+      "value": "API"
+    }
+  ],
+  "links": [],
+  "name": "Verify user is able to login",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify user is able to login"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "1471b210293448a7b7f3981b3175994f-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1701528092176,
+  "stop": 1701528095067
+}

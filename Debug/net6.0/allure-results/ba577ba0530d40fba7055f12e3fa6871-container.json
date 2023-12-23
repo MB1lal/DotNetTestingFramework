@@ -1,0 +1,13 @@
+{
+  "uuid": "74aa42d5-3b01-40b0-96b1-94c632ef8d78",
+  "name": "DotNetTestingFramework.Tests.ApiTests.PetStoreApiTests",
+  "children": [
+    "96b507e5-3581-45ab-adc4-6266704f7be6",
+    "5ac1785c-693a-47e2-8626-39a916ba51a0"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701528092154,
+  "stop": 1701528096266
+}

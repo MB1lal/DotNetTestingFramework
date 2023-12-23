@@ -1,0 +1,12 @@
+{
+  "uuid": "a78c7166-9b4c-4fdf-a8c9-49aacec05678",
+  "name": "DotNetTestingFramework.Tests.SeleniumTests.FramesTests.Verify text in Nested iFrames",
+  "children": [
+    "bf35241d-dc8d-499d-ad13-0787e5f8b5f2"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1700687690942,
+  "stop": 1700687695063
+}

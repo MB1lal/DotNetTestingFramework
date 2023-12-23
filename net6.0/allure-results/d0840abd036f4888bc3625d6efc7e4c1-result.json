@@ -1,0 +1,78 @@
+{
+  "uuid": "6cd7c648-dda6-4f80-a310-87cc4faf65af",
+  "historyId": "398298c8d15968dfeacd077ce97358e6",
+  "testCaseId": "a62adb1759fb5a095007768792566727",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.AuthenticationTests.UserAuthenticationTest(System.String,System.String,System.Boolean)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "UserAuthenticationTest"
+    },
+    {
+      "name": "testClass",
+      "value": "AuthenticationTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify successful login",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify successful login"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "bd808f4ed7ab4a5eb63a6e79cad6c667-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "username",
+      "value": "\"tomsmith\""
+    },
+    {
+      "name": "password",
+      "value": "\"SuperSecretPassword!\""
+    },
+    {
+      "name": "shouldSucceed",
+      "value": "true"
+    }
+  ],
+  "start": 1699385439784,
+  "stop": 1699385445390
+}

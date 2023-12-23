@@ -1,0 +1,12 @@
+{
+  "uuid": "e11c3d42-eca0-422e-83dd-3cae2af0b279",
+  "name": "DotNetTestingFramework.Tests.ApiTests.PetsTest.Verify a new pet can be added with 'sold' status",
+  "children": [
+    "d6fd3ade-033a-4da1-bef6-889ee620d7df"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701528092175,
+  "stop": 1701528094482
+}

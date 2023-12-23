@@ -1,0 +1,3 @@
+2023-11-08 00:04:28.7694 Creating a pet
+2023-11-08 00:04:29.4272 Deleting newly created pet
+2023-11-08 00:04:30.6788 Verifying pet is deleted

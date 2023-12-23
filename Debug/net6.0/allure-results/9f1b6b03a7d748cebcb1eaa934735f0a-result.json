@@ -1,0 +1,75 @@
+{
+  "uuid": "7b69c77f-dab3-4fa8-9f9f-eceac820a8d6",
+  "historyId": "1d3c17cbb9a33d0ac0fcf5adcb91307f",
+  "testCaseId": "75373e3fd4adaf3caa34f1d6d094db4a",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.NotificationTests.VerifyNotificationMessages(System.String)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyNotificationMessages"
+    },
+    {
+      "name": "testClass",
+      "value": "NotificationTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@Notifications"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify unsuccessful notification",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify unsuccessful notification"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "edad753d-8d86-4968-a87e-e0aba0ed0e08-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "expectedMessage",
+      "value": "\"Action unsuccesful, please try again\"",
+      "excluded": false
+    }
+  ],
+  "start": 1701738070615,
+  "stop": 1701738077583
+}

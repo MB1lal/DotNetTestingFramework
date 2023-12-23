@@ -1,0 +1,13 @@
+{
+  "uuid": "55a9f0d1-2462-472a-8520-2e0f6b1cb96f",
+  "name": "DotNetTestingFramework.Tests.SeleniumTests.CheckboxesTests",
+  "children": [
+    "840db8d8-ff0f-438a-977a-7cb52db95b51",
+    "371ef71a-a03c-42fe-8fff-1d19a20d776b"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1699382354439,
+  "stop": 1699382369799
+}

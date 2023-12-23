@@ -1,0 +1,70 @@
+{
+  "uuid": "d8cc3bc3-01ac-4ab5-b993-0b3e5c45edd1",
+  "historyId": "c73a21a35e344f0027ae771602f0a6fa",
+  "testCaseId": "8b90b31e062149a8d3fab74cf871a722",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.DropdownTests.VerifyDropdownSelection(System.String)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#7"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyDropdownSelection"
+    },
+    {
+      "name": "testClass",
+      "value": "DropdownTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify dropdown option is correctly selected",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify dropdown option is correctly selected"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "64e9e1949d6c413aa5d5463ab73f893b-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "option",
+      "value": "\"Option 1\""
+    }
+  ],
+  "start": 1699811919364,
+  "stop": 1699811929105
+}

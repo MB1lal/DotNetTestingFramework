@@ -1,0 +1,2 @@
+2023-12-02 17:11:14.6293 C:\Users\MB1LA\source\repos\MB1lal\DotNetTestingFramework\bin\Debug\net6.0\config.json
+2023-12-02 17:11:14.7738 Quitting browser

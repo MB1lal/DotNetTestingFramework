@@ -1,0 +1,12 @@
+{
+  "uuid": "3c72f413-9e92-47b0-8a58-757430f96f30",
+  "name": "DotNetTestingFramework.Tests.ApiTests.PetStoreApiTests.Verify pet order can be deleted",
+  "children": [
+    "df2cd8de-2986-476b-8b69-6f72c03fe762"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1699387467538,
+  "stop": 1699387469429
+}

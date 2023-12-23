@@ -1,0 +1,76 @@
+{
+  "uuid": "beb61317-1561-4017-b8c2-373156d7a87e",
+  "historyId": "2d5b07e3da5de8a0910832a6bdcb8560",
+  "testCaseId": "0544690ee9bacb48a0da88bb28d78e98",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.API_Tests.PetsTest.VerifyPetCanBeAddedThroughId(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.API_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyPetCanBeAddedThroughId"
+    },
+    {
+      "name": "testClass",
+      "value": "PetsTest"
+    },
+    {
+      "name": "tag",
+      "value": "@Pets"
+    },
+    {
+      "name": "tag",
+      "value": "PetsTest"
+    },
+    {
+      "name": "tag",
+      "value": "API"
+    }
+  ],
+  "links": [],
+  "name": "Verify a pet can be added",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Assert.That(actualPetModel.category.Name, Is.EqualTo(Constants.SessionVariables.PetModel.category.Name))\r\n  Expected: \"PhD\"\r\n  But was:  null\r\n",
+    "trace": "   at DotNetTestingFramework.Tests.API_Tests.PetsTest.VerifyPetCanBeAddedThroughId(Object ignored) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\API Tests\\PetsTest.cs:line 27\r\n"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "00ccab06-f82b-4181-bb24-922659187978-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null",
+      "excluded": false
+    }
+  ],
+  "start": 1701602232865,
+  "stop": 1701602235661
+}

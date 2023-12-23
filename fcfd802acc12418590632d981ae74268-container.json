@@ -1,0 +1,12 @@
+{
+  "uuid": "1bbe8cf8-6d7c-4c97-bb83-b9638c12199c",
+  "name": "DotNetTestingFramework.Tests.Selenium_Tests.MultiWindowTests",
+  "children": [
+    "f951a49f-cca3-4ef4-a499-da7639830983"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1702735985578,
+  "stop": 1702735990312
+}

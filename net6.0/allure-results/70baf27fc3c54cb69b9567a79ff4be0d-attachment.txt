@@ -1,0 +1,4 @@
+2023-11-23 00:57:58.4306 Test detected as 'Selenium' based
+2023-11-23 00:58:05.5995 Navigating to Frames
+2023-11-23 00:58:05.8939 Navigating to iFrame page
+2023-11-23 00:58:05.9311 Quitting browser

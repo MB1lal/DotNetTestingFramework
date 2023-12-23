@@ -1,0 +1,12 @@
+{
+  "uuid": "1e08ae39-3736-47f1-8d58-3f857d955cbc",
+  "name": "DotNetTestingFramework.Tests.SeleniumTests.FileUploadTests",
+  "children": [
+    "ce3b53e4-a05f-4d58-8295-5051367d86f5"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1700078555543,
+  "stop": 1700078561032
+}

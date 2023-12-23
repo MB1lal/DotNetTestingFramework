@@ -1,0 +1,8 @@
+2023-12-05 18:04:44.5810 Test detected as 'Selenium' based
+2023-12-05 18:04:49.2314 Navigating to Frames
+2023-12-05 18:04:49.7172 Navigating to Nested iFrames page
+2023-12-05 18:04:50.5436 Verifying text in Top Left iFrames
+2023-12-05 18:04:50.7342 Verifying text in Top Middle iFrames
+2023-12-05 18:04:50.8995 Verifying text in Bottom iFrames
+2023-12-05 18:04:50.9855 Verifying text in Top Right iFrames
+2023-12-05 18:04:51.1643 Quitting browser

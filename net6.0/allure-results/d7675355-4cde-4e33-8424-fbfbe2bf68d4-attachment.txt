@@ -1,0 +1,8 @@
+2023-12-03 15:22:15.9296 Creating a pet
+{"id":3023,"category":{"id":4474,"name":"Versatile maximized throughput"},"name":"Cross-platform zero tolerance focus group","photoUrls":["",""],"tags":[{"id":312,"name":"Programmable high-level product"}],"status":"Available"}
+OK
+2023-12-03 15:22:16.8450 Updating pet details
+2023-12-03 15:22:18.6880 Fetching newly created pet
+Id=3023
+{"id":3023,"category":{"id":4474,"name":"Versatile maximized throughput"},"name":"Unicorn","photoUrls":["",""],"tags":[{"id":312,"name":"Programmable high-level product"}],"status":"sold"}
+2023-12-03 15:22:19.5075 Verifying pet details are updated

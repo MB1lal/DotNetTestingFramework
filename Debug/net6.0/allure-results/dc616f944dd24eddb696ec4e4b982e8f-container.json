@@ -1,0 +1,12 @@
+{
+  "uuid": "71f71f21-09e8-46e7-bb1f-9ea977938716",
+  "name": "DotNetTestingFramework.Tests.Selenium_Tests.FramesTests.VerifyNestedFrames",
+  "children": [
+    "a03f74bb-8a23-4270-8632-57c5f5e80a81"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701785084580,
+  "stop": 1701785091205
+}

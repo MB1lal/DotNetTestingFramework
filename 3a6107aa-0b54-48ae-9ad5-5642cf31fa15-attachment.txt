@@ -1,0 +1,6 @@
+2023-12-03 19:37:08.9000 Creating a pet
+{"Id":1647,"Category":{"id":1181,"name":"Pre-emptive encompassing workforce"},"Name":"Business-focused foreground emulation","PhotoUrls":["",""],"Tags":[{"id":220,"name":"Horizontal non-volatile process improvement"}],"Status":"Available"}
+OK
+2023-12-03 19:37:10.2450 Fetching newly created pet
+Id=1647
+{"code":1,"type":"error","message":"Pet not found"}

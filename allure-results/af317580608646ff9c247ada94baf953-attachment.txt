@@ -1,0 +1,6 @@
+2023-12-03 14:53:46.2523 Creating a pet
+{"Id":744,"Category":{"Id":4562,"Name":"alias"},"Name":"alias","PhotoUrls":["",""],"Tags":[{"Id":48,"Name":"alias"}],"Status":"Available"}
+OK
+2023-12-03 14:53:47.4893 Fetching newly created pet
+Id=744
+{"code":1,"type":"error","message":"Pet not found"}

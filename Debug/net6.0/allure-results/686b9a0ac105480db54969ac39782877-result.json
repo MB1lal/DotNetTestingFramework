@@ -1,0 +1,69 @@
+{
+  "uuid": "a197d718-7c16-4249-b6f4-a6b0e65a7026",
+  "historyId": "c2686de286be4c6487f1b1c60270a691",
+  "testCaseId": "5da2644572b77d9f193f9f6f7233708b",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.IMDBTest.GooglePageLoads()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#15"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "GooglePageLoads"
+    },
+    {
+      "name": "testClass",
+      "value": "IMDBTest"
+    },
+    {
+      "name": "tag",
+      "value": "Google"
+    },
+    {
+      "name": "tag",
+      "value": "Google"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "GooglePageLoads",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "GooglePageLoads"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "04f3486ee4444d5a89bebc496159facf-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1699379848315,
+  "stop": 1699379851806
+}

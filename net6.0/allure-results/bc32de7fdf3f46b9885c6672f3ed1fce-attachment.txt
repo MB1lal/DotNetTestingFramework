@@ -1,0 +1,5 @@
+2023-11-08 00:04:30.8496 Test detected as 'Selenium' based
+2023-11-08 00:04:34.6899 Navigating to Checkboxes
+2023-11-08 00:04:34.9779 Unchecking the second checkbox
+2023-11-08 00:04:35.0336 Verifying the second checkbox is unchecked
+2023-11-08 00:04:35.0483 Quitting browser

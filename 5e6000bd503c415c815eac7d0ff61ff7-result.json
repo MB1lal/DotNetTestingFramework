@@ -1,0 +1,86 @@
+{
+  "uuid": "0fa1e367-99c2-4366-a545-9f7e7daba0ac",
+  "historyId": "26daf0e35d7fb78c2af6a35b1310f434",
+  "testCaseId": "5ffcce76573af911cb85252e5222bf34",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.AuthenticationTests.UserAuthenticationTest(System.String,System.String,System.Boolean)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "UserAuthenticationTest"
+    },
+    {
+      "name": "testClass",
+      "value": "AuthenticationTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@Login"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify successful login",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify successful login"
+  },
+  "stage": "finished",
+  "description": "Verify login/logout cases for Heroku Web App\n",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "25e9ce9b-107b-4ed7-a512-f265d0095d33-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "username",
+      "value": "\"tomsmith\"",
+      "excluded": false
+    },
+    {
+      "name": "password",
+      "value": "\"SuperSecretPassword!\"",
+      "excluded": false
+    },
+    {
+      "name": "shouldSucceed",
+      "value": "true",
+      "excluded": false
+    }
+  ],
+  "start": 1701783492352,
+  "stop": 1701783507885
+}

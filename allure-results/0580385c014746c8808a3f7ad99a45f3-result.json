@@ -1,0 +1,77 @@
+{
+  "uuid": "75895ba5-92dc-4782-a17a-76800b063a69",
+  "historyId": "c2686de286be4c6487f1b1c60270a691",
+  "testCaseId": "5da2644572b77d9f193f9f6f7233708b",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.IMDBTest.GooglePageLoads()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "GooglePageLoads"
+    },
+    {
+      "name": "testClass",
+      "value": "IMDBTest"
+    },
+    {
+      "name": "tag",
+      "value": "@Google"
+    },
+    {
+      "name": "tag",
+      "value": "@imdb"
+    },
+    {
+      "name": "tag",
+      "value": "Google"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "GooglePageLoads",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "GooglePageLoads"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "52682fb3583c496d87e7fab4d306e972-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1700688551742,
+  "stop": 1700688554730
+}

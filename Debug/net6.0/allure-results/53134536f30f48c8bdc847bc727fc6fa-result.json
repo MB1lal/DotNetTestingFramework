@@ -1,0 +1,76 @@
+{
+  "uuid": "6c50699c-b387-46c2-a5e3-28b305caab6a",
+  "historyId": "5f08d65229adf9fa2b45c2e3c9715d2a",
+  "testCaseId": "32f5089cc78d77323a9c9f6e91d3ca42",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.DropdownTests.VerifyDropdownSelection(System.String)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyDropdownSelection"
+    },
+    {
+      "name": "testClass",
+      "value": "DropdownTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@dropdown"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify dropdown option is correctly selected",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify dropdown option is correctly selected"
+  },
+  "stage": "finished",
+  "description": "Verify dropdown scenarios using Heroku Web App\n",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "d50c5a89-1442-451b-bd35-7bb957f581a1-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "option",
+      "value": "\"Option 1\"",
+      "excluded": false
+    }
+  ],
+  "start": 1702737354172,
+  "stop": 1702737358822
+}

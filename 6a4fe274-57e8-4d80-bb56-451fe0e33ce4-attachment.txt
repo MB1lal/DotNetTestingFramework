@@ -1,0 +1,7 @@
+2023-12-03 15:20:22.8538 Creating a pet
+{"id":3390,"category":{"id":2599,"name":"Public-key scalable knowledge user"},"name":"Integrated mission-critical array","photoUrls":["",""],"tags":[{"id":61,"name":"Streamlined client-server contingency"}],"status":"Available"}
+OK
+2023-12-03 15:20:24.2243 Fetching newly created pet
+Id=3390
+{"id":3390,"category":{"id":2599,"name":"Public-key scalable knowledge user"},"name":"Integrated mission-critical array","photoUrls":["",""],"tags":[{"id":61,"name":"Streamlined client-server contingency"}],"status":"Available"}
+2023-12-03 15:20:25.1751 Verifying pet is correctly created

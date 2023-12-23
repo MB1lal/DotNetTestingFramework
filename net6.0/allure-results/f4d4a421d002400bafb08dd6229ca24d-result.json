@@ -1,0 +1,75 @@
+{
+  "uuid": "92ad74ee-78c8-4562-8dd9-9e7000776dae",
+  "historyId": "f0973f89816e9763321389253a02d05e",
+  "testCaseId": "4f4b8342d25142d588f4efecbd23b159",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.JSAlertTests.VerifyJSALerts(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyJSALerts"
+    },
+    {
+      "name": "testClass",
+      "value": "JSAlertTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@JSAlerts"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verifying interaction with JS Alerts",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verifying interaction with JS Alerts"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "d222dd94-34cf-4e82-ba63-88d48b0ec6dd-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null",
+      "excluded": false
+    }
+  ],
+  "start": 1701739234069,
+  "stop": 1701739239098
+}

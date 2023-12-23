@@ -1,0 +1,86 @@
+{
+  "uuid": "9427849b-e708-49df-aca6-203217dba46e",
+  "historyId": "08c238e1471eaf6fb0610167f7ec6f5f",
+  "testCaseId": "5ffcce76573af911cb85252e5222bf34",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.AuthenticationTests.UserAuthenticationTest(System.String,System.String,System.Boolean)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "UserAuthenticationTest"
+    },
+    {
+      "name": "testClass",
+      "value": "AuthenticationTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@Login"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify unsuccessful login",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify unsuccessful login"
+  },
+  "stage": "finished",
+  "description": "Verify login/logout cases for Heroku Web App\n",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "8547ecaf-d33f-4e93-951a-b44f72ef5da1-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "username",
+      "value": "\"admin\"",
+      "excluded": false
+    },
+    {
+      "name": "password",
+      "value": "\"admin\"",
+      "excluded": false
+    },
+    {
+      "name": "shouldSucceed",
+      "value": "false",
+      "excluded": false
+    }
+  ],
+  "start": 1702737357380,
+  "stop": 1702737362752
+}

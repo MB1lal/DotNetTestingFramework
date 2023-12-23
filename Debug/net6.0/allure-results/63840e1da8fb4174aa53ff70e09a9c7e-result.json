@@ -1,0 +1,70 @@
+{
+  "uuid": "b8fb70c7-7e15-4e79-87a0-606a0e32186e",
+  "historyId": "1e1887e918cceeff501a208f4f69e38a",
+  "testCaseId": "a2c438b60aa0c712baf4987f981cbc14",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.API_Tests.PetsTest.VerifyPetsDetailsCanBeUpdated()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.API_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyPetsDetailsCanBeUpdated"
+    },
+    {
+      "name": "testClass",
+      "value": "PetsTest"
+    },
+    {
+      "name": "tag",
+      "value": "@Pets"
+    },
+    {
+      "name": "tag",
+      "value": "PetsTest"
+    },
+    {
+      "name": "tag",
+      "value": "API"
+    }
+  ],
+  "links": [],
+  "name": "VerifyPetsDetailsCanBeUpdated",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "VerifyPetsDetailsCanBeUpdated"
+  },
+  "stage": "finished",
+  "description": "Verify pet details can be updated\nVerify pet controller API\n",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "ae946430-26b5-4e35-8f42-ccdb7494c3cf-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1701784856012,
+  "stop": 1701784859590
+}

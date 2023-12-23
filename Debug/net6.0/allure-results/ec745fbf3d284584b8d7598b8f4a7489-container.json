@@ -1,0 +1,12 @@
+{
+  "uuid": "c1093b4c-8d18-4d24-abea-1e793562c07f",
+  "name": "DotNetTestingFramework.Tests.SeleniumTests.CheckboxesTests.Verify checkboxes are checked",
+  "children": [
+    "d47d6f66-fdbb-447d-afd7-969510bd0f5b"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701528096268,
+  "stop": 1701528100671
+}

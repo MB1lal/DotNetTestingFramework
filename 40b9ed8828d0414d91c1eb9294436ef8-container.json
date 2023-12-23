@@ -1,0 +1,12 @@
+{
+  "uuid": "09052668-c62e-4252-9614-23d1e8de2678",
+  "name": "DotNetTestingFramework.Tests.SeleniumTests.DropdownTests",
+  "children": [
+    "cbb00c60-74bd-4b89-a2fa-11f221238ce1"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1700688542034,
+  "stop": 1700688546917
+}

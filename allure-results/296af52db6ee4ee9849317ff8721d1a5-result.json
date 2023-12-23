@@ -1,0 +1,75 @@
+{
+  "uuid": "8a9f1e29-c3b4-4980-a343-2e30a631b7e8",
+  "historyId": "2d5b07e3da5de8a0910832a6bdcb8560",
+  "testCaseId": "0544690ee9bacb48a0da88bb28d78e98",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.API_Tests.PetsTest.VerifyPetCanBeAddedThroughId(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.API_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyPetCanBeAddedThroughId"
+    },
+    {
+      "name": "testClass",
+      "value": "PetsTest"
+    },
+    {
+      "name": "tag",
+      "value": "@Pets"
+    },
+    {
+      "name": "tag",
+      "value": "PetsTest"
+    },
+    {
+      "name": "tag",
+      "value": "API"
+    }
+  ],
+  "links": [],
+  "name": "Verify a pet can be added",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: \"Faker.Extensions.EnumerableExtensions+<Times>d__0`1[System.String]\"\r\n  But was:  null\r\n",
+    "trace": "   at DotNetTestingFramework.Tests.API_Tests.PetsTest.VerifyPetCanBeAddedThroughId(Object ignored) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\API Tests\\PetsTest.cs:line 27\r\n"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "fdb46e21c23b45db8a2fdfe95637cc5c-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1701601529014,
+  "stop": 1701601531988
+}

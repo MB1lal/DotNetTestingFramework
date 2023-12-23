@@ -1,0 +1,75 @@
+{
+  "uuid": "33e4251b-4df5-4821-99ff-b534bc399722",
+  "historyId": "e12dd63c99c59a29ba7a58c4c3b2e42a",
+  "testCaseId": "d166f410bc33b7b8fc46546cce34a5ce",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.API_Tests.PetStoreApiTests.OrderIsSuccesfullyPlaced(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.API_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "OrderIsSuccesfullyPlaced"
+    },
+    {
+      "name": "testClass",
+      "value": "PetStoreApiTests"
+    },
+    {
+      "name": "tag",
+      "value": "@PetStore"
+    },
+    {
+      "name": "tag",
+      "value": "PetStore"
+    },
+    {
+      "name": "tag",
+      "value": "API"
+    }
+  ],
+  "links": [],
+  "name": "Verify pet order can be placed",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at DotNetTestingFramework.Connectors.PetStoreConnector.FetchOrder(Int32 orderId) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Connectors\\PetStoreConnector.cs:line 20\r\n   at DotNetTestingFramework.Tests.Core.BaseSteps.FetchPetStoreOrder(Int32 orderId) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Core\\BaseSteps.cs:line 107\r\n   at DotNetTestingFramework.Tests.API_Tests.PetStoreApiTests.OrderIsSuccesfullyPlaced(Object ignored) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\API Tests\\PetStoreApiTests.cs:line 23\r\n"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "55bb05b7d28c49ab98469b91273e65e9-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1701546179243,
+  "stop": 1701546181848
+}

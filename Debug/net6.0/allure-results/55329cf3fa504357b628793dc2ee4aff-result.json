@@ -1,0 +1,75 @@
+{
+  "uuid": "3046825f-ec42-4fd9-8870-3664b92adb48",
+  "historyId": "8d2c2943029e3f86c4da57eb48cb145c",
+  "testCaseId": "30c92c2f920f668093ba63fa3f67dedf",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.FramesTests.VerifyiFrames(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyiFrames"
+    },
+    {
+      "name": "testClass",
+      "value": "FramesTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@iFrames"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify text in an iFrame",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.Id: mce_0_ifr'; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+    "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at OpenQA.Selenium.TargetLocator.Frame(IWebElement frameElement)\r\n   at DotNetTestingFramework.Pages.IFramePage.SwitchToIFrame() in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Pages\\IFramePage.cs:line 22\r\n   at DotNetTestingFramework.Tests.SeleniumTests.FramesTests.VerifyiFrames(Object ignored) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\SeleniumTests\\FramesTests.cs:line 53"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "91e7cbc1b0704eaca1ca5ef750c5c3e0-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1700688143341,
+  "stop": 1700688151103
+}

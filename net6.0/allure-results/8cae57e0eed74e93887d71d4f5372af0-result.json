@@ -1,0 +1,75 @@
+{
+  "uuid": "137c7805-cca7-46b9-bd0c-8ed8a980b4e2",
+  "historyId": "c74c404e51eef0b87116fb8c6fc60a78",
+  "testCaseId": "30ea04607fe358376bd9d2e4c6daf078",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.ApiTests.UserApiTests.UserLoginTest(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.ApiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "UserLoginTest"
+    },
+    {
+      "name": "testClass",
+      "value": "UserApiTests"
+    },
+    {
+      "name": "tag",
+      "value": "@User"
+    },
+    {
+      "name": "tag",
+      "value": "UserOperations"
+    },
+    {
+      "name": "tag",
+      "value": "api"
+    }
+  ],
+  "links": [],
+  "name": "Verify user is able to login",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Reflection.AmbiguousMatchException : Multiple custom attributes of the same type found.\r\nTearDown : System.Reflection.AmbiguousMatchException : Multiple custom attributes of the same type found.",
+    "trace": "   at System.Attribute.GetCustomAttribute(MemberInfo element, Type attributeType, Boolean inherit)\r\n   at System.Attribute.GetCustomAttribute(MemberInfo element, Type attributeType)\r\n   at DotNetTestingFramework.Tests.Core.Hooks.isSeleniumTest() in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Core\\Hooks.cs:line 19\r\n   at DotNetTestingFramework.Tests.Core.Hooks.Setup() in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Core\\Hooks.cs:line 33\r\n--TearDown\r\n   at System.Attribute.GetCustomAttribute(MemberInfo element, Type attributeType, Boolean inherit)\r\n   at System.Attribute.GetCustomAttribute(MemberInfo element, Type attributeType)\r\n   at DotNetTestingFramework.Tests.Core.Hooks.isSeleniumTest() in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Core\\Hooks.cs:line 19\r\n   at DotNetTestingFramework.Tests.Core.Hooks.TearDown() in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Core\\Hooks.cs:line 46"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "66b07c8ce2a14bbdaa7ab738e4d9614b-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1701527451460,
+  "stop": 1701527451655
+}

@@ -1,0 +1,71 @@
+{
+  "uuid": "504d4454-a697-4c59-98cd-2bd7e3610141",
+  "historyId": "ba75f5d5fd6ff0e74211d32865f617dc",
+  "testCaseId": "548fd939d2053c83f76ffd3fe42e430f",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.DynamicLoadingTests.HiddenElementsTest(System.Int32)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "HiddenElementsTest"
+    },
+    {
+      "name": "testClass",
+      "value": "DynamicLoadingTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify loading of hidden elements",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 12 but was 11. Strings differ at index 11.\r\n  Expected: \"Hello World!\"\r\n  But was:  \"Hello World\"\r\n  ----------------------^\r\n",
+    "trace": "   at DotNetTestingFramework.Tests.SeleniumTests.DynamicLoadingTests.HiddenElementsTest(Int32 exampleIndex) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\SeleniumTests\\DynamicLoadingTests.cs:line 51\r\n"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "579acd1bfbf1473a8562424dd9ab36c4-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "exampleIndex",
+      "value": "1"
+    }
+  ],
+  "start": 1700077446383,
+  "stop": 1700077456313
+}

@@ -1,0 +1,12 @@
+{
+  "uuid": "2eaec801-1351-4328-ad59-c8b156169199",
+  "name": "DotNetTestingFramework.Tests.Selenium_Tests.MultiWindowTests.VerifyMultipleTabsHandling",
+  "children": [
+    "3a15e1dd-6818-4f69-a50c-c3acc76cfeb9"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701785086094,
+  "stop": 1701785092091
+}

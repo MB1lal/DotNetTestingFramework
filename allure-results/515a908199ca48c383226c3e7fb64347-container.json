@@ -1,0 +1,12 @@
+{
+  "uuid": "aa888597-e0b3-4b93-9688-56721876a579",
+  "name": "DotNetTestingFramework.Tests.SeleniumTests.HoverTests.Verify names are correct on hovering over images",
+  "children": [
+    "1cd22d57-ba2c-4efb-bc5a-c5f4b4c294a5"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701027491819,
+  "stop": 1701027500084
+}

@@ -1,0 +1,2 @@
+2023-12-02 17:19:04.2844 DotNetTestingFramework.Utils.Configuration
+2023-12-02 17:19:04.3105 Quitting browser

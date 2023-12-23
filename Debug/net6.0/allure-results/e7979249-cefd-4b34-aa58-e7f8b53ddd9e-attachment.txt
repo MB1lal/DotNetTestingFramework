@@ -1,0 +1,7 @@
+2023-12-03 19:37:38.2940 Creating a pet
+{"id":1284,"category":{"id":1593,"name":"Open-source 5th generation architecture"},"name":"Persistent optimizing pricing structure","photoUrls":["",""],"tags":[{"id":296,"name":"Secured 3rd generation time-frame"}],"status":"Available"}
+OK
+2023-12-03 19:37:39.7372 Fetching newly created pet
+Id=1284
+{"id":1284,"category":{"id":1593,"name":"Open-source 5th generation architecture"},"name":"Persistent optimizing pricing structure","photoUrls":["",""],"tags":[{"id":296,"name":"Secured 3rd generation time-frame"}],"status":"Available"}
+2023-12-03 19:37:40.6162 Verifying pet is correctly created

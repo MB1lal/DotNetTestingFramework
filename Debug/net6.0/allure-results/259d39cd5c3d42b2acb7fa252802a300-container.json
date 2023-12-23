@@ -1,0 +1,12 @@
+{
+  "uuid": "9d6de54b-d530-439d-bb9f-0814c04bfc1c",
+  "name": "DotNetTestingFramework.Tests.SeleniumTests.IMDBTest",
+  "children": [
+    "a197d718-7c16-4249-b6f4-a6b0e65a7026"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1699379848286,
+  "stop": 1699379851836
+}

@@ -1,0 +1,74 @@
+{
+  "uuid": "312b38df-5e23-4ca0-b28f-ced209e512ee",
+  "historyId": "d575189022bdee8f74d3633a342225aa",
+  "testCaseId": "5058f5ef46376c3986ef39b88d922b2a",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.ApiTests.UserApiTests.UserLogoutTest(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.ApiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "UserLogoutTest"
+    },
+    {
+      "name": "testClass",
+      "value": "UserApiTests"
+    },
+    {
+      "name": "tag",
+      "value": "@User"
+    },
+    {
+      "name": "tag",
+      "value": "UserOperations"
+    },
+    {
+      "name": "tag",
+      "value": "API"
+    }
+  ],
+  "links": [],
+  "name": "Verify user is able to logout",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify user is able to logout"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "f505892510694a309b5a2a020287e15c-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1701528095069,
+  "stop": 1701528097531
+}

@@ -1,0 +1,70 @@
+{
+  "uuid": "2bfd5243-ca30-4ffc-bf64-a48360d68265",
+  "historyId": "b293437be9dd13152995dc596829c6fb",
+  "testCaseId": "2ee90edc3bd956e6ef134bbcf6568f8c",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.API_Tests.UserApiTests.UserLoginTest()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.API_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "UserLoginTest"
+    },
+    {
+      "name": "testClass",
+      "value": "UserApiTests"
+    },
+    {
+      "name": "tag",
+      "value": "@User"
+    },
+    {
+      "name": "tag",
+      "value": "UserOperations"
+    },
+    {
+      "name": "tag",
+      "value": "API"
+    }
+  ],
+  "links": [],
+  "name": "UserLoginTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "UserLoginTest"
+  },
+  "stage": "finished",
+  "description": "Verify user is able to login\nVerify user login controller API\n",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "5854013e-6e1f-4f75-8847-863cd014c8f1-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1702737348250,
+  "stop": 1702737351658
+}

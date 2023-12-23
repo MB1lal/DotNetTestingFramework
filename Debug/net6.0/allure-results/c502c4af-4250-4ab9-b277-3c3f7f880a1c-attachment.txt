@@ -1,0 +1,5 @@
+2023-12-03 15:22:09.5672 Creating a pet with status 'sold'
+{"id":1570,"category":{"id":3593,"name":"Visionary responsive open architecture"},"name":"Customizable context-sensitive database","photoUrls":["",""],"tags":[{"id":323,"name":"Phased value-added pricing structure"}],"status":"sold"}
+OK
+2023-12-03 15:22:10.8570 Fetching all pets with status 'sold'
+2023-12-03 15:22:11.6912 Verifying newly created pet has correct status

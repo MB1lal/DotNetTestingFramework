@@ -1,0 +1,12 @@
+{
+  "uuid": "f82ddd1d-9f26-4885-851c-22d16dcef2ce",
+  "name": "DotNetTestingFramework.Tests.API_Tests.PetStoreApiTests.Verify pet order can be placed",
+  "children": [
+    "33e4251b-4df5-4821-99ff-b534bc399722"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701546179241,
+  "stop": 1701546181874
+}

@@ -1,0 +1,75 @@
+{
+  "uuid": "e589ba2c-66de-437e-9a01-28417dc71607",
+  "historyId": "75f6ef98ada3cd786cdeb75282281e92",
+  "testCaseId": "9ac26aeb40a1266e35e87d7d68a6cc0b",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.API_Tests.PetsTest.VerifyPetsDetailsCanBeUpdated(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.API_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyPetsDetailsCanBeUpdated"
+    },
+    {
+      "name": "testClass",
+      "value": "PetsTest"
+    },
+    {
+      "name": "tag",
+      "value": "@Pets"
+    },
+    {
+      "name": "tag",
+      "value": "PetsTest"
+    },
+    {
+      "name": "tag",
+      "value": "API"
+    }
+  ],
+  "links": [],
+  "name": "Verify pet details can be updated",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at DotNetTestingFramework.Connectors.PetConnector.UpdateThePetData(String attribute, String value) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Connectors\\PetConnector.cs:line 53\r\n   at DotNetTestingFramework.Tests.Core.BaseSteps.UpdateThePet(String attribute, String value) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Core\\BaseSteps.cs:line 154\r\n   at DotNetTestingFramework.Tests.API_Tests.PetsTest.VerifyPetsDetailsCanBeUpdated(Object ignored) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\API Tests\\PetsTest.cs:line 81\r\n"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "11aaf3a3f82c488e9d5d421ba33847be-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1701546185140,
+  "stop": 1701546186589
+}

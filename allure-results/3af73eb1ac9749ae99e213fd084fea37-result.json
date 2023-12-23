@@ -1,0 +1,75 @@
+{
+  "uuid": "089fe5b2-f6cb-421a-b45b-a26f104cc89d",
+  "historyId": "afda6829ebe98c2bdcb8437e69a2d199",
+  "testCaseId": "17298e4ec4ad10950f5d2f3740c308bf",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.MultiWindowTests.VerifyMultipleTabsHandling(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyMultipleTabsHandling"
+    },
+    {
+      "name": "testClass",
+      "value": "MultiWindowTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@MultiWindow"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify navigation between multiple tabs in a browser",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.ArgumentException : Invalid page specified",
+    "trace": "   at DotNetTestingFramework.Pages.HerokuHomePage.NavigateToPage(String pageName) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Pages\\HerokuHomePage.cs:line 89\r\n   at DotNetTestingFramework.Tests.Core.BaseSteps.NavigateToPage(String pageName) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Core\\BaseSteps.cs:line 158\r\n   at DotNetTestingFramework.Tests.Selenium_Tests.MultiWindowTests.VerifyMultipleTabsHandling(Object ignored) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Selenium Tests\\MultiWindowTests.cs:line 17"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "20cf6f615dc540c5a458375538c7c5f7-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1701529491717,
+  "stop": 1701529498999
+}

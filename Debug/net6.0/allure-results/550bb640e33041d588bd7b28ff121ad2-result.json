@@ -1,0 +1,75 @@
+{
+  "uuid": "ce3b53e4-a05f-4d58-8295-5051367d86f5",
+  "historyId": "8692a6dbab16f22e7bf81c7d10dff8ce",
+  "testCaseId": "d6fa402292af0827975f4f93e118c8e8",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.FileUploadTests.VerifyFileUpload(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyFileUpload"
+    },
+    {
+      "name": "testClass",
+      "value": "FileUploadTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@FileUpload"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verifyt file is succesfully uploaded",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  File not uploaded\r\n  Expected string length 14 but was 13. Strings differ at index 13.\r\n  Expected: \"File Uploaded!\"\r\n  But was:  \"File Uploaded\"\r\n  ------------------------^\r\n",
+    "trace": "   at DotNetTestingFramework.Tests.SeleniumTests.FileUploadTests.VerifyFileUpload(Object ignored) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\SeleniumTests\\FileUploadTests.cs:line 24\r\n"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "b87d3c410e2a4bd1b62d034993e8b641-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1700078555568,
+  "stop": 1700078561009
+}

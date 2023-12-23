@@ -1,0 +1,76 @@
+{
+  "uuid": "dc8a243a-1cbe-4b7f-9f9b-1c10f51ce1a2",
+  "historyId": "1d3c17cbb9a33d0ac0fcf5adcb91307f",
+  "testCaseId": "75373e3fd4adaf3caa34f1d6d094db4a",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.NotificationTests.VerifyNotificationMessages(System.String)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyNotificationMessages"
+    },
+    {
+      "name": "testClass",
+      "value": "NotificationTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@Notifications"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify unsuccessful notification",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Assert.That(notificationsPage.GetNotificationMessage(), Is.EqualTo(expectedMessage))\r\n  Expected string length 36 but was 17. Strings differ at index 7.\r\n  Expected: \"Action unsuccesful, please try again\"\r\n  But was:  \"Action successful\"\r\n  ------------------^\r\n",
+    "trace": "   at DotNetTestingFramework.Tests.Selenium_Tests.NotificationTests.VerifyNotificationMessages(String expectedMessage) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Selenium Tests\\NotificationTests.cs:line 45\r\n"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "1e83fce9-7523-4316-a8cb-a3d834440573-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "expectedMessage",
+      "value": "\"Action unsuccesful, please try again\"",
+      "excluded": false
+    }
+  ],
+  "start": 1701738100627,
+  "stop": 1701738107022
+}

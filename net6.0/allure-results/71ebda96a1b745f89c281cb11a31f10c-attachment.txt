@@ -1,0 +1,2 @@
+2023-12-02 16:56:48.2942 Test detected as 'Selenium' based
+2023-12-02 16:56:48.3197 Quitting browser

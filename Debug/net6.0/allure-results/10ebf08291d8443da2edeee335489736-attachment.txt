@@ -1,0 +1,2 @@
+2023-12-03 02:59:34.7123 Creating a pet
+2023-12-03 02:59:35.9642 Fetching newly created pet

@@ -1,0 +1,70 @@
+{
+  "uuid": "bcb2652e-df7d-4f36-8196-e8c06de03d84",
+  "historyId": "8d4c90a83433ed9a16278b3e85d4e17d",
+  "testCaseId": "febc988cd59a81919690a70397fc3839",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.JSAlertTests.VerifyJSALerts()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyJSALerts"
+    },
+    {
+      "name": "testClass",
+      "value": "JSAlertTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@JSAlerts"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "VerifyJSALerts",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "VerifyJSALerts"
+  },
+  "stage": "finished",
+  "description": "Verifying interaction with JS Alerts\nVerify JavaScript popups on Heroku Web App\n",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "69bdd4bc-6980-4921-a747-1d4cef546d5a-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1702735984291,
+  "stop": 1702735988663
+}

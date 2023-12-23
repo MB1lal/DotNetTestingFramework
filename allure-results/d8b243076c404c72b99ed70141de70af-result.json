@@ -1,0 +1,74 @@
+{
+  "uuid": "6069fe15-0f41-4899-af8d-8cdb6bc14042",
+  "historyId": "ba75f5d5fd6ff0e74211d32865f617dc",
+  "testCaseId": "548fd939d2053c83f76ffd3fe42e430f",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.DynamicLoadingTests.HiddenElementsTest(System.Int32)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "HiddenElementsTest"
+    },
+    {
+      "name": "testClass",
+      "value": "DynamicLoadingTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@DynamicLoading"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify loading of hidden elements",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify loading of hidden elements"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "fc82cf2a9efb40b1bf962f66ad1edde6-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "exampleIndex",
+      "value": "1"
+    }
+  ],
+  "start": 1701528100008,
+  "stop": 1701528109836
+}

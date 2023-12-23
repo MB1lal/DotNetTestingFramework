@@ -1,0 +1,75 @@
+{
+  "uuid": "f09bb167-b6f1-4239-bedc-db9da33f8800",
+  "historyId": "c73a21a35e344f0027ae771602f0a6fa",
+  "testCaseId": "8b90b31e062149a8d3fab74cf871a722",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.DropdownTests.VerifyDropdownSelection(System.String)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyDropdownSelection"
+    },
+    {
+      "name": "testClass",
+      "value": "DropdownTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@dropdown"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify dropdown option is correctly selected",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.ArgumentNullException : Argument 'url' cannot be null. (Parameter 'value')",
+    "trace": "   at OpenQA.Selenium.WebDriver.set_Url(String value)\r\n   at OpenQA.Selenium.Navigator.GoToUrl(String url)\r\n   at DotNetTestingFramework.Pages.HerokuHomePage..ctor(IWebDriver webDriver) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Pages\\HerokuHomePage.cs:line 47\r\n   at DotNetTestingFramework.Tests.Core.BaseSteps.NavigateToPage(String pageName) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Core\\BaseSteps.cs:line 159\r\n   at DotNetTestingFramework.Tests.SeleniumTests.DropdownTests.VerifyDropdownSelection(String option) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\SeleniumTests\\DropdownTests.cs:line 20"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "675f7256c055499c8c777a0e39e2936e-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "option",
+      "value": "\"Option 1\""
+    }
+  ],
+  "start": 1701524693726,
+  "stop": 1701524696248
+}

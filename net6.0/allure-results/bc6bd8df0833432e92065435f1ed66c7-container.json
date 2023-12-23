@@ -1,0 +1,12 @@
+{
+  "uuid": "ca232c25-952c-4893-84b9-053f25a274a5",
+  "name": "DotNetTestingFramework.Tests.API_Tests.UserApiTests.UserLoginTest",
+  "children": [
+    "41c8fdbc-4c4e-4ca9-bbb5-0a35aab858e9"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701785064837,
+  "stop": 1701785068990
+}

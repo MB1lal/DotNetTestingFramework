@@ -1,0 +1,70 @@
+{
+  "uuid": "a5d6fa72-a196-4af4-89c2-a954d6ed8cc5",
+  "historyId": "d1028841ecf96b716ae5bc4aa6e07cd8",
+  "testCaseId": "93906ae8a11acdf2e3a0a8387ef4ded1",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.API_Tests.UserApiTests.UserLogoutTest()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.API_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "UserLogoutTest"
+    },
+    {
+      "name": "testClass",
+      "value": "UserApiTests"
+    },
+    {
+      "name": "tag",
+      "value": "@User"
+    },
+    {
+      "name": "tag",
+      "value": "UserOperations"
+    },
+    {
+      "name": "tag",
+      "value": "API"
+    }
+  ],
+  "links": [],
+  "name": "UserLogoutTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "UserLogoutTest"
+  },
+  "stage": "finished",
+  "description": "Verify user is able to logout\nVerify user login controller API\n",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "bf9a1586-fb9b-4c7f-a90b-9add1c6adccc-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1702737351664,
+  "stop": 1702737354159
+}

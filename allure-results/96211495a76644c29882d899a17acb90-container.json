@@ -1,0 +1,12 @@
+{
+  "uuid": "90550a4d-0fc4-4379-b4e3-bd679e9b77ab",
+  "name": "DotNetTestingFramework.Tests.API_Tests.PetsTest",
+  "children": [
+    "46db87da-f8b2-471f-a9ab-143831af3a41"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701600723600,
+  "stop": 1701600726278
+}

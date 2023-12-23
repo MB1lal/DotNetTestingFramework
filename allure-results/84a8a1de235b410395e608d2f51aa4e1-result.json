@@ -1,0 +1,75 @@
+{
+  "uuid": "cfc49c4a-9116-411e-b817-a4f37cdb8855",
+  "historyId": "afda6829ebe98c2bdcb8437e69a2d199",
+  "testCaseId": "17298e4ec4ad10950f5d2f3740c308bf",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.MultiWindowTests.VerifyMultipleTabsHandling(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyMultipleTabsHandling"
+    },
+    {
+      "name": "testClass",
+      "value": "MultiWindowTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@MultiWindow"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify navigation between multiple tabs in a browser",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify navigation between multiple tabs in a browser"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "e8bde0bb-8ae2-47f4-b30c-7a63c7e469d1-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null",
+      "excluded": false
+    }
+  ],
+  "start": 1701739235387,
+  "stop": 1701739240816
+}

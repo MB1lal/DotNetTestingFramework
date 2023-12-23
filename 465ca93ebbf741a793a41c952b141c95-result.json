@@ -1,0 +1,75 @@
+{
+  "uuid": "496a8620-af31-4682-95e5-b1fb1d525da8",
+  "historyId": "7cc78651dda417119de4111c86e16fb0",
+  "testCaseId": "6570c87f89469f18b095a1fc00c33ec6",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.HoverTests.VerifyHoveringProfiles(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyHoveringProfiles"
+    },
+    {
+      "name": "testClass",
+      "value": "HoverTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@hover"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify all names are correct on hovering over profile images",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 11 but was 6. Strings differ at index 0.\r\n  Expected: \"name: user1\"\r\n  But was:  \"Hovers\"\r\n  -----------^\r\n",
+    "trace": "   at DotNetTestingFramework.Tests.SeleniumTests.HoverTests.VerifyHoveringProfiles(Object ignored) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\SeleniumTests\\HoverTests.cs:line 54\r\n"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "e2bfc12ac3704f9f8937f843f78a2847-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1701028545493,
+  "stop": 1701028552754
+}

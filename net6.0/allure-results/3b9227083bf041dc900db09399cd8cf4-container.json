@@ -1,0 +1,12 @@
+{
+  "uuid": "b4d1c32d-b5b6-45c9-af73-08398a06421f",
+  "name": "DotNetTestingFramework.Tests.API_Tests.PetsTest.Verify a pet can be added",
+  "children": [
+    "c180948f-e465-493b-ad3c-0811a1e69750"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701558268605,
+  "stop": 1701558270489
+}

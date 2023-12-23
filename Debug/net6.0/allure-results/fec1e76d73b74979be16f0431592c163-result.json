@@ -1,0 +1,74 @@
+{
+  "uuid": "e404c423-ddf6-4e0f-a214-e8eb534d63e8",
+  "historyId": "27b5139d0c226d4006e153350d0d5e6a",
+  "testCaseId": "505d7c3286349ac5d70ad4adea8bd005",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.JSAlertTests.VerifyJSConfirm(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyJSConfirm"
+    },
+    {
+      "name": "testClass",
+      "value": "JSAlertTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@JSAlerts"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verifying interaction with JS Confirm",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verifying interaction with JS Confirm"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "ca15a8ee449a4a05b01bbed1305c77ee-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1701517366479,
+  "stop": 1701517375449
+}

@@ -1,0 +1,12 @@
+{
+  "uuid": "3b01b75b-75c4-4917-ac84-03f55d3de343",
+  "name": "DotNetTestingFramework.Tests.Selenium_Tests.NotificationTests",
+  "children": [
+    "ac999d9e-40b6-47d7-a306-9d276badcf00"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701738443268,
+  "stop": 1701738450776
+}

@@ -1,0 +1,75 @@
+{
+  "uuid": "fd80ebbc-960e-4182-ab67-3f8b49930a34",
+  "historyId": "61af006cd6dfca7933f4ab80d9fd0076",
+  "testCaseId": "75373e3fd4adaf3caa34f1d6d094db4a",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.NotificationTests.VerifyNotificationMessages(System.String)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyNotificationMessages"
+    },
+    {
+      "name": "testClass",
+      "value": "NotificationTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@Notifications"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify successful notification",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify successful notification"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "cf1de080-d496-49e9-8bff-f63da4bc5e50-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "expectedMessage",
+      "value": "\"Action successful\"",
+      "excluded": false
+    }
+  ],
+  "start": 1701738063926,
+  "stop": 1701738070612
+}

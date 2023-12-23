@@ -1,0 +1,70 @@
+{
+  "uuid": "96807788-1304-463e-b01e-18d197a029dd",
+  "historyId": "c807f9a47e2d215207681f4f3b6b2ab6",
+  "testCaseId": "73d25e2636ac9140ad32dbdee5c987b9",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.AuthenticationTests.UserLogoutTest()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "UserLogoutTest"
+    },
+    {
+      "name": "testClass",
+      "value": "AuthenticationTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@Login"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "UserLogoutTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "UserLogoutTest"
+  },
+  "stage": "finished",
+  "description": "Verify user logout\nVerify login/logout cases for Heroku Web App\n",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "609fdb7a-65c0-495b-8a3a-67f703203bc0-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1702736262648,
+  "stop": 1702736268241
+}

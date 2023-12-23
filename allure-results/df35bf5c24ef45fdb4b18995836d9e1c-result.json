@@ -1,0 +1,78 @@
+{
+  "uuid": "4df3f5c7-fb49-4194-a177-44bf52477058",
+  "historyId": "e29cfa6bdafe067cb42d81c53ba28a2b",
+  "testCaseId": "a62adb1759fb5a095007768792566727",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.AuthenticationTests.UserAuthenticationTest(System.String,System.String,System.Boolean)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "UserAuthenticationTest"
+    },
+    {
+      "name": "testClass",
+      "value": "AuthenticationTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify unsuccessful login",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify unsuccessful login"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "5bd725e9bf3942b08738665c9d56f536-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "username",
+      "value": "\"admin\""
+    },
+    {
+      "name": "password",
+      "value": "\"admin\""
+    },
+    {
+      "name": "shouldSucceed",
+      "value": "false"
+    }
+  ],
+  "start": 1701528092177,
+  "stop": 1701528098012
+}

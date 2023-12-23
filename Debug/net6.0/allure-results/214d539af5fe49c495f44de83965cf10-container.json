@@ -1,0 +1,12 @@
+{
+  "uuid": "a78465e6-48c6-41a9-8401-6c1bdf221cdc",
+  "name": "DotNetTestingFramework.Tests.SeleniumTests.DynamicLoadingTests",
+  "children": [
+    "6069fe15-0f41-4899-af8d-8cdb6bc14042"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701528100007,
+  "stop": 1701528109838
+}

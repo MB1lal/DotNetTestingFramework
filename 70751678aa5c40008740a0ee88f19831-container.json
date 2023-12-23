@@ -1,0 +1,12 @@
+{
+  "uuid": "e7466087-fff6-4427-a6a2-aebf947cecc5",
+  "name": "DotNetTestingFramework.Tests.Selenium_Tests.MultiWindowTests.Verify navigation between multiple tabs in a browser",
+  "children": [
+    "987f551b-8f86-4a2f-9abd-57b29b5452f4"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701531672597,
+  "stop": 1701531677127
+}

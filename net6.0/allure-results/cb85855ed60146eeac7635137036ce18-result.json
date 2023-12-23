@@ -1,0 +1,75 @@
+{
+  "uuid": "645c1768-7159-4335-9ae6-fe960ffa62fb",
+  "historyId": "eebc19e7703acfdfdec155a67695a43f",
+  "testCaseId": "ec558a7009f9607a27a8eb8545811c38",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.FileUploadTests.VerifyFileUpload(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyFileUpload"
+    },
+    {
+      "name": "testClass",
+      "value": "FileUploadTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@FileUpload"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verifyt file is succesfully uploaded",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verifyt file is succesfully uploaded"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "857b8fb0-852a-4cca-b5b2-7e61a62d4e75-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null",
+      "excluded": false
+    }
+  ],
+  "start": 1701739221074,
+  "stop": 1701739226648
+}

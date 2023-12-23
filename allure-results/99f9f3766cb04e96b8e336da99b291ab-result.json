@@ -1,0 +1,71 @@
+{
+  "uuid": "c7bc18fe-242d-4287-8acb-e6de939092bc",
+  "historyId": "c73a21a35e344f0027ae771602f0a6fa",
+  "testCaseId": "8b90b31e062149a8d3fab74cf871a722",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.DropdownTests.VerifyDropdownSelection(System.String)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#12"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyDropdownSelection"
+    },
+    {
+      "name": "testClass",
+      "value": "DropdownTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify dropdown option is correctly selected",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at DotNetTestingFramework.Tests.SeleniumTests.DropdownTests.VerifyDropdownSelection(String option) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\SeleniumTests\\DropdownTests.cs:line 31\r\n"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "554426ff9d364f4398e14d2c31d3195d-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "option",
+      "value": "\"Option 1\""
+    }
+  ],
+  "start": 1699713669002,
+  "stop": 1699713674993
+}

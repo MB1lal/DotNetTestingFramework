@@ -1,0 +1,76 @@
+{
+  "uuid": "05f62e10-9ed8-4997-9aa4-a318ad7f1172",
+  "historyId": "ab395dfa9b49760a326444799a7c66b1",
+  "testCaseId": "37349b8b7e255502a2c4fe8391016a83",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.Selenium_Tests.FramesTests.VerifyiFrames(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.Selenium_Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyiFrames"
+    },
+    {
+      "name": "testClass",
+      "value": "FramesTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@iFrames"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify text in an iFrame",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  The text in content box is Your content goes here.NUnit Automation Framework\nAssert.That(iFramePage.GetContentText(), Is.EqualTo(\"NUnit Automation Framework\"))\r\n  Expected string length 26 but was 49. Strings differ at index 0.\r\n  Expected: \"NUnit Automation Framework\"\r\n  But was:  \"Your content goes here.NUnit Automation Framework\"\r\n  -----------^\r\n",
+    "trace": "   at DotNetTestingFramework.Tests.Selenium_Tests.FramesTests.VerifyiFrames(Object ignored) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\Selenium Tests\\FramesTests.cs:line 59\r\n"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "77d2aacb-bd1c-456d-80dd-826c9ca43f40-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null",
+      "excluded": false
+    }
+  ],
+  "start": 1701739225881,
+  "stop": 1701739233716
+}

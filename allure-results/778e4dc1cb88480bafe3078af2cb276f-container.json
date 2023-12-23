@@ -1,0 +1,12 @@
+{
+  "uuid": "a23a054d-0e2f-460e-b0ef-4cdf277f1ac1",
+  "name": "DotNetTestingFramework.Tests.SeleniumTests.AuthenticationTests.Verify successful login",
+  "children": [
+    "56123d87-a73c-4aff-902f-de2993c32a66"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1699387465689,
+  "stop": 1699387471432
+}

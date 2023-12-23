@@ -1,0 +1,12 @@
+{
+  "uuid": "e3dda0ee-fea0-4383-b352-07ac98ec8c2b",
+  "name": "DotNetTestingFramework.Tests.API_Tests.UserApiTests.Verify user is able to logout",
+  "children": [
+    "a0622d35-f92a-4eec-b14e-a1b5d559ba27"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1701530495767,
+  "stop": 1701530498284
+}

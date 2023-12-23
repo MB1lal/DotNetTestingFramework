@@ -1,0 +1,75 @@
+{
+  "uuid": "d6fd3ade-033a-4da1-bef6-889ee620d7df",
+  "historyId": "52af2863ee9a1bcf58dd6e4289d9c94e",
+  "testCaseId": "ec46463b846fb2ea4ac325ddabc8f83c",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.ApiTests.PetsTest.VerifyNewlyAddedPetThroughStatus(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.ApiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyNewlyAddedPetThroughStatus"
+    },
+    {
+      "name": "testClass",
+      "value": "PetsTest"
+    },
+    {
+      "name": "tag",
+      "value": "@Pets"
+    },
+    {
+      "name": "tag",
+      "value": "PetsTest"
+    },
+    {
+      "name": "tag",
+      "value": "API"
+    }
+  ],
+  "links": [],
+  "name": "Verify a new pet can be added with 'sold' status",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Text.Json.JsonException : The JSON value could not be converted to System.Int32. Path: $[13].category.id | LineNumber: 0 | BytePositionInLine: 2788.\r\n  ----> System.FormatException : Either the JSON value is not in a supported format, or is out of bounds for an Int32.",
+    "trace": "   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)\r\n   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)\r\n   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo jsonTypeInfo, Nullable`1 actualByteCount)\r\n   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo jsonTypeInfo)\r\n   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)\r\n   at DotNetTestingFramework.Tests.ApiTests.PetsTest.VerifyNewlyAddedPetThroughStatus(Object ignored) in C:\\Users\\MB1LA\\source\\repos\\MB1lal\\DotNetTestingFramework\\Tests\\ApiTests\\PetsTest.cs:line 41\r\n--FormatException\r\n   at System.Text.Json.ThrowHelper.ThrowFormatException(NumericType numericType)\r\n   at System.Text.Json.Utf8JsonReader.GetInt32()\r\n   at System.Text.Json.Serialization.Converters.Int32Converter.Read(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options)\r\n   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)\r\n   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)\r\n   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)\r\n   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)\r\n   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)\r\n   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)\r\n   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)\r\n   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)\r\n   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "6070efe7948440ddb7f941bb73d82b09-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1701528092177,
+  "stop": 1701528094481
+}

@@ -1,0 +1,4 @@
+2023-12-23 10:25:31.3302 Creating a new user
+2023-12-23 10:25:31.7612 Asserting new user is created
+2023-12-23 10:25:31.7612 Logging in using created user
+2023-12-23 10:25:32.9946 Logging out user

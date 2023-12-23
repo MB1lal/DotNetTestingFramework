@@ -1,0 +1,4 @@
+2023-11-07 23:23:51.4254 Test detected as 'Selenium' based
+2023-11-07 23:23:53.0955 Navigating to Google
+2023-11-07 23:23:54.0217 Asserting page is loaded
+2023-11-07 23:23:54.0539 Quitting browser

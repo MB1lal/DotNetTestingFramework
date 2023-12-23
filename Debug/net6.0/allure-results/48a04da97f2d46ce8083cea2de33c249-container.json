@@ -1,0 +1,12 @@
+{
+  "uuid": "445934f9-5601-49c3-85c7-d24c5bd5f83a",
+  "name": "DotNetTestingFramework.Tests.Selenium_Tests.HoverTests.VerifyProfileTextOnHover",
+  "children": [
+    "053d29e0-f31d-47b7-af2f-7714eb65ff37"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1702736261577,
+  "stop": 1702736266919
+}

@@ -1,0 +1,6 @@
+2023-12-03 15:22:13.4778 Creating a pet
+{"id":1387,"category":{"id":2347,"name":"Implemented solution-oriented approach"},"name":"Pre-emptive web-enabled implementation","photoUrls":["",""],"tags":[{"id":193,"name":"Grass-roots executive initiative"}],"status":"Available"}
+OK
+2023-12-03 15:22:14.2851 Deleting newly created pet
+2023-12-03 15:22:15.9230 {"code":1,"type":"error","message":"Pet not found"}
+2023-12-03 15:22:15.9230 Verifying pet is deleted

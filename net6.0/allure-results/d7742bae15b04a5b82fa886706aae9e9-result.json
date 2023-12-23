@@ -1,0 +1,70 @@
+{
+  "uuid": "936d5eaa-7e24-4657-9a28-c234cb06d19b",
+  "historyId": "fbd03e7db04bfeeefbdb9e536bac212b",
+  "testCaseId": "ab3168a013bd81d658beba9c6a821a72",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.ApiTests.PetsTest.VerifyPetCanBeDeleted(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#12"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.ApiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyPetCanBeDeleted"
+    },
+    {
+      "name": "testClass",
+      "value": "PetsTest"
+    },
+    {
+      "name": "tag",
+      "value": "@Pets"
+    },
+    {
+      "name": "tag",
+      "value": "PetsTest"
+    }
+  ],
+  "links": [],
+  "name": "Verify pet can be delted",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify pet can be delted"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "3c25694cea3544af97d72276a908e50c-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1699384580754,
+  "stop": 1699384609895
+}

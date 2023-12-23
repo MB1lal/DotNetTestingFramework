@@ -1,0 +1,74 @@
+{
+  "uuid": "4b9a1fc8-4a76-4c22-b176-193eaa21802f",
+  "historyId": "b0e69d1c28660f299bf7858d88d5e0f9",
+  "testCaseId": "d157eadffba8cffab17d2ccac48df50a",
+  "fullName": "DotNetTestingFramework:DotNetTestingFramework.Tests.SeleniumTests.FramesTests.VerifyNestedFrames(System.Object)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "MBAS-RAZER-BLAD"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "DotNetTestingFramework.Tests.SeleniumTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyNestedFrames"
+    },
+    {
+      "name": "testClass",
+      "value": "FramesTests"
+    },
+    {
+      "name": "tag",
+      "value": "@Heroku"
+    },
+    {
+      "name": "tag",
+      "value": "@iFrames"
+    },
+    {
+      "name": "tag",
+      "value": "Selenium"
+    }
+  ],
+  "links": [],
+  "name": "Verify text in Nested iFrames",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Verify text in Nested iFrames"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "9853a39265d8435fa9c23ccb94c1eda6-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ignored",
+      "value": "null"
+    }
+  ],
+  "start": 1700688151123,
+  "stop": 1700688156198
+}
