@@ -34,6 +34,11 @@ jobs:
           path: .\bin\Debug\net6.0\allure-results
           if-no-files-found: error
           retention-days: 20
+      
+      - name: Clean up gh-pages branch (optional)
+        run: |
+          git checkout -f gh-pages
+          git rm -rf .  
 
   report:
     needs: test  # Ensure previous tests run first
@@ -46,11 +51,6 @@ jobs:
         with:
           name: allure-results
           path: ./allure-results
-  
-      - name: Clean up gh-pages branch (optional)
-        run: |
-          git checkout -f gh-pages
-          git rm -rf .
   
       - name: Get Allure history (optional)
         uses: actions/checkout@v4.1.1
