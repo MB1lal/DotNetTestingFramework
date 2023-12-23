@@ -1,71 +1,71 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sat Dec 23 10:25:33 GMT 2023","Sat Dec 23 10:25:34 GMT 2023","1050","","","","PetsTest","VerifyPetsDetailsCanBeUpdated","VerifyPetsDetailsCanBeUpdated","Verify pet details can be updated
+"passed","Sat Dec 23 10:38:35 GMT 2023","Sat Dec 23 10:38:40 GMT 2023","4679","","","","PetStoreApiTests","OrderIsSuccesfullyPlaced","OrderIsSuccesfullyPlaced","Verify pet order can be placed
+Verify pet store API
+"
+"passed","Sat Dec 23 10:38:42 GMT 2023","Sat Dec 23 10:38:43 GMT 2023","48","","","","PetsTest","VerifyPetsDetailsCanBeUpdated","VerifyPetsDetailsCanBeUpdated","Verify pet details can be updated
 Verify pet controller API
 "
-"passed","Sat Dec 23 10:25:29 GMT 2023","Sat Dec 23 10:25:31 GMT 2023","1919","","","","PetsTest","VerifyNewlyAddedPetThroughStatus","VerifyNewlyAddedPetThroughStatus","Verify a new pet can be added with 'sold' status
-Verify pet controller API
-"
-"passed","Sat Dec 23 10:25:34 GMT 2023","Sat Dec 23 10:25:47 GMT 2023","13448","","","","DynamicLoadingTests","HiddenElementsTest","Verify loading of hidden elements","Verify dynamic loading of elements in Heroku Web App
-"
-"passed","Sat Dec 23 10:25:51 GMT 2023","Sat Dec 23 10:25:53 GMT 2023","2656","","","","JSAlertTests","VerifyJSConfirm","VerifyJSConfirm","Verifying interaction with JS Confirm
-Verify JavaScript popups on Heroku Web App
-"
-"passed","Sat Dec 23 10:25:48 GMT 2023","Sat Dec 23 10:25:51 GMT 2023","2664","","","","MultiWindowTests","VerifyMultipleTabsHandling","VerifyMultipleTabsHandling","Verify navigation between multiple tabs in a browser
-Verifying handling of multiple tabs using Heroku Web App
-"
-"passed","Sat Dec 23 10:25:47 GMT 2023","Sat Dec 23 10:25:55 GMT 2023","8050","","","","DynamicLoadingTests","HiddenElementsTest","Verify loading of newly created elements","Verify dynamic loading of elements in Heroku Web App
-"
-"passed","Sat Dec 23 10:25:51 GMT 2023","Sat Dec 23 10:25:54 GMT 2023","3068","","","","NotificationTests","VerifyNotificationMessages","VerifyNotificationMessages","Verify notification messages
+"passed","Sat Dec 23 10:39:17 GMT 2023","Sat Dec 23 10:39:19 GMT 2023","1979","","","","NotificationTests","VerifyNotificationMessages","VerifyNotificationMessages","Verify notification messages
 Heroku notification messages
 "
-"passed","Sat Dec 23 10:25:31 GMT 2023","Sat Dec 23 10:25:33 GMT 2023","1868","","","","UserApiTests","UserLogoutTest","UserLogoutTest","Verify user is able to logout
-Verify user login controller API
-"
-"passed","Sat Dec 23 10:25:31 GMT 2023","Sat Dec 23 10:25:42 GMT 2023","10351","","","","CheckboxesTests","VerifyCheckboxesChecking","VerifyCheckboxesChecking","Verify checkboxes are checked
+"passed","Sat Dec 23 10:39:09 GMT 2023","Sat Dec 23 10:39:11 GMT 2023","1888","","","","CheckboxesTests","VerifyCheckboxesUnchecking","VerifyCheckboxesUnchecking","Verify checkboxes are unchecked
 Verify checkbox scenarios for Heroku Web App
 "
-"passed","Sat Dec 23 10:25:33 GMT 2023","Sat Dec 23 10:25:42 GMT 2023","9101","","","","DropdownTests","VerifyDropdownSelection","Verify dropdown option is correctly selected","Verify dropdown scenarios using Heroku Web App
+"passed","Sat Dec 23 10:38:40 GMT 2023","Sat Dec 23 10:39:09 GMT 2023","28358","","","","DropdownTests","VerifyDropdownSelection","Verify dropdown option is correctly selected","Verify dropdown scenarios using Heroku Web App
 "
-"passed","Sat Dec 23 10:25:44 GMT 2023","Sat Dec 23 10:25:48 GMT 2023","3653","","","","FramesTests","VerifyiFrames","VerifyiFrames","Verify text in an iFrame
-Verify iFrames scenarios on Heroku Web App
+"passed","Sat Dec 23 10:39:17 GMT 2023","Sat Dec 23 10:39:19 GMT 2023","1658","","","","JSAlertTests","VerifyJSPrompts","VerifyJSPrompts","Verifying interaction with JS Prompt
+Verify JavaScript popups on Heroku Web App
 "
-"passed","Sat Dec 23 10:25:29 GMT 2023","Sat Dec 23 10:25:31 GMT 2023","1917","","","","PetStoreApiTests","OrderIsSuccesfullyPlaced","OrderIsSuccesfullyPlaced","Verify pet order can be placed
-Verify pet store API
-"
-"passed","Sat Dec 23 10:25:31 GMT 2023","Sat Dec 23 10:25:31 GMT 2023","634","","","","PetStoreApiTests","OrderIsSuccessfullyDeleted","OrderIsSuccessfullyDeleted","Verify pet order can be deleted
-Verify pet store API
-"
-"passed","Sat Dec 23 10:25:45 GMT 2023","Sat Dec 23 10:25:48 GMT 2023","3387","","","","AuthenticationTests","UserLogoutTest","UserLogoutTest","Verify user logout
-Verify login/logout cases for Heroku Web App
-"
-"passed","Sat Dec 23 10:25:42 GMT 2023","Sat Dec 23 10:25:45 GMT 2023","2810","","","","FileUploadTests","VerifyFileUpload","VerifyFileUpload","Verify file is succesfully uploaded
-Verify file uploading on Heroku Web App
-"
-"passed","Sat Dec 23 10:25:42 GMT 2023","Sat Dec 23 10:25:45 GMT 2023","2927","","","","AuthenticationTests","UserAuthenticationTest","Verify unsuccessful login","Verify login/logout cases for Heroku Web App
-"
-"passed","Sat Dec 23 10:25:48 GMT 2023","Sat Dec 23 10:25:51 GMT 2023","3254","","","","FramesTests","VerifyNestedFrames","VerifyNestedFrames","Verify text in Nested iFrames
-Verify iFrames scenarios on Heroku Web App
-"
-"passed","Sat Dec 23 10:25:31 GMT 2023","Sat Dec 23 10:25:31 GMT 2023","421","","","","PetsTest","VerifyPetCanBeAddedThroughId","VerifyPetCanBeAddedThroughId","Verify a pet can be added
+"passed","Sat Dec 23 10:38:40 GMT 2023","Sat Dec 23 10:38:40 GMT 2023","24","","","","PetsTest","VerifyPetCanBeAddedThroughId","VerifyPetCanBeAddedThroughId","Verify a pet can be added
 Verify pet controller API
 "
-"passed","Sat Dec 23 10:25:29 GMT 2023","Sat Dec 23 10:25:31 GMT 2023","2124","","","","UserApiTests","UserLoginTest","UserLoginTest","Verify user is able to login
+"passed","Sat Dec 23 10:39:15 GMT 2023","Sat Dec 23 10:39:17 GMT 2023","2104","","","","MultiWindowTests","VerifyMultipleTabsHandling","VerifyMultipleTabsHandling","Verify navigation between multiple tabs in a browser
+Verifying handling of multiple tabs using Heroku Web App
+"
+"passed","Sat Dec 23 10:38:40 GMT 2023","Sat Dec 23 10:38:40 GMT 2023","40","","","","PetStoreApiTests","OrderIsSuccessfullyDeleted","OrderIsSuccessfullyDeleted","Verify pet order can be deleted
+Verify pet store API
+"
+"passed","Sat Dec 23 10:39:14 GMT 2023","Sat Dec 23 10:39:22 GMT 2023","7286","","","","DynamicLoadingTests","HiddenElementsTest","Verify loading of newly created elements","Verify dynamic loading of elements in Heroku Web App
+"
+"passed","Sat Dec 23 10:38:40 GMT 2023","Sat Dec 23 10:38:40 GMT 2023","815","","","","UserApiTests","UserLogoutTest","UserLogoutTest","Verify user is able to logout
 Verify user login controller API
 "
-"passed","Sat Dec 23 10:25:45 GMT 2023","Sat Dec 23 10:25:48 GMT 2023","3394","","","","HoverTests","VerifyProfileTextOnHover","VerifyProfileTextOnHover","Verify all names are correct on hovering over profile images
+"passed","Sat Dec 23 10:39:11 GMT 2023","Sat Dec 23 10:39:15 GMT 2023","3835","","","","HoverTests","VerifyProfileTextOnHover","VerifyProfileTextOnHover","Verify all names are correct on hovering over profile images
 Verify hovering scenarios on Heroku Web App
 "
-"passed","Sat Dec 23 10:25:53 GMT 2023","Sat Dec 23 10:25:56 GMT 2023","2496","","","","JSAlertTests","VerifyJSPrompts","VerifyJSPrompts","Verifying interaction with JS Prompt
-Verify JavaScript popups on Heroku Web App
+"passed","Sat Dec 23 10:39:09 GMT 2023","Sat Dec 23 10:39:11 GMT 2023","2052","","","","FileUploadTests","VerifyFileUpload","VerifyFileUpload","Verify file is succesfully uploaded
+Verify file uploading on Heroku Web App
 "
-"passed","Sat Dec 23 10:25:48 GMT 2023","Sat Dec 23 10:25:51 GMT 2023","2741","","","","JSAlertTests","VerifyJSALerts","VerifyJSALerts","Verifying interaction with JS Alerts
-Verify JavaScript popups on Heroku Web App
+"passed","Sat Dec 23 10:38:35 GMT 2023","Sat Dec 23 10:39:10 GMT 2023","34632","","","","AuthenticationTests","UserAuthenticationTest","Verify successful login","Verify login/logout cases for Heroku Web App
 "
-"passed","Sat Dec 23 10:25:29 GMT 2023","Sat Dec 23 10:25:42 GMT 2023","13425","","","","AuthenticationTests","UserAuthenticationTest","Verify successful login","Verify login/logout cases for Heroku Web App
+"passed","Sat Dec 23 10:38:35 GMT 2023","Sat Dec 23 10:38:40 GMT 2023","4684","","","","UserApiTests","UserLoginTest","UserLoginTest","Verify user is able to login
+Verify user login controller API
 "
-"passed","Sat Dec 23 10:25:31 GMT 2023","Sat Dec 23 10:25:33 GMT 2023","1632","","","","PetsTest","VerifyPetCanBeDeleted","VerifyPetCanBeDeleted","Verify pet can be deleted
+"passed","Sat Dec 23 10:39:15 GMT 2023","Sat Dec 23 10:39:17 GMT 2023","2336","","","","FramesTests","VerifyNestedFrames","VerifyNestedFrames","Verify text in Nested iFrames
+Verify iFrames scenarios on Heroku Web App
+"
+"passed","Sat Dec 23 10:38:40 GMT 2023","Sat Dec 23 10:38:42 GMT 2023","2792","","","","PetsTest","VerifyPetCanBeDeleted","VerifyPetCanBeDeleted","Verify pet can be deleted
 Verify pet controller API
 "
-"passed","Sat Dec 23 10:25:42 GMT 2023","Sat Dec 23 10:25:44 GMT 2023","2665","","","","CheckboxesTests","VerifyCheckboxesUnchecking","VerifyCheckboxesUnchecking","Verify checkboxes are unchecked
+"passed","Sat Dec 23 10:38:43 GMT 2023","Sat Dec 23 10:39:14 GMT 2023","31702","","","","DynamicLoadingTests","HiddenElementsTest","Verify loading of hidden elements","Verify dynamic loading of elements in Heroku Web App
+"
+"passed","Sat Dec 23 10:39:12 GMT 2023","Sat Dec 23 10:39:14 GMT 2023","2094","","","","AuthenticationTests","UserLogoutTest","UserLogoutTest","Verify user logout
+Verify login/logout cases for Heroku Web App
+"
+"passed","Sat Dec 23 10:39:14 GMT 2023","Sat Dec 23 10:39:16 GMT 2023","1827","","","","JSAlertTests","VerifyJSALerts","VerifyJSALerts","Verifying interaction with JS Alerts
+Verify JavaScript popups on Heroku Web App
+"
+"passed","Sat Dec 23 10:38:40 GMT 2023","Sat Dec 23 10:39:09 GMT 2023","29088","","","","CheckboxesTests","VerifyCheckboxesChecking","VerifyCheckboxesChecking","Verify checkboxes are checked
 Verify checkbox scenarios for Heroku Web App
+"
+"passed","Sat Dec 23 10:38:35 GMT 2023","Sat Dec 23 10:38:40 GMT 2023","4695","","","","PetsTest","VerifyNewlyAddedPetThroughStatus","VerifyNewlyAddedPetThroughStatus","Verify a new pet can be added with 'sold' status
+Verify pet controller API
+"
+"passed","Sat Dec 23 10:39:11 GMT 2023","Sat Dec 23 10:39:15 GMT 2023","4221","","","","FramesTests","VerifyiFrames","VerifyiFrames","Verify text in an iFrame
+Verify iFrames scenarios on Heroku Web App
+"
+"passed","Sat Dec 23 10:39:10 GMT 2023","Sat Dec 23 10:39:12 GMT 2023","2000","","","","AuthenticationTests","UserAuthenticationTest","Verify unsuccessful login","Verify login/logout cases for Heroku Web App
+"
+"passed","Sat Dec 23 10:39:16 GMT 2023","Sat Dec 23 10:39:17 GMT 2023","1964","","","","JSAlertTests","VerifyJSConfirm","VerifyJSConfirm","Verifying interaction with JS Confirm
+Verify JavaScript popups on Heroku Web App
 "

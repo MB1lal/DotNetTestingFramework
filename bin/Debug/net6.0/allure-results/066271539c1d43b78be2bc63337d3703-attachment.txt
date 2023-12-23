@@ -1,3 +1,0 @@
-2023-11-08 00:08:16.8141 Placing a pet order
-2023-11-08 00:08:17.8946 Fetching all placed orders
-2023-11-08 00:08:18.5485 Verifying newly placed order exists

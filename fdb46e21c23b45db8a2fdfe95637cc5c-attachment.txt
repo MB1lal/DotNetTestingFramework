@@ -1,7 +1,0 @@
-2023-12-03 15:05:29.2581 Creating a pet
-{"id":3428,"category":{"Id":2331,"Name":"Faker.Extensions.EnumerableExtensions\u002B\u003CTimes\u003Ed__0\u00601[System.String]"},"name":"Faker.Extensions.EnumerableExtensions\u002B\u003CTimes\u003Ed__0\u00601[System.String]","photoUrls":["",""],"tags":[{"Id":202,"Name":"Faker.Extensions.EnumerableExtensions\u002B\u003CTimes\u003Ed__0\u00601[System.String]"}],"status":"Available"}
-OK
-2023-12-03 15:05:30.8855 Fetching newly created pet
-Id=3428
-{"id":3428,"category":{"id":0},"name":"Faker.Extensions.EnumerableExtensions+<Times>d__0`1[System.String]","photoUrls":["",""],"tags":[{"id":0}],"status":"Available"}
-2023-12-03 15:05:31.8064 Verifying pet is correctly created

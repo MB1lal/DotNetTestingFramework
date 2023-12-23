@@ -1,4 +1,0 @@
-2023-12-05 04:53:00.6125 Test detected as 'Selenium' based
-2023-12-05 04:53:10.1623 Navigating to Notification
-2023-12-05 04:53:10.1623 Invalid page specified
-2023-12-05 04:53:10.2709 Quitting browser

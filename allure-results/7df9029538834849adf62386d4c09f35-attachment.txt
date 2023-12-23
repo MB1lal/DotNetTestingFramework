@@ -1,3 +1,0 @@
-2023-11-07 23:23:54.4420 Creating a pet
-2023-11-07 23:23:55.0932 Deleting newly created pet
-2023-11-07 23:23:56.3150 Verifying pet is deleted

@@ -1,5 +1,0 @@
-2023-12-02 18:37:40.2696 https://the-internet.herokuapp.com/
-2023-12-02 18:37:40.2739 https://petstore.swagger.io/v2
-2023-12-02 18:37:40.3476 Creating a new user
-2023-12-02 18:37:42.1824 Asserting new user is created
-2023-12-02 18:37:42.1824 Logging in using created user

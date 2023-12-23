@@ -1,9 +1,0 @@
-2023-12-16 18:12:58.9582 Test detected as 'Selenium' based
-2023-12-16 18:13:02.8938 Navigating to Hovers
-2023-12-16 18:13:03.3663 Hovering over first profile
-2023-12-16 18:13:03.6671 Verifying profile text
-2023-12-16 18:13:03.6897 Hovering over second profile
-2023-12-16 18:13:03.9624 Verifying profile text
-2023-12-16 18:13:03.9742 Hovering over third profile
-2023-12-16 18:13:04.2405 Verifying profile text
-2023-12-16 18:13:04.2405 Quitting browser

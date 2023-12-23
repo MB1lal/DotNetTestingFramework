@@ -1,4 +1,0 @@
-2023-12-02 23:43:08.6127 Navigating to Checkboxes
-2023-12-02 23:43:09.1367 Checking the first checkbox
-2023-12-02 23:43:09.6425 Verifying the first checkbox is checked
-2023-12-02 23:43:09.7745 Quitting browser

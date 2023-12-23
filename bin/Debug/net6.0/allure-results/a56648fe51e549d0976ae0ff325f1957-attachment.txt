@@ -1,7 +1,0 @@
-2023-12-02 18:35:57.1239 https://the-internet.herokuapp.com/
-2023-12-02 18:35:57.1239 https://petstore.swagger.io/v2
-2023-12-02 18:35:57.1239 Test detected as 'Selenium' based
-2023-12-02 18:36:00.7370 Navigating to Dropdown
-2023-12-02 18:36:01.0817 Selecting dropdown option as 'Option 2'
-2023-12-02 18:36:01.1388 Verifying selected option
-2023-12-02 18:36:01.1821 Quitting browser

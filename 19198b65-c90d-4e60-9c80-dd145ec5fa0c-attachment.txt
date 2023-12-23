@@ -1,3 +1,0 @@
-2023-12-05 18:00:49.1693 Creating a pet with status 'sold'
-2023-12-05 18:00:50.6064 Fetching all pets with status 'sold'
-2023-12-05 18:00:51.5469 Verifying newly created pet has correct status

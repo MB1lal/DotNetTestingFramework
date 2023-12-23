@@ -1,6 +1,0 @@
-2023-12-02 19:22:01.7731 Test detected as 'Selenium' based
-2023-12-02 19:22:05.7059 Navigating to JavaScript Alerts
-2023-12-02 19:22:06.0083 Triggering JS Prompt
-2023-12-02 19:22:06.0618 Entering the text into alert
-2023-12-02 19:22:10.0687 Verifying entered text was correct
-2023-12-02 19:22:10.0930 Quitting browser

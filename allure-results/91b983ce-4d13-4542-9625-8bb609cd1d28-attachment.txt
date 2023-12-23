@@ -1,7 +1,0 @@
-2023-12-03 15:22:11.7785 Creating a pet
-{"id":2705,"category":{"id":2113,"name":"Stand-alone homogeneous software"},"name":"Switchable multi-state service-desk","photoUrls":["",""],"tags":[{"id":329,"name":"Stand-alone leading edge framework"}],"status":"Available"}
-OK
-2023-12-03 15:22:12.5598 Fetching newly created pet
-Id=2705
-{"id":2705,"category":{"id":2113,"name":"Stand-alone homogeneous software"},"name":"Switchable multi-state service-desk","photoUrls":["",""],"tags":[{"id":329,"name":"Stand-alone leading edge framework"}],"status":"Available"}
-2023-12-03 15:22:13.4660 Verifying pet is correctly created

@@ -1,4 +1,0 @@
-2023-12-03 03:04:58.1227 Creating a pet
-OK
-2023-12-03 03:04:59.1088 Fetching newly created pet
-NotFound

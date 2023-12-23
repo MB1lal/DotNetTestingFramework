@@ -1,3 +1,0 @@
-2023-12-05 17:44:22.0121 Creating a pet
-{"Id":3968,"Category":{"Id":3941,"Name":"Optimized national analyzer"},"Name":"Cross-platform solution-oriented monitoring","PhotoUrls":["",""],"Tags":[{"Id":192,"Name":"Operative stable policy"}],"Status":"Available"}
-2023-12-05 17:44:23.4547 Fetching newly created pet

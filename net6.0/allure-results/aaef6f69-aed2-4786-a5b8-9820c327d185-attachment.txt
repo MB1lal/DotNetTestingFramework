@@ -1,2 +1,0 @@
-2023-12-05 17:34:12.2984 Error loading configuration: Could not find file 'C:\Users\MB1LA\source\repos\MB1lal\DotNetTestingFramework\bin\Debug\net6.0\config.json'.
-2023-12-05 17:34:12.3015 Creating a pet

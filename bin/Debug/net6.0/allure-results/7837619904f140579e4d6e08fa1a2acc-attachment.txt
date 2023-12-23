@@ -1,5 +1,0 @@
-2023-12-02 19:21:38.2874 Test detected as 'Selenium' based
-2023-12-02 19:21:42.2744 Navigating to Dropdown
-2023-12-02 19:21:42.6713 Selecting dropdown option as 'Option 2'
-2023-12-02 19:21:42.7382 Verifying selected option
-2023-12-02 19:21:42.7831 Quitting browser

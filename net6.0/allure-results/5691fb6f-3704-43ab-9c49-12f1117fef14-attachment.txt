@@ -1,7 +1,0 @@
-2023-12-05 05:20:25.7588 Test detected as 'Selenium' based
-2023-12-05 05:20:30.1456 Navigating to Dynamic Loading
-2023-12-05 05:20:30.5149 Navigating to Example 2 Page
-2023-12-05 05:20:30.8451 Starting loading of element
-2023-12-05 05:20:30.9317 Fetching text of element
-2023-12-05 05:20:36.4168 Verifying text
-2023-12-05 05:20:36.4168 Quitting browser

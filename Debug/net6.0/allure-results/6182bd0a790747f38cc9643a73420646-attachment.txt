@@ -1,4 +1,0 @@
-2023-12-02 17:08:38.5174 C:\Users\MB1LA\source\repos\MB1lal\DotNetTestingFramework\bin\Debug\net6.0\config.json
-2023-12-02 17:08:38.6569 DotNetTestingFramework.Utils.Configuration
-2023-12-02 17:08:38.6642 Test detected as 'Selenium' based
-2023-12-02 17:08:38.6865 Quitting browser

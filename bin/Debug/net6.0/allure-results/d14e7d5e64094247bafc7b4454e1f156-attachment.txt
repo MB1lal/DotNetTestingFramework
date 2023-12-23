@@ -1,4 +1,0 @@
-2023-12-02 19:21:36.4742 Creating a pet
-2023-12-02 19:21:37.1137 Deleting newly created pet
-2023-12-02 19:21:38.3729 {"code":1,"type":"error","message":"Pet not found"}
-2023-12-02 19:21:38.3729 Verifying pet is deleted

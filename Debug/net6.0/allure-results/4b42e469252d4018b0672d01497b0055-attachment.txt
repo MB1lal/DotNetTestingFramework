@@ -1,3 +1,0 @@
-2023-11-07 23:23:53.1884 Placing a pet order
-2023-11-07 23:23:53.8164 Deletting newly placed pet order
-2023-11-07 23:23:55.1055 Verifying order is deleted

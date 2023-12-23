@@ -1,6 +1,0 @@
-2023-11-23 01:26:30.6591 Test detected as 'Selenium' based
-2023-11-23 01:26:34.5690 Navigating to Form Authentication
-2023-11-23 01:26:35.0974 Entering username
-2023-11-23 01:26:35.1747 Entering password
-2023-11-23 01:26:35.2373 Clicking login
-2023-11-23 01:26:35.7419 Quitting browser
