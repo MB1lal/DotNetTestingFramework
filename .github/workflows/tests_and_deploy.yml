@@ -41,7 +41,7 @@ jobs:
           git rm -rf .  
 
   report:
-    needs: test  # Ensure previous tests run first
+    needs: test
   
     runs-on: ubuntu-latest
   
@@ -54,7 +54,7 @@ jobs:
   
       - name: Get Allure history (optional)
         uses: actions/checkout@v4.1.1
-        if: always()  # Always check out history for reports
+        if: always()
         continue-on-error: true
         with:
           ref: gh-pages
@@ -62,18 +62,16 @@ jobs:
   
       - name: Generate report
         uses: simple-elf/allure-report-action@v1.7
-        if: always()  # Always generate report
+        if: always()
         id: allure-report
         with:
           allure_results: allure-results
-          # Deploy the generated report directly
           gh_pages: allure-report
-          allure_history: allure-history  # Keep historical reports
+          allure_history: allure-history
           keep_reports: 20
   
       - name: Deploy report to Github Pages
         if: always()
-        # uses: peaceiris/actions-github-pages@v3.1.12
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
