@@ -1,3 +1,0 @@
-2023-12-23 12:40:57.9503 Creating a new user
-2023-12-23 12:41:01.0449 Asserting new user is created
-2023-12-23 12:41:01.0625 Logging in using created user

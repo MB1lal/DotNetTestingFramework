@@ -1,7 +1,0 @@
-2023-12-23 12:41:42.2615 Test detected as 'Selenium' based
-2023-12-23 12:41:43.8258 Navigating to Notification Messages
-2023-12-23 12:41:43.9482 Generating a new notification
-2023-12-23 12:41:44.0532 Verifying notifcation displayed is one of the correct notification
-2023-12-23 12:41:44.0796 Generating a new notification
-2023-12-23 12:41:44.1680 Verifying notifcation displayed is one of the correct notification
-2023-12-23 12:41:44.1816 Quitting browser
