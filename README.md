@@ -58,6 +58,8 @@ ToDo
 	```dotnet test --filter Category=API```
 
 ## Test Reports
-Test reports are generated using Allure
+Test reports are generated using Allure and published to GitHub pages.
+
+URL: https://mb1lal.github.io/DotNetTestingFramework/
 
 
