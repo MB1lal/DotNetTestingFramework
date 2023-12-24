@@ -1,8 +1,0 @@
-2023-12-24 15:17:45.4355 Test detected as 'Selenium' based
-2023-12-24 15:17:47.7882 Navigating to multiple windows
-2023-12-24 15:17:47.9579 Clicking button to open link in a new tab
-2023-12-24 15:17:48.0084 Switching to newly opened tab
-2023-12-24 15:17:48.2065 Verifying text on newly opened tab
-2023-12-24 15:17:48.2339 Switching to previous opened tab
-2023-12-24 15:17:48.2339 Verifying text on previous tab
-2023-12-24 15:17:48.2584 Quitting browser
